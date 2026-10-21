@@ -16,6 +16,7 @@ Each zip holds plain CSVs with columns `date,open,high,low,close,volume`. Unzip 
 
 - `intraday/index_1min/nifty50_1min_kite_2015-2026.csv.gz`: Nifty 50 index 1-minute OHLC from Zerodha Kite, 9 Jan 2015 to 19 Oct 2026 (2,916 trading days, ~1.09 million candles). Index has no volume.
 - `intraday/stocks_1min/`: 1-minute OHLCV for all Nifty 50 stocks, 22 Sep to 19 Oct 2026 (Yahoo; one file, `symbol` column).
+- `intraday/stocks_1min/kite_2015-2026/`: 1-minute OHLCV from Zerodha Kite, 2 Feb 2015 to 19 Oct 2026 (2,901 days, ~1.08M candles each, no gaps) for 22 Nifty 50 stocks: RELIANCE, HDFCBANK, ICICIBANK, BHARTIARTL, INFY, LT, ITC, TCS, SBIN, AXISBANK, ADANIENT, APOLLOHOSP, KOTAKBANK, MM (M&M), HINDUNILVR, BAJFINANCE, SUNPHARMA, MARUTI, HCLTECH, NTPC, ULTRACEMCO, TITAN. Prices as returned by Kite (not split-adjusted). Columns `date,open,high,low,close,volume`.
 - `intraday/hourly/`: 60-min and 30-min bars for Nifty, Bank Nifty and the Nifty 50 stocks (60-min from Nov 2023, 30-min last 60 days).
 - `intraday/5min/`: 5-minute bars, last 60 days.
 - `intraday/1min/YYYY/MM/`: 1-minute bars and chart image for each trading day.
