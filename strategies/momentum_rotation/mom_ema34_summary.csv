@@ -1,0 +1,8 @@
+variant,CAGR,maxDD,CAGR_after_tax,maxDD_after_tax,last3y_at,worst_year_at,losing_yrs,ema_exits_yr,final_after_tax_L
+Current model (no EMA stop),34.4,-22.7,28.7,-28.7,19.1,-21.6,4,0,741.3
+"Daily 34 EMA stop, wait for rebalance",28.3,-20.3,23.8,-24.3,20.8,-16.4,5,91,342.2
+"Daily 34 EMA stop, refill same day",31.9,-27.5,26.7,-33.5,27.0,-25.5,4,112,538.6
+"Daily 34 EMA stop + buy only above 34 EMA, refill",31.8,-25.9,26.6,-32.0,25.5,-24.1,5,99,530.5
+"Weekly 34 EMA stop, wait for rebalance",34.2,-23.5,28.6,-28.5,19.0,-21.0,4,3,719.7
+"Weekly 34 EMA stop, refill same day",34.4,-23.3,28.7,-28.6,19.2,-21.5,4,3,737.7
+"Weekly 34 EMA stop + buy only above, refill",34.6,-23.3,28.9,-28.3,19.2,-21.2,4,2,759.9
