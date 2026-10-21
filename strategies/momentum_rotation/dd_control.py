@@ -12,7 +12,7 @@ F50 = M.FLT["50EMA->cash"]; F200 = ic > ic.rolling(200).mean()
 SC = {"blend": M.SC["blend"], "voladj": M.SC["6M/vol"]}
 def fy(t): return t.year + 1 if t.month >= 4 else t.year
 
-def sim(N=20, score="blend", stop=None, trail=None, invest=1.0, brake=None, strict=False, tax=True):
+def sim(N=20, score="blend", stop=None, trail=None, invest=1.0, brake=None, strict=False, tax=True, K=2, daily=False):
     S = SC[score]; on = (F50 & F200) if strict else F50
     cash = CAP; pos = {}; was_on = True; vals = []; st = lt = cfs = cfl = 0.0; cur = fy(M.days[0]); peak = CAP; braked = False
     def sell(s, px, t):
@@ -29,7 +29,7 @@ def sim(N=20, score="blend", stop=None, trail=None, invest=1.0, brake=None, stri
             cash -= (max(S_, 0) * 0.20 + max(max(L_, 0) - 125000, 0) * 0.125) * 1.04
             st = lt = 0.0; cur = fy(t)
         cash += max(cash, 0) * LIQ                                         # idle cash in a liquid fund
-        f = bool(on.loc[t]); reb = t in M.first
+        f = bool(on.loc[t]); reb = daily or (t in M.first)
         # per-stock stops at the close (alert-style)
         for s in list(pos):
             p = px[s]; pos[s][3] = max(pos[s][3], p)
@@ -44,7 +44,7 @@ def sim(N=20, score="blend", stop=None, trail=None, invest=1.0, brake=None, stri
             for s in list(pos): sell(s, px[s], t)
         expo = invest * (0.5 if new_brake else 1.0)
         if f and (reb or not was_on or new_brake != braked):
-            sc = S.loc[t].where(M.elig.loc[t]).dropna().sort_values(ascending=False); ok = set(sc.index[:2 * N])
+            sc = S.loc[t].where(M.elig.loc[t]).dropna().sort_values(ascending=False); ok = set(sc.index[:int(K * N)])
             for s in [s for s in pos if s not in ok]: sell(s, px[s], t)
             eq = cash + sum(p[0] * px[s] for s, p in pos.items()); tgt = eq * expo / N
             if new_brake and not braked:                                      # cut each holding to half size

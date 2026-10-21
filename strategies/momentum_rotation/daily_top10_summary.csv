@@ -1,0 +1,7 @@
+variant,CAGR,maxDD,CAGR_after_tax,maxDD_after_tax,last3y_at,worst_year_at,losing_yrs,final_at_L
+"Current: monthly top 20, keep while top 40",34.4,-22.7,28.7,-28.7,19.1,-21.6,4,741.3
+"Monthly top 10, keep while top 20",38.0,-23.6,31.4,-30.0,12.4,-22.8,4,1106.2
+"DAILY top 10, keep while top 20",37.9,-28.1,31.5,-33.1,18.1,-26.6,5,1130.2
+"DAILY top 10, sell when out of top 10",31.2,-36.6,26.0,-40.6,21.5,-27.4,6,486.6
+"DAILY top 10, keep while top 15",36.6,-30.5,30.5,-35.7,15.6,-27.1,5,971.3
+"DAILY top 20, keep while top 40",34.1,-24.2,28.5,-30.5,23.6,-23.6,3,708.8
