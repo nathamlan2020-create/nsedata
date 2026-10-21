@@ -1,0 +1,5 @@
+variant,trades,trades_yr,win,avg,tp_hit,med_days,CAGR,maxDD,last3y,losing_yrs
+SST as sheet,2405,211,33%,-0.11%,8%,3,-2.5%,-33%,-8.5%,9/12
+SST as sheet | after tax,2405,211,33%,-0.11%,8%,3,-2.6%,-33%,-8.5%,9/12
+SST + market filter,1806,158,32%,-0.13%,8%,3,-2.3%,-29%,-6.1%,9/12
+SST + market filter | after tax,1806,158,32%,-0.13%,8%,3,-2.4%,-29%,-6.1%,9/12
