@@ -1,0 +1,6 @@
+screen,signals_yr,fwd5d_avg%,fwd10d_avg%,fwd20d_avg%,fwd60d_avg%,fwd20d_win%
+All liquid stock-days,53740,0.39,0.78,1.57,4.88,53.8
+"Footprint 2x vol+delivery, up day",2417,0.43,0.82,1.8,5.61,53.3
+Footprint 3x,961,0.48,0.87,1.91,5.9,53.0
+Footprint 2x + sector >=3 + chart filters,493,0.54,1.0,2.31,7.0,54.2
+... and market on,424,0.7,1.21,2.6,7.22,55.3
