@@ -71,3 +71,4 @@ pd.set_option("display.width", 250); print(S.to_string(index=False)); S.to_csv("
 Y = pd.DataFrame({et: res[(et, 0.30)].pnl.groupby(res[(et, 0.30)].index.year).sum() * LOT for et in TIMES}); Y["3 lots combined"] = combo.pnl.groupby(combo.index.year).sum() * LOT
 print(Y.round(-2).to_string()); Y.round(0).to_csv("entry_time_yearly.csv")
 print("corr of daily P&L:\n", pd.DataFrame({et: res[(et, 0.30)].pnl for et in ("09:22", "09:35", "10:05")}).corr().round(2))
+pd.to_pickle(res, f"{SP}/entry_res.pkl")
