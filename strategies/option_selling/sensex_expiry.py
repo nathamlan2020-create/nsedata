@@ -16,7 +16,9 @@ SENSEX_1MIN = f"{SP}/sensex_1min.csv"
 LOT, R, YM, STEP = 20, 0.065, 375 * 252, 100
 nm = pd.read_csv("/home/claude/nsedata/intraday/index_1min/nifty50_1min_kite_2015-2026.csv.gz", parse_dates=["date"]).set_index("date").sort_index()
 vix = pd.read_csv("/home/claude/nsedata/daily/extra/INDIAVIX.csv", parse_dates=["Date"]).set_index("Date").close
-dl = yf.download(["^BSESN", "^NSEI"], start="2023-04-01", progress=False, auto_adjust=True)["Close"].dropna()
+DD = yf.download(["^BSESN", "^NSEI"], start="2023-04-01", progress=False, auto_adjust=True); dl = DD["Close"].dropna()
+SX = pd.DataFrame({k: DD[k]["^BSESN"] for k in ("Open", "High", "Low", "Close")}).dropna()
+SCALE_RANGE = os.environ.get("SCALE_RANGE", "1") == "1"
 ratio = (dl["^BSESN"] / dl["^NSEI"]).shift(1)
 REAL = os.path.exists(SENSEX_1MIN)
 sm = pd.read_csv(SENSEX_1MIN, parse_dates=["date"]).set_index("date").sort_index() if REAL else None
@@ -42,17 +44,25 @@ def bsv(S, K, T, v, cp):
     T = np.maximum(T, 1e-7); sq = v * np.sqrt(T); d1 = (np.log(S / K) + (R + v * v / 2) * T) / sq; d2 = d1 - sq
     return S * ndtr(d1) - K * np.exp(-R * T) * ndtr(d2) if cp == "C" else K * np.exp(-R * T) * ndtr(-d2) - S * ndtr(-d1)
 def cost(pi, po): return pi * 0.0010 + (pi + po) * 0.0004 + 47.2 / LOT + 3.0
-PRE = []; ND = set(nm.index.normalize())
+PRE = []; ND = set(nm.index.normalize()); RANGE_RATIO = []
 for d in EXP:
     if REAL and str(d.date()) in sm.index.strftime("%Y-%m-%d"): b = sm.loc[str(d.date())]
     else:
         if d not in ND: continue
-        b = nm.loc[str(d.date())] * float(ratio.get(d, np.nan))
+        b = nm.loc[str(d.date())].between_time("09:15", "15:29").copy()
+        if len(b) < 300: continue
+        if SCALE_RANGE and d in SX.index:                          # stretch Nifty's path so the day's range matches real Sensex
+            o0 = b.open.iloc[0]; nr = (b.high.max() - b.low.min()) / o0; sx = SX.loc[d]; sr = (sx.High - sx.Low) / sx.Open
+            a = sr / nr if nr > 0 else 1.0
+            b = sx.Open * (1 + a * (b / o0 - 1)); RANGE_RATIO.append(a)
+        else:
+            b = b * float(ratio.get(d, np.nan))
     b = b.between_time("09:15", "15:29")
     v = vix.shift(1).reindex([d], method="ffill").iloc[0] / 100
     if len(b) < 300 or np.isnan(v) or b.isna().any().any(): continue
     t = np.array([x.hour * 60 + x.minute for x in b.index]); T = np.array([(930 - m_) for m_ in t]) / YM
     PRE.append(dict(dt=d, t=t, o=b.open.values, h=b.high.values, l=b.low.values, c=b.close.values, T=T, iv=K_IV * v))
+print("median Sensex/Nifty day-range ratio on expiry days:", round(float(np.median(RANGE_RATIO)), 3) if RANGE_RATIO else "n/a", " mean", round(float(np.mean(RANGE_RATIO)), 3) if RANGE_RATIO else "")
 print("Sensex expiry days simulated:", len(PRE), "| minute data:", "real Sensex" if REAL else "Nifty path scaled to Sensex")
 def hm(s): h, m_ = map(int, s.split(":")); return h * 60 + m_
 
@@ -107,6 +117,7 @@ for name, legs in V.items():
                      total=round(s.sum()), worst_day=round(s.min()), max_dd=round((eq - eq.cummax()).min()), losing_years=int((yr < 0).sum()),
                      **{f"y{y}": round(v_) for y, v_ in yr.items()}))
 R_ = pd.DataFrame(rows); pd.set_option("display.width", 250); print(R_.to_string(index=False))
-R_.to_csv("sensex_expiry_summary.csv", index=False); pd.DataFrame(daily).to_csv("sensex_expiry_daily.csv")
+tag = "_rangefit" if SCALE_RANGE else ""
+R_.to_csv(f"sensex_expiry_summary{tag}.csv", index=False); pd.DataFrame(daily).to_csv(f"sensex_expiry_daily{tag}.csv")
 for name, s in daily.items():
     print(name, {k: round(v_) for k, v_ in s.groupby(s.index.dayofweek.map({1: "Tue", 3: "Thu", 4: "Fri", 0: "Mon", 2: "Wed"})).sum().items()})
