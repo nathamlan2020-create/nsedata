@@ -1,0 +1,1321 @@
+year,family,asset,strategy,train_sharpe
+2016,mean_reversion,Nifty 50 (NIFTYBEES),RSI2<5 exit>80 +200SMA,0.55
+2016,mean_reversion,Bank Nifty (BANKBEES),RSI5<20 exit>65 +200SMA,0.88
+2016,mean_reversion,Nifty Next 50 (JUNIORBEES),RSI2<5 exit>65 +200SMA,0.92
+2016,mean_reversion,Gold (GOLDBEES),RSI2<5 exit>65 +200SMA,0.77
+2016,mean_reversion,Nifty 500,RSI5<10 exit>80 +200SMA,0.79
+2016,mean_reversion,Midcap 50,"Bollinger 30,2.5 exit>mid",0.68
+2016,mean_reversion,Nifty IT,"Bollinger 30,2.5 exit>mid",0.74
+2016,mean_reversion,Nifty Pharma,RSI5<15 exit>80 +200SMA,0.92
+2016,mean_reversion,Nifty FMCG,RSI5<20 exit>80,1.31
+2016,mean_reversion,Nifty Auto,RSI5<15 exit>65,1.03
+2016,mean_reversion,Nifty Metal,RSI2<15 exit>50 +200SMA,0.41
+2016,mean_reversion,Nifty Realty,RSI3<10 exit>50 +200SMA,1.04
+2016,mean_reversion,Nifty Energy,RSI5<10 exit>65,0.77
+2016,mean_reversion,Nifty Infra,RSI5<5 exit>65,0.88
+2016,mean_reversion,Nifty PSU Bank,RSI5<10 exit>50 +200SMA,0.55
+2016,mean_reversion,Nifty PSE,"Bollinger 30,2 exit>mid +200SMA",0.47
+2016,mean_reversion,Nifty MNC,RSI3<5 exit>80 +200SMA,0.94
+2016,mean_reversion,RELIANCE,RSI5<5 exit>80 +200SMA,0.85
+2016,mean_reversion,HDFCBANK,RSI5<10 exit>50,0.99
+2016,mean_reversion,ICICIBANK,RSI3<5 exit>65 +200SMA,1.06
+2016,mean_reversion,INFY,RSI3<5 exit>80,0.66
+2016,mean_reversion,TCS,RSI5<15 exit>65 +200SMA,1.21
+2016,mean_reversion,ITC,"Bollinger 30,2 exit>mid",1.38
+2016,mean_reversion,LT,RSI5<10 exit>80 +200SMA,0.7
+2016,mean_reversion,SBIN,RSI3<5 exit>65,0.69
+2016,mean_reversion,HINDUNILVR,"Bollinger 30,1 exit>mid",1.25
+2016,mean_reversion,BHARTIARTL,"Bollinger 20,2.5 exit>mid",0.58
+2016,mean_reversion,AXISBANK,RSI5<10 exit>65,0.73
+2016,mean_reversion,KOTAKBANK,"Bollinger 20,2.5 exit>mid +200SMA",1.13
+2016,mean_reversion,MARUTI,IBS<0.1 exit>0.8,0.92
+2017,mean_reversion,Nifty 50 (NIFTYBEES),RSI2<5 exit>80 +200SMA,0.79
+2017,mean_reversion,Bank Nifty (BANKBEES),RSI5<20 exit>65 +200SMA,0.81
+2017,mean_reversion,Nifty Next 50 (JUNIORBEES),RSI2<5 exit>65 +200SMA,0.74
+2017,mean_reversion,Gold (GOLDBEES),"Bollinger 10,2.5 exit>mid",0.94
+2017,mean_reversion,Nifty 500,RSI5<15 exit>65,1.03
+2017,mean_reversion,Midcap 50,RSI5<15 exit>50,0.92
+2017,mean_reversion,Nifty IT,"Bollinger 30,2.5 exit>mid",0.79
+2017,mean_reversion,Nifty Pharma,"Bollinger 30,2.5 exit>mid",0.99
+2017,mean_reversion,Nifty FMCG,RSI2<10 exit>80,0.93
+2017,mean_reversion,Nifty Auto,RSI2<5 exit>65,0.86
+2017,mean_reversion,Nifty Metal,"Bollinger 30,1.5 exit>mid +200SMA",0.65
+2017,mean_reversion,Nifty Realty,RSI3<5 exit>80,1.1
+2017,mean_reversion,Nifty Energy,RSI5<10 exit>80,0.96
+2017,mean_reversion,Nifty Infra,"Bollinger 10,2.5 exit>mid +200SMA",0.62
+2017,mean_reversion,Nifty PSU Bank,RSI5<10 exit>50 +200SMA,0.55
+2017,mean_reversion,Nifty PSE,RSI3<30 exit>80 +200SMA,0.92
+2017,mean_reversion,Nifty MNC,RSI3<5 exit>80 +200SMA,0.59
+2017,mean_reversion,RELIANCE,RSI5<5 exit>80 +200SMA,0.85
+2017,mean_reversion,HDFCBANK,IBS<0.2 exit>0.8,1.11
+2017,mean_reversion,ICICIBANK,RSI3<5 exit>65,1.01
+2017,mean_reversion,INFY,RSI5<15 exit>80,0.6
+2017,mean_reversion,TCS,RSI5<15 exit>65,1.37
+2017,mean_reversion,ITC,RSI5<20 exit>80,1.32
+2017,mean_reversion,LT,RSI5<20 exit>80 +200SMA,0.81
+2017,mean_reversion,SBIN,RSI5<10 exit>50 +200SMA,0.62
+2017,mean_reversion,HINDUNILVR,RSI5<10 exit>80,1.33
+2017,mean_reversion,BHARTIARTL,RSI5<15 exit>80,0.66
+2017,mean_reversion,AXISBANK,RSI5<10 exit>65,0.69
+2017,mean_reversion,KOTAKBANK,3-day low exit prevhigh,1.16
+2017,mean_reversion,MARUTI,IBS<0.1 exit>0.8,1.21
+2018,mean_reversion,Nifty 50 (NIFTYBEES),RSI2<5 exit>80 +200SMA,0.75
+2018,mean_reversion,Bank Nifty (BANKBEES),RSI5<20 exit>65 +200SMA,0.76
+2018,mean_reversion,Nifty Next 50 (JUNIORBEES),RSI3<5 exit>50,0.73
+2018,mean_reversion,Gold (GOLDBEES),"Bollinger 10,2.5 exit>mid",0.79
+2018,mean_reversion,Nifty 500,RSI5<15 exit>50 +200SMA,1.25
+2018,mean_reversion,Midcap 50,RSI5<15 exit>50,1.08
+2018,mean_reversion,Nifty IT,"Bollinger 30,2.5 exit>mid",0.87
+2018,mean_reversion,Nifty Pharma,RSI5<5 exit>65,1.05
+2018,mean_reversion,Nifty FMCG,"Bollinger 20,2 exit>mid",0.95
+2018,mean_reversion,Nifty Auto,RSI2<5 exit>65,1.04
+2018,mean_reversion,Nifty Metal,RSI5<10 exit>80 +200SMA,0.93
+2018,mean_reversion,Nifty Realty,RSI3<5 exit>80,0.9
+2018,mean_reversion,Nifty Energy,RSI3<5 exit>50,0.91
+2018,mean_reversion,Nifty Infra,"Bollinger 10,2.5 exit>mid +200SMA",0.62
+2018,mean_reversion,Nifty PSU Bank,IBS<0.1 exit>0.7 +200SMA,0.97
+2018,mean_reversion,Nifty PSE,RSI3<30 exit>80 +200SMA,0.85
+2018,mean_reversion,Nifty MNC,RSI5<20 exit>80 +200SMA,0.7
+2018,mean_reversion,RELIANCE,RSI5<20 exit>80,0.96
+2018,mean_reversion,HDFCBANK,IBS<0.3 exit>0.8,0.94
+2018,mean_reversion,ICICIBANK,RSI3<15 exit>50,1.02
+2018,mean_reversion,INFY,5-day low exit prevhigh,0.63
+2018,mean_reversion,TCS,"Bollinger 30,2 exit>mid",1.48
+2018,mean_reversion,ITC,"Bollinger 30,2 exit>mid",1.13
+2018,mean_reversion,LT,"Bollinger 30,2 exit>mid +200SMA",0.84
+2018,mean_reversion,SBIN,RSI3<5 exit>65 +200SMA,0.74
+2018,mean_reversion,HINDUNILVR,RSI5<10 exit>80,1.35
+2018,mean_reversion,BHARTIARTL,RSI5<15 exit>80,0.66
+2018,mean_reversion,AXISBANK,RSI5<20 exit>65,0.95
+2018,mean_reversion,KOTAKBANK,10-day low exit prevhigh,1.08
+2018,mean_reversion,MARUTI,IBS<0.1 exit>0.8 +200SMA,1.09
+2019,mean_reversion,Nifty 50 (NIFTYBEES),RSI3<5 exit>50 +200SMA,1.11
+2019,mean_reversion,Bank Nifty (BANKBEES),RSI3<20 exit>80 +200SMA,0.53
+2019,mean_reversion,Nifty Next 50 (JUNIORBEES),RSI5<20 exit>80 +200SMA,0.87
+2019,mean_reversion,Gold (GOLDBEES),"Bollinger 30,2.5 exit>mid +200SMA",0.38
+2019,mean_reversion,Nifty 500,RSI5<15 exit>50 +200SMA,1.23
+2019,mean_reversion,Midcap 50,RSI5<15 exit>50 +200SMA,1.57
+2019,mean_reversion,Nifty IT,"Bollinger 10,2.5 exit>mid +200SMA",0.81
+2019,mean_reversion,Nifty Pharma,RSI5<5 exit>65,1.23
+2019,mean_reversion,Nifty FMCG,RSI5<10 exit>65,0.97
+2019,mean_reversion,Nifty Auto,RSI5<15 exit>65 +200SMA,1.16
+2019,mean_reversion,Nifty Metal,"Bollinger 30,1 exit>mid +200SMA",1.02
+2019,mean_reversion,Nifty Realty,RSI5<15 exit>65 +200SMA,1.11
+2019,mean_reversion,Nifty Energy,RSI3<5 exit>80,0.95
+2019,mean_reversion,Nifty Infra,"Bollinger 20,2 exit>mid +200SMA",0.69
+2019,mean_reversion,Nifty PSU Bank,RSI2<15 exit>50 +200SMA,0.8
+2019,mean_reversion,Nifty PSE,RSI3<30 exit>80 +200SMA,0.59
+2019,mean_reversion,Nifty MNC,RSI5<15 exit>65 +200SMA,0.56
+2019,mean_reversion,RELIANCE,RSI5<25 exit>80,1.0
+2019,mean_reversion,HDFCBANK,RSI2<30 exit>80 +200SMA,0.87
+2019,mean_reversion,ICICIBANK,RSI5<25 exit>50,0.98
+2019,mean_reversion,INFY,RSI3<30 exit>80,0.84
+2019,mean_reversion,TCS,"Bollinger 30,2 exit>mid",1.34
+2019,mean_reversion,ITC,RSI2<5 exit>65,1.05
+2019,mean_reversion,LT,"Bollinger 30,2 exit>mid +200SMA",0.92
+2019,mean_reversion,SBIN,RSI5<25 exit>80 +200SMA,0.75
+2019,mean_reversion,HINDUNILVR,RSI5<10 exit>80,1.35
+2019,mean_reversion,BHARTIARTL,IBS<0.1 exit>0.8,0.48
+2019,mean_reversion,AXISBANK,RSI3<20 exit>80,1.19
+2019,mean_reversion,KOTAKBANK,IBS<0.2 exit>0.8,1.24
+2019,mean_reversion,MARUTI,IBS<0.3 exit>0.8 +200SMA,0.71
+2020,mean_reversion,Nifty 50 (NIFTYBEES),RSI3<5 exit>50 +200SMA,1.08
+2020,mean_reversion,Bank Nifty (BANKBEES),RSI2<5 exit>50,0.69
+2020,mean_reversion,Nifty Next 50 (JUNIORBEES),RSI5<15 exit>80 +200SMA,0.8
+2020,mean_reversion,Gold (GOLDBEES),RSI5<5 exit>50,0.59
+2020,mean_reversion,Nifty 500,RSI5<15 exit>65 +200SMA,1.15
+2020,mean_reversion,Midcap 50,RSI5<15 exit>65 +200SMA,1.39
+2020,mean_reversion,Nifty IT,RSI2<10 exit>65,0.68
+2020,mean_reversion,Nifty Pharma,RSI5<5 exit>50,0.96
+2020,mean_reversion,Nifty FMCG,RSI5<10 exit>65,0.97
+2020,mean_reversion,Nifty Auto,RSI5<15 exit>80 +200SMA,0.9
+2020,mean_reversion,Nifty Metal,RSI5<10 exit>80 +200SMA,1.19
+2020,mean_reversion,Nifty Realty,RSI3<5 exit>65,0.99
+2020,mean_reversion,Nifty Energy,RSI3<5 exit>80,1.0
+2020,mean_reversion,Nifty Infra,"Bollinger 20,2 exit>mid +200SMA",0.92
+2020,mean_reversion,Nifty PSU Bank,"Bollinger 20,2.5 exit>mid +200SMA",0.53
+2020,mean_reversion,Nifty PSE,RSI5<5 exit>80,0.54
+2020,mean_reversion,Nifty MNC,RSI3<15 exit>65,0.36
+2020,mean_reversion,RELIANCE,RSI5<25 exit>80,1.2
+2020,mean_reversion,HDFCBANK,RSI3<10 exit>50,0.96
+2020,mean_reversion,ICICIBANK,"Bollinger 30,2 exit>mid +200SMA",1.34
+2020,mean_reversion,INFY,RSI5<25 exit>65,1.08
+2020,mean_reversion,TCS,"Bollinger 30,2 exit>mid",1.0
+2020,mean_reversion,ITC,RSI2<5 exit>65,1.05
+2020,mean_reversion,LT,IBS<0.1 exit>0.5 +200SMA,0.77
+2020,mean_reversion,SBIN,RSI3<10 exit>50 +200SMA,0.9
+2020,mean_reversion,HINDUNILVR,RSI3<15 exit>65,0.93
+2020,mean_reversion,BHARTIARTL,RSI5<30 exit>80,0.62
+2020,mean_reversion,AXISBANK,RSI3<25 exit>80,1.18
+2020,mean_reversion,KOTAKBANK,IBS<0.2 exit>0.8,1.47
+2020,mean_reversion,MARUTI,10-day low exit prevhigh +200SMA,0.51
+2021,mean_reversion,Nifty 50 (NIFTYBEES),RSI3<5 exit>80 +200SMA,0.92
+2021,mean_reversion,Bank Nifty (BANKBEES),RSI3<5 exit>50 +200SMA,0.44
+2021,mean_reversion,Nifty Next 50 (JUNIORBEES),RSI5<5 exit>80,0.74
+2021,mean_reversion,Gold (GOLDBEES),RSI5<20 exit>80 +200SMA,0.97
+2021,mean_reversion,Nifty 500,RSI5<15 exit>65 +200SMA,1.17
+2021,mean_reversion,Midcap 50,RSI5<15 exit>65 +200SMA,1.35
+2021,mean_reversion,Nifty IT,IBS<0.1 exit>0.8,0.74
+2021,mean_reversion,Nifty Pharma,RSI5<5 exit>50,1.0
+2021,mean_reversion,Nifty FMCG,RSI3<5 exit>65 +200SMA,0.55
+2021,mean_reversion,Nifty Auto,RSI3<10 exit>80 +200SMA,1.18
+2021,mean_reversion,Nifty Metal,RSI5<10 exit>80 +200SMA,1.19
+2021,mean_reversion,Nifty Realty,"Bollinger 10,2.5 exit>mid",0.85
+2021,mean_reversion,Nifty Energy,RSI5<25 exit>50 +200SMA,1.15
+2021,mean_reversion,Nifty Infra,RSI2<10 exit>50 +200SMA,1.0
+2021,mean_reversion,Nifty PSU Bank,"Bollinger 30,2 exit>mid +200SMA",0.87
+2021,mean_reversion,Nifty PSE,RSI5<5 exit>80,0.98
+2021,mean_reversion,Nifty MNC,"Bollinger 10,2.5 exit>mid +200SMA",0.35
+2021,mean_reversion,RELIANCE,RSI5<15 exit>50 +200SMA,0.61
+2021,mean_reversion,HDFCBANK,RSI3<30 exit>80,0.76
+2021,mean_reversion,ICICIBANK,RSI2<5 exit>65 +200SMA,0.94
+2021,mean_reversion,INFY,RSI5<25 exit>65 +200SMA,1.19
+2021,mean_reversion,TCS,RSI3<5 exit>80,0.85
+2021,mean_reversion,ITC,RSI2<30 exit>80 +200SMA,0.84
+2021,mean_reversion,LT,IBS<0.1 exit>0.5 +200SMA,0.74
+2021,mean_reversion,SBIN,RSI3<10 exit>50 +200SMA,0.95
+2021,mean_reversion,HINDUNILVR,RSI5<10 exit>65,0.85
+2021,mean_reversion,BHARTIARTL,IBS<0.2 exit>0.8 +200SMA,0.81
+2021,mean_reversion,AXISBANK,RSI3<25 exit>80,0.86
+2021,mean_reversion,KOTAKBANK,RSI5<15 exit>80 +200SMA,0.94
+2021,mean_reversion,MARUTI,RSI5<5 exit>80,0.43
+2022,mean_reversion,Nifty 50 (NIFTYBEES),RSI3<5 exit>80 +200SMA,1.37
+2022,mean_reversion,Bank Nifty (BANKBEES),RSI3<10 exit>50 +200SMA,0.59
+2022,mean_reversion,Nifty Next 50 (JUNIORBEES),RSI5<30 exit>80,0.8
+2022,mean_reversion,Gold (GOLDBEES),RSI5<20 exit>80 +200SMA,0.92
+2022,mean_reversion,Nifty 500,RSI5<15 exit>65 +200SMA,1.35
+2022,mean_reversion,Midcap 50,RSI3<5 exit>65 +200SMA,1.42
+2022,mean_reversion,Nifty IT,IBS<0.2 exit>0.8,0.9
+2022,mean_reversion,Nifty Pharma,RSI5<5 exit>50,0.85
+2022,mean_reversion,Nifty FMCG,RSI3<10 exit>50 +200SMA,0.81
+2022,mean_reversion,Nifty Auto,RSI2<5 exit>65 +200SMA,1.24
+2022,mean_reversion,Nifty Metal,RSI3<15 exit>50 +200SMA,1.1
+2022,mean_reversion,Nifty Realty,RSI5<10 exit>50 +200SMA,0.84
+2022,mean_reversion,Nifty Energy,RSI3<10 exit>50 +200SMA,1.1
+2022,mean_reversion,Nifty Infra,RSI3<10 exit>50 +200SMA,1.39
+2022,mean_reversion,Nifty PSU Bank,"Bollinger 30,2 exit>mid +200SMA",0.94
+2022,mean_reversion,Nifty PSE,RSI5<5 exit>80,0.98
+2022,mean_reversion,Nifty MNC,RSI3<5 exit>65 +200SMA,1.0
+2022,mean_reversion,RELIANCE,RSI3<10 exit>50 +200SMA,0.68
+2022,mean_reversion,HDFCBANK,RSI3<30 exit>80,0.82
+2022,mean_reversion,ICICIBANK,RSI2<5 exit>50 +200SMA,0.89
+2022,mean_reversion,INFY,RSI5<25 exit>50 +200SMA,1.2
+2022,mean_reversion,TCS,RSI5<15 exit>80,0.93
+2022,mean_reversion,ITC,RSI3<20 exit>80 +200SMA,0.8
+2022,mean_reversion,LT,RSI5<10 exit>80 +200SMA,0.88
+2022,mean_reversion,SBIN,RSI2<5 exit>50 +200SMA,1.05
+2022,mean_reversion,HINDUNILVR,RSI3<5 exit>65 +200SMA,0.74
+2022,mean_reversion,BHARTIARTL,IBS<0.2 exit>0.8,0.86
+2022,mean_reversion,AXISBANK,IBS<0.1 exit>0.7,0.99
+2022,mean_reversion,KOTAKBANK,RSI5<10 exit>80 +200SMA,0.73
+2022,mean_reversion,MARUTI,RSI5<10 exit>65 +200SMA,0.74
+2023,mean_reversion,Nifty 50 (NIFTYBEES),RSI3<5 exit>80 +200SMA,1.08
+2023,mean_reversion,Bank Nifty (BANKBEES),RSI3<10 exit>50 +200SMA,0.61
+2023,mean_reversion,Nifty Next 50 (JUNIORBEES),RSI5<5 exit>80,0.74
+2023,mean_reversion,Gold (GOLDBEES),RSI5<20 exit>80 +200SMA,1.03
+2023,mean_reversion,Nifty 500,RSI3<5 exit>80 +200SMA,1.14
+2023,mean_reversion,Midcap 50,RSI3<5 exit>65 +200SMA,1.54
+2023,mean_reversion,Nifty IT,RSI5<5 exit>50 +200SMA,0.73
+2023,mean_reversion,Nifty Pharma,"Bollinger 10,2.5 exit>mid",0.78
+2023,mean_reversion,Nifty FMCG,RSI3<10 exit>50 +200SMA,0.68
+2023,mean_reversion,Nifty Auto,"Bollinger 10,2.5 exit>mid +200SMA",0.92
+2023,mean_reversion,Nifty Metal,RSI2<10 exit>65 +200SMA,0.93
+2023,mean_reversion,Nifty Realty,"Bollinger 10,2.5 exit>mid",0.87
+2023,mean_reversion,Nifty Energy,RSI3<10 exit>50 +200SMA,0.97
+2023,mean_reversion,Nifty Infra,RSI3<10 exit>50 +200SMA,1.25
+2023,mean_reversion,Nifty PSU Bank,"Bollinger 30,2 exit>mid +200SMA",0.88
+2023,mean_reversion,Nifty PSE,RSI3<5 exit>50 +200SMA,0.78
+2023,mean_reversion,Nifty MNC,RSI3<5 exit>65 +200SMA,0.87
+2023,mean_reversion,RELIANCE,RSI5<15 exit>50 +200SMA,0.62
+2023,mean_reversion,HDFCBANK,RSI3<15 exit>80,0.72
+2023,mean_reversion,ICICIBANK,RSI2<5 exit>50 +200SMA,0.79
+2023,mean_reversion,INFY,RSI3<30 exit>80,0.69
+2023,mean_reversion,TCS,RSI5<15 exit>65,0.83
+2023,mean_reversion,ITC,RSI5<25 exit>80 +200SMA,0.95
+2023,mean_reversion,LT,RSI5<15 exit>80 +200SMA,0.69
+2023,mean_reversion,SBIN,IBS<0.2 exit>0.7 +200SMA,0.89
+2023,mean_reversion,HINDUNILVR,RSI2<5 exit>80,0.67
+2023,mean_reversion,BHARTIARTL,IBS<0.2 exit>0.8,0.76
+2023,mean_reversion,AXISBANK,IBS<0.1 exit>0.7,0.83
+2023,mean_reversion,KOTAKBANK,RSI5<10 exit>80 +200SMA,0.73
+2023,mean_reversion,MARUTI,RSI5<10 exit>65 +200SMA,0.74
+2024,mean_reversion,Nifty 50 (NIFTYBEES),RSI5<15 exit>50 +200SMA,1.01
+2024,mean_reversion,Bank Nifty (BANKBEES),RSI3<10 exit>50 +200SMA,0.79
+2024,mean_reversion,Nifty Next 50 (JUNIORBEES),RSI5<30 exit>80,0.79
+2024,mean_reversion,Gold (GOLDBEES),RSI5<20 exit>80 +200SMA,0.97
+2024,mean_reversion,Nifty 500,RSI3<5 exit>80 +200SMA,1.35
+2024,mean_reversion,Midcap 50,RSI3<5 exit>65 +200SMA,1.38
+2024,mean_reversion,Nifty IT,RSI5<5 exit>50 +200SMA,0.73
+2024,mean_reversion,Nifty Pharma,RSI5<20 exit>50 +200SMA,0.77
+2024,mean_reversion,Nifty FMCG,RSI3<10 exit>65 +200SMA,0.8
+2024,mean_reversion,Nifty Auto,IBS<0.1 exit>0.5 +200SMA,1.04
+2024,mean_reversion,Nifty Metal,RSI2<10 exit>50 +200SMA,0.98
+2024,mean_reversion,Nifty Realty,"Bollinger 10,2.5 exit>mid",0.93
+2024,mean_reversion,Nifty Energy,RSI3<10 exit>50 +200SMA,1.05
+2024,mean_reversion,Nifty Infra,RSI3<10 exit>50 +200SMA,1.08
+2024,mean_reversion,Nifty PSU Bank,"Bollinger 30,2 exit>mid +200SMA",0.87
+2024,mean_reversion,Nifty PSE,IBS<0.1 exit>0.8 +200SMA,0.89
+2024,mean_reversion,Nifty MNC,RSI5<20 exit>65 +200SMA,1.33
+2024,mean_reversion,RELIANCE,RSI3<5 exit>50 +200SMA,0.69
+2024,mean_reversion,HDFCBANK,"Bollinger 20,2 exit>mid +200SMA",1.22
+2024,mean_reversion,ICICIBANK,RSI2<5 exit>50 +200SMA,0.88
+2024,mean_reversion,INFY,RSI3<30 exit>80,0.63
+2024,mean_reversion,TCS,RSI5<25 exit>80 +200SMA,0.75
+2024,mean_reversion,ITC,RSI5<25 exit>80 +200SMA,1.14
+2024,mean_reversion,LT,RSI5<15 exit>80 +200SMA,0.79
+2024,mean_reversion,SBIN,RSI3<10 exit>65 +200SMA,0.87
+2024,mean_reversion,HINDUNILVR,RSI5<5 exit>50,0.66
+2024,mean_reversion,BHARTIARTL,RSI2<15 exit>50,1.12
+2024,mean_reversion,AXISBANK,IBS<0.1 exit>0.8,0.75
+2024,mean_reversion,KOTAKBANK,RSI5<10 exit>80 +200SMA,0.73
+2024,mean_reversion,MARUTI,RSI5<10 exit>65 +200SMA,0.74
+2025,mean_reversion,Nifty 50 (NIFTYBEES),RSI5<15 exit>50 +200SMA,0.82
+2025,mean_reversion,Bank Nifty (BANKBEES),"Bollinger 30,2.5 exit>mid +200SMA",0.68
+2025,mean_reversion,Nifty Next 50 (JUNIORBEES),RSI5<30 exit>80,0.81
+2025,mean_reversion,Gold (GOLDBEES),RSI5<20 exit>80 +200SMA,1.11
+2025,mean_reversion,Nifty 500,RSI3<5 exit>65 +200SMA,1.4
+2025,mean_reversion,Midcap 50,RSI3<5 exit>65 +200SMA,1.48
+2025,mean_reversion,Nifty IT,IBS<0.3 exit>0.8 +200SMA,0.84
+2025,mean_reversion,Nifty Pharma,RSI5<20 exit>50,1.04
+2025,mean_reversion,Nifty FMCG,RSI2<5 exit>65 +200SMA,0.63
+2025,mean_reversion,Nifty Auto,IBS<0.1 exit>0.8 +200SMA,1.02
+2025,mean_reversion,Nifty Metal,RSI2<10 exit>50 +200SMA,1.03
+2025,mean_reversion,Nifty Realty,RSI5<10 exit>80 +200SMA,1.04
+2025,mean_reversion,Nifty Energy,RSI5<15 exit>80 +200SMA,0.91
+2025,mean_reversion,Nifty Infra,RSI5<15 exit>50 +200SMA,1.16
+2025,mean_reversion,Nifty PSU Bank,RSI5<30 exit>80 +200SMA,1.06
+2025,mean_reversion,Nifty PSE,RSI2<5 exit>80 +200SMA,1.05
+2025,mean_reversion,Nifty MNC,RSI5<20 exit>65 +200SMA,0.92
+2025,mean_reversion,RELIANCE,RSI5<15 exit>65 +200SMA,0.68
+2025,mean_reversion,HDFCBANK,"Bollinger 20,2 exit>mid +200SMA",1.29
+2025,mean_reversion,ICICIBANK,RSI2<5 exit>50 +200SMA,0.79
+2025,mean_reversion,INFY,RSI3<30 exit>80,0.65
+2025,mean_reversion,TCS,RSI3<5 exit>50 +200SMA,0.76
+2025,mean_reversion,ITC,RSI5<30 exit>80 +200SMA,0.99
+2025,mean_reversion,LT,"Bollinger 20,2.5 exit>mid +200SMA",1.13
+2025,mean_reversion,SBIN,RSI2<5 exit>80 +200SMA,0.76
+2025,mean_reversion,HINDUNILVR,RSI5<5 exit>50,0.43
+2025,mean_reversion,BHARTIARTL,RSI3<30 exit>80,0.97
+2025,mean_reversion,AXISBANK,RSI5<20 exit>80 +200SMA,0.85
+2025,mean_reversion,KOTAKBANK,RSI5<10 exit>80 +200SMA,0.73
+2025,mean_reversion,MARUTI,RSI5<10 exit>65 +200SMA,0.74
+2026,mean_reversion,Nifty 50 (NIFTYBEES),RSI5<10 exit>80 +200SMA,0.73
+2026,mean_reversion,Bank Nifty (BANKBEES),RSI5<15 exit>50,0.94
+2026,mean_reversion,Nifty Next 50 (JUNIORBEES),RSI5<30 exit>80,0.92
+2026,mean_reversion,Gold (GOLDBEES),RSI5<30 exit>80 +200SMA,0.84
+2026,mean_reversion,Nifty 500,RSI3<5 exit>65 +200SMA,1.33
+2026,mean_reversion,Midcap 50,RSI3<5 exit>65,1.75
+2026,mean_reversion,Nifty IT,RSI5<5 exit>50 +200SMA,0.73
+2026,mean_reversion,Nifty Pharma,RSI5<20 exit>50,1.41
+2026,mean_reversion,Nifty FMCG,RSI5<25 exit>65,0.89
+2026,mean_reversion,Nifty Auto,RSI5<10 exit>50,0.98
+2026,mean_reversion,Nifty Metal,IBS<0.1 exit>0.7,1.29
+2026,mean_reversion,Nifty Realty,RSI5<15 exit>50 +200SMA,1.4
+2026,mean_reversion,Nifty Energy,"Bollinger 20,2 exit>mid +200SMA",0.9
+2026,mean_reversion,Nifty Infra,RSI3<10 exit>50,1.28
+2026,mean_reversion,Nifty PSU Bank,"Bollinger 30,2 exit>mid",1.18
+2026,mean_reversion,Nifty PSE,RSI5<20 exit>50,0.9
+2026,mean_reversion,Nifty MNC,RSI5<20 exit>65,0.92
+2026,mean_reversion,RELIANCE,RSI5<10 exit>80,1.23
+2026,mean_reversion,HDFCBANK,RSI5<15 exit>80,1.38
+2026,mean_reversion,ICICIBANK,RSI2<15 exit>50 +200SMA,1.23
+2026,mean_reversion,INFY,RSI3<30 exit>80,0.43
+2026,mean_reversion,TCS,RSI3<5 exit>50 +200SMA,0.76
+2026,mean_reversion,ITC,RSI5<30 exit>80 +200SMA,0.98
+2026,mean_reversion,LT,RSI5<15 exit>50,1.25
+2026,mean_reversion,SBIN,RSI5<10 exit>65,1.15
+2026,mean_reversion,HINDUNILVR,RSI5<5 exit>50,0.43
+2026,mean_reversion,BHARTIARTL,RSI3<25 exit>80,1.39
+2026,mean_reversion,AXISBANK,RSI3<10 exit>80 +200SMA,0.69
+2026,mean_reversion,KOTAKBANK,"Bollinger 30,2.5 exit>mid",1.19
+2026,mean_reversion,MARUTI,RSI3<5 exit>65,1.21
+2016,trend,Nifty 50 (NIFTYBEES),SMA 50/150 cross,0.14
+2016,trend,Bank Nifty (BANKBEES),Donchian 20/10,0.75
+2016,trend,Nifty Next 50 (JUNIORBEES),Close>SMA50 band2%,0.71
+2016,trend,Gold (GOLDBEES),SMA 50/150 cross,0.34
+2016,trend,Nifty 500,Donchian 200/50,0.76
+2016,trend,Midcap 50,Close>SMA20,0.43
+2016,trend,Nifty IT,Donchian 200/10,0.45
+2016,trend,Nifty Pharma,Close>SMA250,1.03
+2016,trend,Nifty FMCG,SMA 50/200 cross,0.65
+2016,trend,Nifty Auto,Donchian 200/50,0.77
+2016,trend,Nifty Metal,Donchian 50/10,0.87
+2016,trend,Nifty Realty,Donchian 200/10,0.34
+2016,trend,Nifty Energy,Donchian 200/10,0.5
+2016,trend,Nifty Infra,Donchian 200/10,0.28
+2016,trend,Nifty PSU Bank,Donchian 20/10,0.36
+2016,trend,Nifty PSE,Donchian 200/10,0.61
+2016,trend,Nifty MNC,Close>SMA20,0.74
+2016,trend,RELIANCE,Donchian 100/10,0.13
+2016,trend,HDFCBANK,Close>SMA20 band2%,0.51
+2016,trend,ICICIBANK,SMA 5/150 cross,0.24
+2016,trend,INFY,Close>SMA20 band2%,0.26
+2016,trend,TCS,SMA 20/200 cross,0.49
+2016,trend,ITC,SMA 50/100 cross,0.5
+2016,trend,LT,Close>SMA20,0.46
+2016,trend,SBIN,Donchian 200/20,0.56
+2016,trend,HINDUNILVR,EMA 21/55 cross,0.79
+2016,trend,BHARTIARTL,Donchian 100/50,-0.02
+2016,trend,AXISBANK,Donchian 100/50,0.61
+2016,trend,KOTAKBANK,Close>SMA20 band2%,0.47
+2016,trend,MARUTI,Close>SMA50,1.06
+2017,trend,Nifty 50 (NIFTYBEES),Close>SMA50 band2%,0.54
+2017,trend,Bank Nifty (BANKBEES),Close>SMA20 band2%,0.9
+2017,trend,Nifty Next 50 (JUNIORBEES),EMA 12/26 cross,1.05
+2017,trend,Gold (GOLDBEES),Donchian 200/50,0.09
+2017,trend,Nifty 500,Donchian 200/50,0.78
+2017,trend,Midcap 50,Close>SMA20,0.7
+2017,trend,Nifty IT,Donchian 200/10,0.51
+2017,trend,Nifty Pharma,Donchian 200/50,0.95
+2017,trend,Nifty FMCG,Donchian 200/50,0.55
+2017,trend,Nifty Auto,SMA 10/50 cross,0.99
+2017,trend,Nifty Metal,Donchian 50/10,0.77
+2017,trend,Nifty Realty,Donchian 20/10,0.46
+2017,trend,Nifty Energy,Donchian 200/10,0.67
+2017,trend,Nifty Infra,Close>SMA50 band2%,0.43
+2017,trend,Nifty PSU Bank,Donchian 20/10,0.49
+2017,trend,Nifty PSE,Donchian 200/10,0.72
+2017,trend,Nifty MNC,Donchian 20/10,0.83
+2017,trend,RELIANCE,SMA 50/100 cross,0.08
+2017,trend,HDFCBANK,Close>SMA20 band2%,0.95
+2017,trend,ICICIBANK,SMA 50/150 cross,0.38
+2017,trend,INFY,Close>SMA20 band2%,0.32
+2017,trend,TCS,SMA 20/200 cross,0.58
+2017,trend,ITC,SMA 50/100 cross,0.54
+2017,trend,LT,SMA 20/50 cross,0.55
+2017,trend,SBIN,Donchian 100/10,0.37
+2017,trend,HINDUNILVR,SMA 20/50 cross,0.59
+2017,trend,BHARTIARTL,SMA 20/100 cross,-0.06
+2017,trend,AXISBANK,Close>SMA50,0.8
+2017,trend,KOTAKBANK,Close>SMA200 band2%,0.66
+2017,trend,MARUTI,Close>SMA50,1.53
+2018,trend,Nifty 50 (NIFTYBEES),SMA 50/150 cross,0.7
+2018,trend,Bank Nifty (BANKBEES),SMA 20/50 cross,0.91
+2018,trend,Nifty Next 50 (JUNIORBEES),SMA 5/50 cross,1.0
+2018,trend,Gold (GOLDBEES),Close>SMA20,0.11
+2018,trend,Nifty 500,Donchian 100/50,1.06
+2018,trend,Midcap 50,Close>SMA20,0.82
+2018,trend,Nifty IT,Donchian 200/20,0.54
+2018,trend,Nifty Pharma,Donchian 200/50,0.76
+2018,trend,Nifty FMCG,EMA 8/21 cross,0.31
+2018,trend,Nifty Auto,SMA 10/50 cross,0.93
+2018,trend,Nifty Metal,Close>SMA100,0.99
+2018,trend,Nifty Realty,Donchian 200/50,0.67
+2018,trend,Nifty Energy,Donchian 200/10,0.8
+2018,trend,Nifty Infra,Close>SMA50 band2%,0.62
+2018,trend,Nifty PSU Bank,SMA 10/200 cross,0.3
+2018,trend,Nifty PSE,Donchian 200/10,0.63
+2018,trend,Nifty MNC,Close>SMA50 band2%,1.15
+2018,trend,RELIANCE,SMA 50/100 cross,0.52
+2018,trend,HDFCBANK,Close>SMA20 band2%,1.16
+2018,trend,ICICIBANK,SMA 20/200 cross,0.37
+2018,trend,INFY,SMA 5/50 cross,0.43
+2018,trend,TCS,SMA 50/200 cross,0.56
+2018,trend,ITC,SMA 50/100 cross,0.21
+2018,trend,LT,SMA 50/100 cross,0.58
+2018,trend,SBIN,SMA 10/150 cross,0.38
+2018,trend,HINDUNILVR,SMA 20/50 cross,0.87
+2018,trend,BHARTIARTL,SMA 10/100 cross,0.24
+2018,trend,AXISBANK,SMA 50/100 cross,0.6
+2018,trend,KOTAKBANK,Close>SMA200 band2%,0.61
+2018,trend,MARUTI,Close>SMA50,1.85
+2019,trend,Nifty 50 (NIFTYBEES),EMA 12/26 cross,0.89
+2019,trend,Bank Nifty (BANKBEES),Close>SMA20 band2%,1.15
+2019,trend,Nifty Next 50 (JUNIORBEES),Close>SMA20,0.9
+2019,trend,Gold (GOLDBEES),Close>SMA20,0.07
+2019,trend,Nifty 500,Donchian 100/50,0.86
+2019,trend,Midcap 50,Close>SMA20,0.66
+2019,trend,Nifty IT,Donchian 200/50,0.6
+2019,trend,Nifty Pharma,Donchian 200/20,0.52
+2019,trend,Nifty FMCG,SMA 5/50 cross,0.55
+2019,trend,Nifty Auto,SMA 50/200 cross,0.84
+2019,trend,Nifty Metal,Donchian 100/50,0.81
+2019,trend,Nifty Realty,Donchian 20/10,0.71
+2019,trend,Nifty Energy,Donchian 200/50,0.68
+2019,trend,Nifty Infra,Donchian 200/10,0.57
+2019,trend,Nifty PSU Bank,SMA 10/200 cross,0.4
+2019,trend,Nifty PSE,Donchian 100/10,0.8
+2019,trend,Nifty MNC,Close>SMA50 band2%,1.14
+2019,trend,RELIANCE,SMA 50/100 cross,0.66
+2019,trend,HDFCBANK,Close>SMA20 band2%,1.58
+2019,trend,ICICIBANK,SMA 50/150 cross,0.6
+2019,trend,INFY,EMA 50/200 cross,0.34
+2019,trend,TCS,SMA 50/100 cross,0.38
+2019,trend,ITC,SMA 50/100 cross,0.11
+2019,trend,LT,SMA 50/100 cross,0.61
+2019,trend,SBIN,SMA 5/150 cross,0.45
+2019,trend,HINDUNILVR,Donchian 200/50,0.95
+2019,trend,BHARTIARTL,Close>SMA100 band2%,0.36
+2019,trend,AXISBANK,Donchian 100/50,0.62
+2019,trend,KOTAKBANK,EMA 21/55 cross,0.81
+2019,trend,MARUTI,Close>SMA50,1.51
+2020,trend,Nifty 50 (NIFTYBEES),EMA 12/26 cross,0.59
+2020,trend,Bank Nifty (BANKBEES),Donchian 50/20,0.67
+2020,trend,Nifty Next 50 (JUNIORBEES),Close>SMA20,0.73
+2020,trend,Gold (GOLDBEES),Donchian 20/10,0.44
+2020,trend,Nifty 500,Donchian 100/50,0.19
+2020,trend,Midcap 50,Close>SMA20,0.16
+2020,trend,Nifty IT,Donchian 200/20,0.6
+2020,trend,Nifty Pharma,Donchian 200/10,0.27
+2020,trend,Nifty FMCG,EMA 8/21 cross,0.46
+2020,trend,Nifty Auto,SMA 50/200 cross,0.35
+2020,trend,Nifty Metal,Donchian 100/50,0.88
+2020,trend,Nifty Realty,SMA 5/100 cross,0.54
+2020,trend,Nifty Energy,EMA 50/200 cross,0.35
+2020,trend,Nifty Infra,Donchian 200/10,-0.04
+2020,trend,Nifty PSU Bank,Close>SMA20,-0.38
+2020,trend,Nifty PSE,Donchian 100/10,0.29
+2020,trend,Nifty MNC,SMA 20/200 cross,0.55
+2020,trend,RELIANCE,EMA 50/200 cross,0.8
+2020,trend,HDFCBANK,Close>SMA20 band2%,1.41
+2020,trend,ICICIBANK,SMA 50/150 cross,0.51
+2020,trend,INFY,EMA 50/200 cross,0.41
+2020,trend,TCS,SMA 50/200 cross,0.33
+2020,trend,ITC,SMA 50/100 cross,0.03
+2020,trend,LT,SMA 50/100 cross,0.15
+2020,trend,SBIN,SMA 50/100 cross,-0.04
+2020,trend,HINDUNILVR,SMA 20/50 cross,0.91
+2020,trend,BHARTIARTL,Close>SMA150 band2%,0.45
+2020,trend,AXISBANK,SMA 20/50 cross,0.26
+2020,trend,KOTAKBANK,SMA 10/150 cross,0.64
+2020,trend,MARUTI,SMA 10/200 cross,0.98
+2021,trend,Nifty 50 (NIFTYBEES),SMA 20/50 cross,1.45
+2021,trend,Bank Nifty (BANKBEES),Close>SMA50,1.12
+2021,trend,Nifty Next 50 (JUNIORBEES),EMA 8/21 cross,1.13
+2021,trend,Gold (GOLDBEES),SMA 5/100 cross,0.7
+2021,trend,Nifty 500,SMA 20/50 cross,1.14
+2021,trend,Midcap 50,Donchian 200/20,0.9
+2021,trend,Nifty IT,Donchian 200/10,0.84
+2021,trend,Nifty Pharma,Donchian 200/50,0.47
+2021,trend,Nifty FMCG,EMA 8/21 cross,0.7
+2021,trend,Nifty Auto,SMA 20/50 cross,0.72
+2021,trend,Nifty Metal,Donchian 100/50,1.0
+2021,trend,Nifty Realty,SMA 5/100 cross,1.08
+2021,trend,Nifty Energy,Close>SMA100,0.49
+2021,trend,Nifty Infra,Close>SMA20 band2%,0.38
+2021,trend,Nifty PSU Bank,Close>SMA20,0.2
+2021,trend,Nifty PSE,Close>SMA20,0.31
+2021,trend,Nifty MNC,Close>SMA20 band2%,0.67
+2021,trend,RELIANCE,Close>SMA20 band2%,0.93
+2021,trend,HDFCBANK,Close>SMA20 band2%,1.23
+2021,trend,ICICIBANK,SMA 50/150 cross,0.5
+2021,trend,INFY,SMA 10/50 cross,0.83
+2021,trend,TCS,Close>SMA250 band2%,0.56
+2021,trend,ITC,SMA 20/50 cross,0.3
+2021,trend,LT,SMA 50/100 cross,0.49
+2021,trend,SBIN,SMA 10/50 cross,0.38
+2021,trend,HINDUNILVR,Close>SMA20 band2%,0.92
+2021,trend,BHARTIARTL,EMA 34/89 cross,0.5
+2021,trend,AXISBANK,SMA 10/50 cross,0.4
+2021,trend,KOTAKBANK,Close>SMA100 band2%,0.78
+2021,trend,MARUTI,Close>SMA50,0.92
+2022,trend,Nifty 50 (NIFTYBEES),EMA 12/26 cross,1.45
+2022,trend,Bank Nifty (BANKBEES),EMA 12/26 cross,1.03
+2022,trend,Nifty Next 50 (JUNIORBEES),Close>SMA100,1.18
+2022,trend,Gold (GOLDBEES),SMA 5/200 cross,0.65
+2022,trend,Nifty 500,SMA 20/50 cross,1.13
+2022,trend,Midcap 50,Donchian 200/20,0.89
+2022,trend,Nifty IT,EMA 8/21 cross,1.29
+2022,trend,Nifty Pharma,Close>SMA250 band2%,0.29
+2022,trend,Nifty FMCG,Close>SMA20 band2%,0.82
+2022,trend,Nifty Auto,SMA 10/50 cross,0.57
+2022,trend,Nifty Metal,Donchian 200/50,1.06
+2022,trend,Nifty Realty,Close>SMA20,1.19
+2022,trend,Nifty Energy,Close>SMA50,0.61
+2022,trend,Nifty Infra,Close>SMA20,0.82
+2022,trend,Nifty PSU Bank,Close>SMA20,0.55
+2022,trend,Nifty PSE,Close>SMA20,0.57
+2022,trend,Nifty MNC,Close>SMA250 band2%,0.87
+2022,trend,RELIANCE,EMA 12/26 cross,0.9
+2022,trend,HDFCBANK,EMA 12/26 cross,0.85
+2022,trend,ICICIBANK,SMA 20/50 cross,0.75
+2022,trend,INFY,EMA 8/21 cross,1.01
+2022,trend,TCS,Donchian 20/10,0.88
+2022,trend,ITC,SMA 20/50 cross,0.3
+2022,trend,LT,SMA 50/150 cross,0.83
+2022,trend,SBIN,Close>SMA20,0.72
+2022,trend,HINDUNILVR,Close>SMA20 band2%,1.13
+2022,trend,BHARTIARTL,SMA 20/150 cross,0.69
+2022,trend,AXISBANK,SMA 20/100 cross,0.27
+2022,trend,KOTAKBANK,Close>SMA100 band2%,0.67
+2022,trend,MARUTI,SMA 20/50 cross,0.76
+2023,trend,Nifty 50 (NIFTYBEES),SMA 5/50 cross,1.08
+2023,trend,Bank Nifty (BANKBEES),Close>SMA20,0.87
+2023,trend,Nifty Next 50 (JUNIORBEES),EMA 8/21 cross,1.01
+2023,trend,Gold (GOLDBEES),SMA 5/200 cross,0.7
+2023,trend,Nifty 500,SMA 10/50 cross,0.67
+2023,trend,Midcap 50,Donchian 200/20,0.58
+2023,trend,Nifty IT,Donchian 50/10,1.19
+2023,trend,Nifty Pharma,EMA 8/21 cross,0.27
+2023,trend,Nifty FMCG,Close>SMA20 band2%,0.41
+2023,trend,Nifty Auto,EMA 50/200 cross,0.29
+2023,trend,Nifty Metal,SMA 10/50 cross,1.02
+2023,trend,Nifty Realty,Close>SMA20,0.77
+2023,trend,Nifty Energy,Close>SMA20 band2%,0.46
+2023,trend,Nifty Infra,Close>SMA20,0.81
+2023,trend,Nifty PSU Bank,EMA 8/21 cross,0.74
+2023,trend,Nifty PSE,Close>SMA20,0.61
+2023,trend,Nifty MNC,Close>SMA20 band2%,0.16
+2023,trend,RELIANCE,Close>SMA20 band2%,0.59
+2023,trend,HDFCBANK,EMA 34/89 cross,0.38
+2023,trend,ICICIBANK,SMA 5/100 cross,0.67
+2023,trend,INFY,SMA 10/50 cross,0.84
+2023,trend,TCS,Donchian 20/10,0.76
+2023,trend,ITC,SMA 20/50 cross,0.58
+2023,trend,LT,EMA 8/21 cross,0.79
+2023,trend,SBIN,Close>SMA20,0.79
+2023,trend,HINDUNILVR,Close>SMA20,0.72
+2023,trend,BHARTIARTL,Donchian 50/20,0.5
+2023,trend,AXISBANK,SMA 5/50 cross,0.37
+2023,trend,KOTAKBANK,Close>SMA100 band2%,0.36
+2023,trend,MARUTI,SMA 20/50 cross,0.21
+2024,trend,Nifty 50 (NIFTYBEES),EMA 8/21 cross,1.25
+2024,trend,Bank Nifty (BANKBEES),Close>SMA20,1.01
+2024,trend,Nifty Next 50 (JUNIORBEES),EMA 8/21 cross,1.33
+2024,trend,Gold (GOLDBEES),SMA 5/100 cross,0.81
+2024,trend,Nifty 500,SMA 10/50 cross,1.07
+2024,trend,Midcap 50,Donchian 200/20,1.2
+2024,trend,Nifty IT,Donchian 20/10,1.25
+2024,trend,Nifty Pharma,Close>SMA150 band2%,0.66
+2024,trend,Nifty FMCG,Donchian 200/10,0.63
+2024,trend,Nifty Auto,EMA 50/200 cross,0.88
+2024,trend,Nifty Metal,SMA 10/50 cross,1.23
+2024,trend,Nifty Realty,Close>SMA20,1.36
+2024,trend,Nifty Energy,Close>SMA20 band2%,1.26
+2024,trend,Nifty Infra,Close>SMA20 band2%,1.28
+2024,trend,Nifty PSU Bank,EMA 8/21 cross,0.98
+2024,trend,Nifty PSE,Close>SMA20,1.37
+2024,trend,Nifty MNC,SMA 5/150 cross,0.71
+2024,trend,RELIANCE,Donchian 20/10,0.85
+2024,trend,HDFCBANK,EMA 34/89 cross,0.33
+2024,trend,ICICIBANK,SMA 5/200 cross,0.65
+2024,trend,INFY,EMA 8/21 cross,0.69
+2024,trend,TCS,Donchian 20/10,0.58
+2024,trend,ITC,Close>SMA250 band2%,0.98
+2024,trend,LT,Close>SMA150 band2%,1.15
+2024,trend,SBIN,Close>SMA20 band2%,0.9
+2024,trend,HINDUNILVR,Close>SMA20,0.36
+2024,trend,BHARTIARTL,EMA 12/26 cross,0.76
+2024,trend,AXISBANK,Close>SMA50,0.6
+2024,trend,KOTAKBANK,Close>SMA100 band2%,0.17
+2024,trend,MARUTI,SMA 20/100 cross,0.49
+2025,trend,Nifty 50 (NIFTYBEES),SMA 5/50 cross,1.38
+2025,trend,Bank Nifty (BANKBEES),Close>SMA20,0.88
+2025,trend,Nifty Next 50 (JUNIORBEES),Close>SMA100,1.6
+2025,trend,Gold (GOLDBEES),SMA 5/100 cross,0.73
+2025,trend,Nifty 500,SMA 5/50 cross,1.22
+2025,trend,Midcap 50,SMA 5/100 cross,1.25
+2025,trend,Nifty IT,Close>SMA20 band2%,1.29
+2025,trend,Nifty Pharma,Close>SMA20 band2%,1.22
+2025,trend,Nifty FMCG,Close>SMA20 band2%,0.7
+2025,trend,Nifty Auto,EMA 12/26 cross,1.12
+2025,trend,Nifty Metal,SMA 10/50 cross,1.22
+2025,trend,Nifty Realty,Close>SMA20,1.36
+2025,trend,Nifty Energy,Close>SMA20 band2%,1.06
+2025,trend,Nifty Infra,Close>SMA20,1.07
+2025,trend,Nifty PSU Bank,EMA 8/21 cross,0.99
+2025,trend,Nifty PSE,Close>SMA20,1.19
+2025,trend,Nifty MNC,Donchian 50/20,1.08
+2025,trend,RELIANCE,Donchian 20/10,0.63
+2025,trend,HDFCBANK,EMA 34/89 cross,0.23
+2025,trend,ICICIBANK,SMA 5/100 cross,0.67
+2025,trend,INFY,Close>SMA50 band2%,0.92
+2025,trend,TCS,EMA 12/26 cross,0.59
+2025,trend,ITC,Close>SMA50 band2%,1.02
+2025,trend,LT,SMA 50/150 cross,1.19
+2025,trend,SBIN,Close>SMA20 band2%,0.78
+2025,trend,HINDUNILVR,Close>SMA20,0.37
+2025,trend,BHARTIARTL,EMA 8/21 cross,1.1
+2025,trend,AXISBANK,Close>SMA200 band2%,0.4
+2025,trend,KOTAKBANK,Close>SMA20 band2%,-0.18
+2025,trend,MARUTI,Close>SMA50,0.38
+2026,trend,Nifty 50 (NIFTYBEES),SMA 5/50 cross,0.94
+2026,trend,Bank Nifty (BANKBEES),Close>SMA20,0.69
+2026,trend,Nifty Next 50 (JUNIORBEES),SMA 10/50 cross,1.32
+2026,trend,Gold (GOLDBEES),SMA 5/200 cross,1.22
+2026,trend,Nifty 500,SMA 50/100 cross,0.86
+2026,trend,Midcap 50,SMA 5/100 cross,0.99
+2026,trend,Nifty IT,EMA 8/21 cross,0.63
+2026,trend,Nifty Pharma,SMA 50/100 cross,0.76
+2026,trend,Nifty FMCG,Donchian 200/10,0.49
+2026,trend,Nifty Auto,SMA 5/100 cross,0.98
+2026,trend,Nifty Metal,SMA 10/50 cross,0.89
+2026,trend,Nifty Realty,SMA 50/100 cross,0.93
+2026,trend,Nifty Energy,Donchian 100/50,0.82
+2026,trend,Nifty Infra,Close>SMA150,0.97
+2026,trend,Nifty PSU Bank,SMA 50/150 cross,1.07
+2026,trend,Nifty PSE,SMA 10/100 cross,1.17
+2026,trend,Nifty MNC,SMA 10/100 cross,0.97
+2026,trend,RELIANCE,EMA 50/200 cross,0.18
+2026,trend,HDFCBANK,SMA 50/200 cross,0.05
+2026,trend,ICICIBANK,EMA 50/200 cross,0.68
+2026,trend,INFY,SMA 10/150 cross,0.29
+2026,trend,TCS,SMA 50/150 cross,0.37
+2026,trend,ITC,SMA 50/200 cross,0.83
+2026,trend,LT,EMA 34/89 cross,0.9
+2026,trend,SBIN,EMA 8/21 cross,0.88
+2026,trend,HINDUNILVR,EMA 8/21 cross,0.08
+2026,trend,BHARTIARTL,SMA 20/200 cross,1.13
+2026,trend,AXISBANK,EMA 12/26 cross,0.36
+2026,trend,KOTAKBANK,Close>SMA20 band2%,-0.47
+2026,trend,MARUTI,EMA 8/21 cross,0.4
+2016,momentum,Nifty 50 (NIFTYBEES),ROC63>5%,0.24
+2016,momentum,Bank Nifty (BANKBEES),ROC21>5%,0.64
+2016,momentum,Nifty Next 50 (JUNIORBEES),ROC21>5%,0.76
+2016,momentum,Gold (GOLDBEES),Dual: ROC252>6% & >200SMA,0.5
+2016,momentum,Nifty 500,ROC126>10%,0.47
+2016,momentum,Midcap 50,ROC21>5%,0.85
+2016,momentum,Nifty IT,ROC252>0%,0.16
+2016,momentum,Nifty Pharma,ROC189>10%,1.02
+2016,momentum,Nifty FMCG,ROC252 skip21 >0,0.58
+2016,momentum,Nifty Auto,ROC252>0%,0.81
+2016,momentum,Nifty Metal,ROC21>10%,0.61
+2016,momentum,Nifty Realty,ROC21>10%,0.41
+2016,momentum,Nifty Energy,Dual: ROC189>6% & >200SMA,0.01
+2016,momentum,Nifty Infra,ROC21>5%,0.39
+2016,momentum,Nifty PSU Bank,ROC21>5%,0.38
+2016,momentum,Nifty PSE,ROC126>5%,0.54
+2016,momentum,Nifty MNC,ROC189>10%,0.7
+2016,momentum,RELIANCE,ROC252 skip21 >0,-0.01
+2016,momentum,HDFCBANK,ROC252 skip21 >0,0.54
+2016,momentum,ICICIBANK,ROC126 skip21 >0,0.21
+2016,momentum,INFY,ROC21>0%,0.16
+2016,momentum,TCS,ROC252>0%,0.45
+2016,momentum,ITC,ROC252>5%,0.48
+2016,momentum,LT,ROC21>5%,0.46
+2016,momentum,SBIN,ROC21>10%,0.57
+2016,momentum,HINDUNILVR,Dual: ROC63>6% & >200SMA,0.74
+2016,momentum,BHARTIARTL,ROC63>5%,-0.07
+2016,momentum,AXISBANK,ROC126>10%,0.95
+2016,momentum,KOTAKBANK,ROC252 skip21 >0,0.75
+2016,momentum,MARUTI,ROC252>10%,0.97
+2017,momentum,Nifty 50 (NIFTYBEES),ROC63>5%,0.44
+2017,momentum,Bank Nifty (BANKBEES),ROC21>5%,0.69
+2017,momentum,Nifty Next 50 (JUNIORBEES),ROC21>5%,0.99
+2017,momentum,Gold (GOLDBEES),ROC63>10%,0.23
+2017,momentum,Nifty 500,ROC126 skip21 >0,0.65
+2017,momentum,Midcap 50,ROC21>5%,0.83
+2017,momentum,Nifty IT,ROC252 skip21 >0,0.44
+2017,momentum,Nifty Pharma,ROC189>10%,1.03
+2017,momentum,Nifty FMCG,ROC63 skip21 >0,0.57
+2017,momentum,Nifty Auto,ROC21>0%,0.78
+2017,momentum,Nifty Metal,ROC126>5%,0.56
+2017,momentum,Nifty Realty,ROC21>10%,0.58
+2017,momentum,Nifty Energy,Dual: ROC189>6% & >200SMA,0.3
+2017,momentum,Nifty Infra,ROC21>5%,0.36
+2017,momentum,Nifty PSU Bank,ROC21>10%,0.4
+2017,momentum,Nifty PSE,ROC126>5%,0.63
+2017,momentum,Nifty MNC,ROC21>0%,0.57
+2017,momentum,RELIANCE,ROC189 skip21 >0,0.06
+2017,momentum,HDFCBANK,ROC126 skip21 >0,0.76
+2017,momentum,ICICIBANK,ROC126 skip21 >0,0.45
+2017,momentum,INFY,ROC252 skip21 >0,0.23
+2017,momentum,TCS,ROC189 skip21 >0,0.54
+2017,momentum,ITC,ROC252 skip21 >0,0.46
+2017,momentum,LT,ROC21>5%,0.39
+2017,momentum,SBIN,ROC21>10%,0.51
+2017,momentum,HINDUNILVR,ROC189 skip21 >0,0.49
+2017,momentum,BHARTIARTL,ROC252 skip21 >0,-0.09
+2017,momentum,AXISBANK,ROC126>10%,0.83
+2017,momentum,KOTAKBANK,ROC252 skip21 >0,0.76
+2017,momentum,MARUTI,ROC63>0%,1.24
+2018,momentum,Nifty 50 (NIFTYBEES),ROC63>10%,0.69
+2018,momentum,Bank Nifty (BANKBEES),ROC63>10%,0.8
+2018,momentum,Nifty Next 50 (JUNIORBEES),ROC63>10%,0.95
+2018,momentum,Gold (GOLDBEES),ROC63>10%,0.24
+2018,momentum,Nifty 500,ROC126 skip21 >0,0.92
+2018,momentum,Midcap 50,ROC189>10%,0.79
+2018,momentum,Nifty IT,ROC252 skip21 >0,0.6
+2018,momentum,Nifty Pharma,ROC189>10%,0.9
+2018,momentum,Nifty FMCG,ROC252 skip21 >0,0.32
+2018,momentum,Nifty Auto,ROC126 skip21 >0,1.08
+2018,momentum,Nifty Metal,Dual: ROC126>6% & >200SMA,0.9
+2018,momentum,Nifty Realty,ROC63>10%,0.53
+2018,momentum,Nifty Energy,ROC126>0%,0.81
+2018,momentum,Nifty Infra,ROC252>5%,0.38
+2018,momentum,Nifty PSU Bank,ROC126>0%,0.23
+2018,momentum,Nifty PSE,ROC63>5%,0.72
+2018,momentum,Nifty MNC,ROC189>10%,1.03
+2018,momentum,RELIANCE,ROC126 skip21 >0,0.56
+2018,momentum,HDFCBANK,ROC126 skip21 >0,0.92
+2018,momentum,ICICIBANK,ROC126 skip21 >0,0.43
+2018,momentum,INFY,ROC252 skip21 >0,0.31
+2018,momentum,TCS,ROC126 skip21 >0,0.59
+2018,momentum,ITC,ROC252 skip21 >0,0.21
+2018,momentum,LT,ROC252>10%,0.46
+2018,momentum,SBIN,ROC126>5%,0.33
+2018,momentum,HINDUNILVR,ROC189 skip21 >0,0.6
+2018,momentum,BHARTIARTL,ROC252>0%,0.27
+2018,momentum,AXISBANK,ROC126>10%,0.79
+2018,momentum,KOTAKBANK,ROC252 skip21 >0,0.74
+2018,momentum,MARUTI,ROC21>0%,1.46
+2019,momentum,Nifty 50 (NIFTYBEES),ROC189>0%,0.72
+2019,momentum,Bank Nifty (BANKBEES),ROC21>0%,1.0
+2019,momentum,Nifty Next 50 (JUNIORBEES),ROC63>10%,0.98
+2019,momentum,Gold (GOLDBEES),ROC126>5%,0.19
+2019,momentum,Nifty 500,ROC189>0%,0.59
+2019,momentum,Midcap 50,ROC189>10%,0.62
+2019,momentum,Nifty IT,ROC252>5%,0.46
+2019,momentum,Nifty Pharma,ROC252>10%,0.64
+2019,momentum,Nifty FMCG,ROC252 skip21 >0,0.35
+2019,momentum,Nifty Auto,ROC63>10%,0.73
+2019,momentum,Nifty Metal,ROC126>0%,0.66
+2019,momentum,Nifty Realty,ROC21>5%,0.76
+2019,momentum,Nifty Energy,ROC126>0%,0.66
+2019,momentum,Nifty Infra,ROC252>5%,0.46
+2019,momentum,Nifty PSU Bank,ROC63>5%,0.37
+2019,momentum,Nifty PSE,ROC63>5%,0.93
+2019,momentum,Nifty MNC,ROC252>10%,1.06
+2019,momentum,RELIANCE,ROC126 skip21 >0,0.64
+2019,momentum,HDFCBANK,ROC126>0%,1.2
+2019,momentum,ICICIBANK,ROC126 skip21 >0,0.43
+2019,momentum,INFY,ROC252>0%,0.41
+2019,momentum,TCS,ROC126 skip21 >0,0.44
+2019,momentum,ITC,ROC252 skip21 >0,0.09
+2019,momentum,LT,ROC252>5%,0.71
+2019,momentum,SBIN,ROC63>10%,0.5
+2019,momentum,HINDUNILVR,Dual: ROC126>6% & >200SMA,1.05
+2019,momentum,BHARTIARTL,ROC63>5%,0.01
+2019,momentum,AXISBANK,ROC63>5%,0.71
+2019,momentum,KOTAKBANK,ROC252 skip21 >0,0.85
+2019,momentum,MARUTI,ROC126>5%,1.38
+2020,momentum,Nifty 50 (NIFTYBEES),ROC189>0%,0.4
+2020,momentum,Bank Nifty (BANKBEES),ROC63>10%,0.51
+2020,momentum,Nifty Next 50 (JUNIORBEES),ROC63>10%,0.62
+2020,momentum,Gold (GOLDBEES),Dual: ROC126>6% & >200SMA,0.46
+2020,momentum,Nifty 500,ROC21>10%,0.09
+2020,momentum,Midcap 50,ROC189>10%,0.33
+2020,momentum,Nifty IT,ROC63>5%,0.39
+2020,momentum,Nifty Pharma,ROC252>10%,0.15
+2020,momentum,Nifty FMCG,ROC252>0%,0.02
+2020,momentum,Nifty Auto,ROC126 skip21 >0,0.13
+2020,momentum,Nifty Metal,Dual: ROC126>6% & >200SMA,0.71
+2020,momentum,Nifty Realty,ROC21>5%,0.58
+2020,momentum,Nifty Energy,ROC189 skip21 >0,0.77
+2020,momentum,Nifty Infra,ROC252>10%,0.21
+2020,momentum,Nifty PSU Bank,ROC63>5%,-0.13
+2020,momentum,Nifty PSE,ROC189>5%,0.35
+2020,momentum,Nifty MNC,Dual: ROC63>6% & >200SMA,0.55
+2020,momentum,RELIANCE,ROC189>5%,0.96
+2020,momentum,HDFCBANK,ROC252>0%,0.94
+2020,momentum,ICICIBANK,ROC126 skip21 >0,0.29
+2020,momentum,INFY,ROC252 skip21 >0,0.41
+2020,momentum,TCS,ROC63 skip21 >0,0.57
+2020,momentum,ITC,ROC189 skip21 >0,0.03
+2020,momentum,LT,ROC252 skip21 >0,0.15
+2020,momentum,SBIN,ROC63 skip21 >0,0.05
+2020,momentum,HINDUNILVR,ROC126>0%,0.88
+2020,momentum,BHARTIARTL,ROC126>10%,0.34
+2020,momentum,AXISBANK,ROC63>5%,0.16
+2020,momentum,KOTAKBANK,ROC252 skip21 >0,0.69
+2020,momentum,MARUTI,ROC126>5%,0.87
+2021,momentum,Nifty 50 (NIFTYBEES),ROC63>0%,1.05
+2021,momentum,Bank Nifty (BANKBEES),ROC63>5%,0.9
+2021,momentum,Nifty Next 50 (JUNIORBEES),Dual: ROC189>6% & >200SMA,0.63
+2021,momentum,Gold (GOLDBEES),Dual: ROC126>6% & >200SMA,0.64
+2021,momentum,Nifty 500,ROC63>5%,0.79
+2021,momentum,Midcap 50,ROC63>10%,0.77
+2021,momentum,Nifty IT,ROC63>5%,1.11
+2021,momentum,Nifty Pharma,ROC252>10%,0.74
+2021,momentum,Nifty FMCG,ROC252>0%,0.12
+2021,momentum,Nifty Auto,ROC63>5%,0.73
+2021,momentum,Nifty Metal,ROC189>0%,0.98
+2021,momentum,Nifty Realty,ROC63>5%,0.93
+2021,momentum,Nifty Energy,ROC189 skip21 >0,0.75
+2021,momentum,Nifty Infra,ROC21>0%,0.16
+2021,momentum,Nifty PSU Bank,ROC21>0%,-0.03
+2021,momentum,Nifty PSE,ROC252>10%,0.32
+2021,momentum,Nifty MNC,Dual: ROC63>6% & >200SMA,0.87
+2021,momentum,RELIANCE,ROC189>5%,1.0
+2021,momentum,HDFCBANK,ROC126>0%,0.97
+2021,momentum,ICICIBANK,ROC63 skip21 >0,0.36
+2021,momentum,INFY,ROC252>0%,0.59
+2021,momentum,TCS,ROC63 skip21 >0,0.7
+2021,momentum,ITC,ROC189 skip21 >0,0.09
+2021,momentum,LT,ROC63>10%,0.39
+2021,momentum,SBIN,ROC63>10%,0.24
+2021,momentum,HINDUNILVR,ROC126>0%,0.81
+2021,momentum,BHARTIARTL,ROC126>10%,0.54
+2021,momentum,AXISBANK,ROC63>5%,0.42
+2021,momentum,KOTAKBANK,ROC63>10%,0.85
+2021,momentum,MARUTI,ROC21>0%,0.75
+2022,momentum,Nifty 50 (NIFTYBEES),ROC21>0%,1.22
+2022,momentum,Bank Nifty (BANKBEES),ROC63>5%,0.72
+2022,momentum,Nifty Next 50 (JUNIORBEES),ROC189>10%,0.99
+2022,momentum,Gold (GOLDBEES),ROC126>10%,0.59
+2022,momentum,Nifty 500,ROC63>0%,0.94
+2022,momentum,Midcap 50,ROC189>10%,0.99
+2022,momentum,Nifty IT,ROC252>5%,1.35
+2022,momentum,Nifty Pharma,ROC252>10%,0.62
+2022,momentum,Nifty FMCG,ROC252>0%,0.31
+2022,momentum,Nifty Auto,ROC189>5%,0.62
+2022,momentum,Nifty Metal,ROC126>10%,1.06
+2022,momentum,Nifty Realty,ROC63>5%,0.93
+2022,momentum,Nifty Energy,ROC189 skip21 >0,0.76
+2022,momentum,Nifty Infra,ROC21>0%,0.86
+2022,momentum,Nifty PSU Bank,ROC21>0%,0.32
+2022,momentum,Nifty PSE,ROC189>5%,0.51
+2022,momentum,Nifty MNC,ROC189>10%,0.88
+2022,momentum,RELIANCE,ROC189>5%,1.04
+2022,momentum,HDFCBANK,ROC189>0%,0.84
+2022,momentum,ICICIBANK,ROC63>0%,0.52
+2022,momentum,INFY,ROC252>0%,1.04
+2022,momentum,TCS,ROC189>5%,0.88
+2022,momentum,ITC,ROC189>0%,0.12
+2022,momentum,LT,ROC126>10%,0.71
+2022,momentum,SBIN,ROC21>0%,0.38
+2022,momentum,HINDUNILVR,ROC252 skip21 >0,0.92
+2022,momentum,BHARTIARTL,Dual: ROC189>6% & >200SMA,0.52
+2022,momentum,AXISBANK,ROC126>5%,0.22
+2022,momentum,KOTAKBANK,ROC63>0%,0.52
+2022,momentum,MARUTI,ROC189>10%,0.4
+2023,momentum,Nifty 50 (NIFTYBEES),ROC21>0%,0.98
+2023,momentum,Bank Nifty (BANKBEES),ROC63>5%,0.68
+2023,momentum,Nifty Next 50 (JUNIORBEES),Dual: ROC126>6% & >200SMA,0.6
+2023,momentum,Gold (GOLDBEES),ROC126>10%,0.55
+2023,momentum,Nifty 500,ROC63>5%,0.77
+2023,momentum,Midcap 50,ROC63>5%,0.55
+2023,momentum,Nifty IT,ROC63>5%,1.09
+2023,momentum,Nifty Pharma,ROC252>10%,0.63
+2023,momentum,Nifty FMCG,ROC252>0%,0.16
+2023,momentum,Nifty Auto,ROC63>5%,0.33
+2023,momentum,Nifty Metal,ROC21>0%,0.85
+2023,momentum,Nifty Realty,ROC63>5%,0.46
+2023,momentum,Nifty Energy,ROC21>10%,0.63
+2023,momentum,Nifty Infra,ROC21>0%,0.89
+2023,momentum,Nifty PSU Bank,ROC21>0%,0.64
+2023,momentum,Nifty PSE,ROC21>10%,0.39
+2023,momentum,Nifty MNC,Dual: ROC63>6% & >200SMA,0.23
+2023,momentum,RELIANCE,ROC189>5%,0.57
+2023,momentum,HDFCBANK,ROC126 skip21 >0,0.37
+2023,momentum,ICICIBANK,ROC21>0%,0.54
+2023,momentum,INFY,Dual: ROC126>6% & >200SMA,0.95
+2023,momentum,TCS,ROC63>5%,0.78
+2023,momentum,ITC,ROC189>0%,0.56
+2023,momentum,LT,ROC21>5%,0.66
+2023,momentum,SBIN,Dual: ROC126>6% & >200SMA,0.54
+2023,momentum,HINDUNILVR,ROC126>0%,0.38
+2023,momentum,BHARTIARTL,Dual: ROC189>6% & >200SMA,0.32
+2023,momentum,AXISBANK,ROC21>0%,0.54
+2023,momentum,KOTAKBANK,ROC63>10%,0.3
+2023,momentum,MARUTI,ROC21>0%,-0.16
+2024,momentum,Nifty 50 (NIFTYBEES),ROC21>0%,1.03
+2024,momentum,Bank Nifty (BANKBEES),ROC63>5%,0.73
+2024,momentum,Nifty Next 50 (JUNIORBEES),ROC63>0%,0.95
+2024,momentum,Gold (GOLDBEES),ROC126>0%,0.64
+2024,momentum,Nifty 500,Dual: ROC63>6% & >200SMA,1.15
+2024,momentum,Midcap 50,ROC63>0%,1.1
+2024,momentum,Nifty IT,ROC21>0%,1.06
+2024,momentum,Nifty Pharma,ROC252>10%,0.88
+2024,momentum,Nifty FMCG,ROC189>10%,0.56
+2024,momentum,Nifty Auto,ROC252>0%,0.97
+2024,momentum,Nifty Metal,ROC21>0%,1.12
+2024,momentum,Nifty Realty,ROC63>5%,1.06
+2024,momentum,Nifty Energy,ROC21>0%,1.06
+2024,momentum,Nifty Infra,ROC21>0%,1.43
+2024,momentum,Nifty PSU Bank,ROC126>0%,0.91
+2024,momentum,Nifty PSE,ROC126>5%,1.01
+2024,momentum,Nifty MNC,Dual: ROC63>6% & >200SMA,0.89
+2024,momentum,RELIANCE,ROC189>5%,0.56
+2024,momentum,HDFCBANK,ROC126 skip21 >0,0.28
+2024,momentum,ICICIBANK,ROC63 skip21 >0,0.56
+2024,momentum,INFY,Dual: ROC126>6% & >200SMA,0.73
+2024,momentum,TCS,ROC63>5%,0.56
+2024,momentum,ITC,ROC189>5%,0.97
+2024,momentum,LT,ROC126>10%,1.1
+2024,momentum,SBIN,ROC21>0%,0.66
+2024,momentum,HINDUNILVR,ROC252>5%,0.02
+2024,momentum,BHARTIARTL,ROC63 skip21 >0,0.72
+2024,momentum,AXISBANK,ROC21>0%,0.61
+2024,momentum,KOTAKBANK,ROC63>0%,0.16
+2024,momentum,MARUTI,ROC21>0%,0.05
+2025,momentum,Nifty 50 (NIFTYBEES),Dual: ROC63>6% & >200SMA,0.91
+2025,momentum,Bank Nifty (BANKBEES),ROC63>10%,0.42
+2025,momentum,Nifty Next 50 (JUNIORBEES),ROC63>0%,1.32
+2025,momentum,Gold (GOLDBEES),ROC126>0%,0.63
+2025,momentum,Nifty 500,Dual: ROC63>6% & >200SMA,1.18
+2025,momentum,Midcap 50,ROC63>0%,1.28
+2025,momentum,Nifty IT,ROC21>0%,1.28
+2025,momentum,Nifty Pharma,ROC189>0%,1.24
+2025,momentum,Nifty FMCG,ROC252>0%,0.45
+2025,momentum,Nifty Auto,ROC21>0%,1.09
+2025,momentum,Nifty Metal,ROC21>0%,1.24
+2025,momentum,Nifty Realty,ROC21>0%,1.12
+2025,momentum,Nifty Energy,ROC21>10%,0.94
+2025,momentum,Nifty Infra,ROC21>0%,1.34
+2025,momentum,Nifty PSU Bank,ROC126>0%,1.09
+2025,momentum,Nifty PSE,ROC126>5%,1.14
+2025,momentum,Nifty MNC,Dual: ROC63>6% & >200SMA,1.1
+2025,momentum,RELIANCE,ROC21>5%,0.47
+2025,momentum,HDFCBANK,ROC126>10%,0.21
+2025,momentum,ICICIBANK,ROC63 skip21 >0,0.57
+2025,momentum,INFY,ROC21>0%,1.09
+2025,momentum,TCS,ROC126 skip21 >0,0.5
+2025,momentum,ITC,Dual: ROC189>6% & >200SMA,0.9
+2025,momentum,LT,ROC126>10%,1.15
+2025,momentum,SBIN,ROC189 skip21 >0,0.76
+2025,momentum,HINDUNILVR,ROC63>10%,0.15
+2025,momentum,BHARTIARTL,ROC21>0%,0.86
+2025,momentum,AXISBANK,ROC189>0%,0.33
+2025,momentum,KOTAKBANK,ROC21>10%,0.38
+2025,momentum,MARUTI,ROC21>0%,0.18
+2026,momentum,Nifty 50 (NIFTYBEES),ROC126 skip21 >0,0.71
+2026,momentum,Bank Nifty (BANKBEES),ROC21>0%,0.38
+2026,momentum,Nifty Next 50 (JUNIORBEES),ROC63>5%,1.07
+2026,momentum,Gold (GOLDBEES),Dual: ROC126>6% & >200SMA,1.07
+2026,momentum,Nifty 500,Dual: ROC63>6% & >200SMA,0.82
+2026,momentum,Midcap 50,ROC21>0%,1.02
+2026,momentum,Nifty IT,ROC21>0%,0.67
+2026,momentum,Nifty Pharma,ROC252>5%,0.65
+2026,momentum,Nifty FMCG,ROC126 skip21 >0,0.41
+2026,momentum,Nifty Auto,Dual: ROC189>6% & >200SMA,0.84
+2026,momentum,Nifty Metal,ROC189>10%,0.98
+2026,momentum,Nifty Realty,ROC21>0%,0.94
+2026,momentum,Nifty Energy,ROC189 skip21 >0,0.7
+2026,momentum,Nifty Infra,ROC21>0%,1.14
+2026,momentum,Nifty PSU Bank,ROC126 skip21 >0,1.15
+2026,momentum,Nifty PSE,ROC63>5%,1.05
+2026,momentum,Nifty MNC,Dual: ROC63>6% & >200SMA,0.9
+2026,momentum,RELIANCE,ROC189>10%,0.19
+2026,momentum,HDFCBANK,ROC126 skip21 >0,0.24
+2026,momentum,ICICIBANK,ROC189>0%,0.61
+2026,momentum,INFY,ROC21>0%,0.64
+2026,momentum,TCS,ROC126 skip21 >0,0.3
+2026,momentum,ITC,Dual: ROC189>6% & >200SMA,0.72
+2026,momentum,LT,ROC189>10%,0.84
+2026,momentum,SBIN,ROC189 skip21 >0,0.83
+2026,momentum,HINDUNILVR,ROC63>10%,0.25
+2026,momentum,BHARTIARTL,ROC252>5%,1.18
+2026,momentum,AXISBANK,ROC21>0%,0.48
+2026,momentum,KOTAKBANK,ROC252 skip21 >0,-0.2
+2026,momentum,MARUTI,ROC252 skip21 >0,0.45
+2016,volatility,Nifty 50 (NIFTYBEES),"Vol breakout: +2 ATR10, hold 10d",0.41
+2016,volatility,Bank Nifty (BANKBEES),"Vol breakout: +2 ATR20, hold 10d",0.8
+2016,volatility,Nifty Next 50 (JUNIORBEES),"Vol breakout: +1 ATR20, hold 10d",0.78
+2016,volatility,Gold (GOLDBEES),"Vol breakout: +1.5 ATR10, hold 20d",0.37
+2016,volatility,Nifty 500,"Vol breakout: +2 ATR10, hold 5d",1.11
+2016,volatility,Midcap 50,"Vol breakout: +1.5 ATR10, hold 5d",1.39
+2016,volatility,Nifty IT,"Vol breakout: +2 ATR10, hold 20d",0.88
+2016,volatility,Nifty Pharma,Low-vol regime: vol10 < 80th pct,1.09
+2016,volatility,Nifty FMCG,Low-vol regime: vol60 < 70th pct,0.94
+2016,volatility,Nifty Auto,"Vol breakout: +1.5 ATR10, hold 20d",0.99
+2016,volatility,Nifty Metal,"Vol breakout: +2 ATR20, hold 5d",0.83
+2016,volatility,Nifty Realty,"Vol breakout: +2 ATR10, hold 5d",0.7
+2016,volatility,Nifty Energy,"Vol breakout: +1.5 ATR20, hold 5d",0.79
+2016,volatility,Nifty Infra,"Vol breakout: +2 ATR20, hold 10d",1.01
+2016,volatility,Nifty PSU Bank,"Vol breakout: +1.5 ATR10, hold 5d",0.85
+2016,volatility,Nifty PSE,"Vol breakout: +1.5 ATR20, hold 5d",0.64
+2016,volatility,Nifty MNC,"Vol breakout: +1 ATR20, hold 5d",1.23
+2016,volatility,RELIANCE,"Vol breakout: +1 ATR20, hold 10d",0.16
+2016,volatility,HDFCBANK,Low-vol regime: vol10 < 80th pct,0.83
+2016,volatility,ICICIBANK,Low-vol regime: vol20 < 60th pct,0.58
+2016,volatility,INFY,"Vol breakout: +2 ATR10, hold 20d",0.59
+2016,volatility,TCS,"Vol breakout: +0.5 ATR10, hold 20d",0.56
+2016,volatility,ITC,Low-vol regime: vol60 < 80th pct,0.6
+2016,volatility,LT,"Vol breakout: +2 ATR20, hold 10d",0.72
+2016,volatility,SBIN,"Vol breakout: +2 ATR10, hold 5d",0.89
+2016,volatility,HINDUNILVR,"Vol breakout: +2 ATR10, hold 5d",0.98
+2016,volatility,BHARTIARTL,Low-vol regime: vol10 < 60th pct,0.2
+2016,volatility,AXISBANK,"Vol breakout: +1.5 ATR20, hold 10d",0.94
+2016,volatility,KOTAKBANK,Low-vol regime: vol20 < 50th pct,0.82
+2016,volatility,MARUTI,"Vol breakout: +2 ATR10, hold 20d",1.32
+2017,volatility,Nifty 50 (NIFTYBEES),"Vol breakout: +2 ATR10, hold 10d",0.57
+2017,volatility,Bank Nifty (BANKBEES),Low-vol regime: vol10 < 80th pct,0.91
+2017,volatility,Nifty Next 50 (JUNIORBEES),Low-vol regime: vol10 < 60th pct,1.21
+2017,volatility,Gold (GOLDBEES),"Vol breakout: +1.5 ATR20, hold 10d",0.06
+2017,volatility,Nifty 500,"Vol breakout: +2 ATR10, hold 5d",1.05
+2017,volatility,Midcap 50,"Vol breakout: +1.5 ATR10, hold 10d",1.41
+2017,volatility,Nifty IT,"Vol breakout: +2 ATR10, hold 20d",0.81
+2017,volatility,Nifty Pharma,Low-vol regime: vol10 < 80th pct,0.77
+2017,volatility,Nifty FMCG,Low-vol regime: vol60 < 80th pct,0.73
+2017,volatility,Nifty Auto,"Vol breakout: +0.5 ATR10, hold 5d",0.81
+2017,volatility,Nifty Metal,Keltner breakout 2 ATR20 exit<EMA20,0.64
+2017,volatility,Nifty Realty,Keltner breakout 2.5 ATR10 exit<EMA20,0.62
+2017,volatility,Nifty Energy,"Vol breakout: +1.5 ATR20, hold 5d",0.66
+2017,volatility,Nifty Infra,"Vol breakout: +1.5 ATR10, hold 20d",1.0
+2017,volatility,Nifty PSU Bank,"Vol breakout: +1.5 ATR10, hold 20d",0.64
+2017,volatility,Nifty PSE,Keltner breakout 2.5 ATR20 exit<EMA20,0.59
+2017,volatility,Nifty MNC,"Vol breakout: +1 ATR20, hold 10d",1.41
+2017,volatility,RELIANCE,"Vol breakout: +1 ATR20, hold 20d",0.36
+2017,volatility,HDFCBANK,Low-vol regime: vol60 < 80th pct,1.03
+2017,volatility,ICICIBANK,Low-vol regime: vol20 < 80th pct,0.61
+2017,volatility,INFY,"Vol breakout: +2 ATR10, hold 20d",0.54
+2017,volatility,TCS,"Vol breakout: +0.5 ATR10, hold 20d",0.56
+2017,volatility,ITC,Low-vol regime: vol60 < 80th pct,0.53
+2017,volatility,LT,"Vol breakout: +1.5 ATR10, hold 20d",0.74
+2017,volatility,SBIN,Keltner breakout 2.5 ATR10 exit<EMA20,0.74
+2017,volatility,HINDUNILVR,"Vol breakout: +2 ATR10, hold 5d",0.81
+2017,volatility,BHARTIARTL,"Vol breakout: +2 ATR20, hold 10d",-0.03
+2017,volatility,AXISBANK,"Vol breakout: +1.5 ATR20, hold 20d",0.86
+2017,volatility,KOTAKBANK,Low-vol regime: vol10 < 80th pct,0.85
+2017,volatility,MARUTI,"Vol breakout: +2 ATR10, hold 20d",1.52
+2018,volatility,Nifty 50 (NIFTYBEES),Low-vol regime: vol60 < 80th pct,0.57
+2018,volatility,Bank Nifty (BANKBEES),Low-vol regime: vol20 < 60th pct,0.95
+2018,volatility,Nifty Next 50 (JUNIORBEES),Low-vol regime: vol10 < 60th pct,1.1
+2018,volatility,Gold (GOLDBEES),"Vol breakout: +1.5 ATR20, hold 10d",0.1
+2018,volatility,Nifty 500,"Vol breakout: +2 ATR10, hold 10d",0.95
+2018,volatility,Midcap 50,"Vol breakout: +1.5 ATR10, hold 10d",1.0
+2018,volatility,Nifty IT,Low-vol regime: vol10 < 50th pct,0.81
+2018,volatility,Nifty Pharma,"Vol breakout: +0.5 ATR10, hold 20d",0.28
+2018,volatility,Nifty FMCG,Low-vol regime: vol60 < 80th pct,0.81
+2018,volatility,Nifty Auto,"Vol breakout: +0.5 ATR10, hold 5d",0.84
+2018,volatility,Nifty Metal,"Vol breakout: +2 ATR20, hold 20d",0.69
+2018,volatility,Nifty Realty,Keltner breakout 2.5 ATR10 exit<EMA20,0.76
+2018,volatility,Nifty Energy,"Vol breakout: +1.5 ATR20, hold 5d",0.79
+2018,volatility,Nifty Infra,"Vol breakout: +1.5 ATR10, hold 20d",1.09
+2018,volatility,Nifty PSU Bank,"Vol breakout: +1.5 ATR20, hold 5d",0.66
+2018,volatility,Nifty PSE,"Vol breakout: +1 ATR20, hold 10d",0.6
+2018,volatility,Nifty MNC,"Vol breakout: +1 ATR20, hold 10d",1.39
+2018,volatility,RELIANCE,"Vol breakout: +1 ATR20, hold 10d",0.63
+2018,volatility,HDFCBANK,Low-vol regime: vol60 < 80th pct,1.06
+2018,volatility,ICICIBANK,Low-vol regime: vol60 < 60th pct,0.5
+2018,volatility,INFY,Low-vol regime: vol10 < 80th pct,0.81
+2018,volatility,TCS,"Vol breakout: +0.5 ATR10, hold 20d",0.62
+2018,volatility,ITC,Low-vol regime: vol60 < 80th pct,0.67
+2018,volatility,LT,"Vol breakout: +1.5 ATR10, hold 20d",0.56
+2018,volatility,SBIN,"Vol breakout: +1.5 ATR20, hold 5d",0.64
+2018,volatility,HINDUNILVR,"Vol breakout: +2 ATR10, hold 5d",0.82
+2018,volatility,BHARTIARTL,"Vol breakout: +2 ATR20, hold 20d",0.56
+2018,volatility,AXISBANK,"Vol breakout: +1.5 ATR20, hold 10d",0.71
+2018,volatility,KOTAKBANK,Low-vol regime: vol10 < 60th pct,1.16
+2018,volatility,MARUTI,Low-vol regime: vol10 < 50th pct,1.58
+2019,volatility,Nifty 50 (NIFTYBEES),"Vol breakout: +2 ATR10, hold 20d",0.8
+2019,volatility,Bank Nifty (BANKBEES),Low-vol regime: vol20 < 60th pct,1.03
+2019,volatility,Nifty Next 50 (JUNIORBEES),"Vol breakout: +1 ATR20, hold 10d",1.15
+2019,volatility,Gold (GOLDBEES),"Vol breakout: +1.5 ATR20, hold 10d",0.32
+2019,volatility,Nifty 500,"Vol breakout: +2 ATR10, hold 20d",1.49
+2019,volatility,Midcap 50,"Vol breakout: +1.5 ATR10, hold 10d",1.22
+2019,volatility,Nifty IT,Low-vol regime: vol10 < 50th pct,0.57
+2019,volatility,Nifty Pharma,"Vol breakout: +1 ATR20, hold 10d",0.08
+2019,volatility,Nifty FMCG,Low-vol regime: vol60 < 80th pct,0.86
+2019,volatility,Nifty Auto,Low-vol regime: vol10 < 80th pct,0.63
+2019,volatility,Nifty Metal,Keltner breakout 2 ATR20 exit<EMA20,0.41
+2019,volatility,Nifty Realty,Keltner breakout 2.5 ATR10 exit<EMA20,0.69
+2019,volatility,Nifty Energy,"Vol breakout: +1 ATR20, hold 5d",0.78
+2019,volatility,Nifty Infra,"Vol breakout: +1.5 ATR10, hold 20d",1.16
+2019,volatility,Nifty PSU Bank,"Vol breakout: +1.5 ATR20, hold 5d",1.03
+2019,volatility,Nifty PSE,"Vol breakout: +2 ATR10, hold 20d",0.84
+2019,volatility,Nifty MNC,"Vol breakout: +1 ATR10, hold 20d",1.14
+2019,volatility,RELIANCE,"Vol breakout: +1.5 ATR20, hold 5d",0.69
+2019,volatility,HDFCBANK,Low-vol regime: vol10 < 80th pct,1.2
+2019,volatility,ICICIBANK,Low-vol regime: vol20 < 50th pct,0.64
+2019,volatility,INFY,Low-vol regime: vol10 < 80th pct,0.56
+2019,volatility,TCS,Low-vol regime: vol10 < 50th pct,0.45
+2019,volatility,ITC,Low-vol regime: vol60 < 80th pct,0.64
+2019,volatility,LT,"Vol breakout: +1.5 ATR20, hold 20d",0.65
+2019,volatility,SBIN,"Vol breakout: +1.5 ATR20, hold 5d",1.01
+2019,volatility,HINDUNILVR,Low-vol regime: vol60 < 80th pct,1.18
+2019,volatility,BHARTIARTL,"Vol breakout: +2 ATR10, hold 20d",0.76
+2019,volatility,AXISBANK,"Vol breakout: +1 ATR20, hold 20d",0.72
+2019,volatility,KOTAKBANK,Low-vol regime: vol10 < 60th pct,1.35
+2019,volatility,MARUTI,Low-vol regime: vol20 < 60th pct,1.5
+2020,volatility,Nifty 50 (NIFTYBEES),"Vol breakout: +0.5 ATR10, hold 5d",0.7
+2020,volatility,Bank Nifty (BANKBEES),Low-vol regime: vol20 < 50th pct,0.84
+2020,volatility,Nifty Next 50 (JUNIORBEES),Low-vol regime: vol20 < 70th pct,0.69
+2020,volatility,Gold (GOLDBEES),"Vol breakout: +1.5 ATR20, hold 10d",0.59
+2020,volatility,Nifty 500,"Vol breakout: +2 ATR10, hold 5d",0.49
+2020,volatility,Midcap 50,"Vol breakout: +1 ATR20, hold 10d",0.53
+2020,volatility,Nifty IT,"Vol breakout: +2 ATR20, hold 20d",0.66
+2020,volatility,Nifty Pharma,"Vol breakout: +2 ATR10, hold 5d",-0.01
+2020,volatility,Nifty FMCG,Low-vol regime: vol60 < 80th pct,0.54
+2020,volatility,Nifty Auto,Low-vol regime: vol60 < 50th pct,0.14
+2020,volatility,Nifty Metal,"Vol breakout: +1 ATR10, hold 20d",-0.03
+2020,volatility,Nifty Realty,Keltner breakout 1.5 ATR10 exit<EMA20,0.39
+2020,volatility,Nifty Energy,"Vol breakout: +1 ATR20, hold 5d",0.96
+2020,volatility,Nifty Infra,"Vol breakout: +1.5 ATR10, hold 20d",0.77
+2020,volatility,Nifty PSU Bank,"Vol breakout: +2 ATR20, hold 5d",0.64
+2020,volatility,Nifty PSE,Keltner breakout 2.5 ATR20 exit<EMA20,0.29
+2020,volatility,Nifty MNC,"Vol breakout: +1 ATR10, hold 20d",0.53
+2020,volatility,RELIANCE,"Vol breakout: +0.5 ATR20, hold 20d",0.89
+2020,volatility,HDFCBANK,Low-vol regime: vol10 < 80th pct,1.13
+2020,volatility,ICICIBANK,Low-vol regime: vol20 < 60th pct,0.37
+2020,volatility,INFY,Low-vol regime: vol20 < 70th pct,0.5
+2020,volatility,TCS,"Vol breakout: +0.5 ATR10, hold 20d",0.42
+2020,volatility,ITC,Low-vol regime: vol60 < 80th pct,0.34
+2020,volatility,LT,"Vol breakout: +2 ATR10, hold 5d",0.7
+2020,volatility,SBIN,"Vol breakout: +1.5 ATR20, hold 5d",0.86
+2020,volatility,HINDUNILVR,Low-vol regime: vol60 < 80th pct,0.92
+2020,volatility,BHARTIARTL,"Vol breakout: +2 ATR10, hold 20d",0.72
+2020,volatility,AXISBANK,"Vol breakout: +1 ATR20, hold 20d",0.35
+2020,volatility,KOTAKBANK,Low-vol regime: vol20 < 50th pct,1.23
+2020,volatility,MARUTI,Low-vol regime: vol10 < 80th pct,0.88
+2021,volatility,Nifty 50 (NIFTYBEES),Low-vol regime: vol20 < 80th pct,0.98
+2021,volatility,Bank Nifty (BANKBEES),Low-vol regime: vol20 < 50th pct,1.34
+2021,volatility,Nifty Next 50 (JUNIORBEES),Low-vol regime: vol20 < 70th pct,0.88
+2021,volatility,Gold (GOLDBEES),Low-vol regime: vol10 < 60th pct,0.77
+2021,volatility,Nifty 500,Low-vol regime: vol10 < 80th pct,0.88
+2021,volatility,Midcap 50,"Vol breakout: +1.5 ATR10, hold 10d",0.84
+2021,volatility,Nifty IT,"Vol breakout: +2 ATR20, hold 20d",1.16
+2021,volatility,Nifty Pharma,"Vol breakout: +1.5 ATR10, hold 5d",0.14
+2021,volatility,Nifty FMCG,Low-vol regime: vol10 < 80th pct,0.72
+2021,volatility,Nifty Auto,"Vol breakout: +1 ATR10, hold 20d",0.47
+2021,volatility,Nifty Metal,Low-vol regime: vol10 < 80th pct,0.83
+2021,volatility,Nifty Realty,Keltner breakout 1.5 ATR10 exit<EMA20,0.81
+2021,volatility,Nifty Energy,"Vol breakout: +1 ATR20, hold 5d",0.72
+2021,volatility,Nifty Infra,"Vol breakout: +1.5 ATR20, hold 5d",0.79
+2021,volatility,Nifty PSU Bank,"Vol breakout: +1.5 ATR10, hold 5d",0.45
+2021,volatility,Nifty PSE,"Vol breakout: +1.5 ATR10, hold 20d",0.19
+2021,volatility,Nifty MNC,"Vol breakout: +1.5 ATR20, hold 20d",0.66
+2021,volatility,RELIANCE,"Vol breakout: +1 ATR10, hold 10d",1.08
+2021,volatility,HDFCBANK,Low-vol regime: vol10 < 60th pct,1.06
+2021,volatility,ICICIBANK,Low-vol regime: vol10 < 80th pct,0.75
+2021,volatility,INFY,Low-vol regime: vol20 < 80th pct,0.95
+2021,volatility,TCS,"Vol breakout: +1 ATR20, hold 20d",0.76
+2021,volatility,ITC,Low-vol regime: vol60 < 80th pct,0.42
+2021,volatility,LT,"Vol breakout: +2 ATR10, hold 5d",0.83
+2021,volatility,SBIN,Low-vol regime: vol20 < 70th pct,0.56
+2021,volatility,HINDUNILVR,Low-vol regime: vol10 < 80th pct,0.91
+2021,volatility,BHARTIARTL,"Vol breakout: +2 ATR10, hold 20d",0.34
+2021,volatility,AXISBANK,Low-vol regime: vol10 < 50th pct,0.6
+2021,volatility,KOTAKBANK,Low-vol regime: vol10 < 60th pct,1.02
+2021,volatility,MARUTI,"Vol breakout: +1.5 ATR10, hold 20d",0.57
+2022,volatility,Nifty 50 (NIFTYBEES),Low-vol regime: vol20 < 80th pct,1.26
+2022,volatility,Bank Nifty (BANKBEES),Low-vol regime: vol20 < 50th pct,1.23
+2022,volatility,Nifty Next 50 (JUNIORBEES),"Vol breakout: +1.5 ATR10, hold 20d",0.89
+2022,volatility,Gold (GOLDBEES),"Vol breakout: +0.5 ATR10, hold 20d",0.77
+2022,volatility,Nifty 500,Low-vol regime: vol20 < 80th pct,1.1
+2022,volatility,Midcap 50,"Vol breakout: +1 ATR10, hold 10d",1.39
+2022,volatility,Nifty IT,Low-vol regime: vol20 < 80th pct,1.43
+2022,volatility,Nifty Pharma,"Vol breakout: +1.5 ATR10, hold 5d",0.54
+2022,volatility,Nifty FMCG,Low-vol regime: vol10 < 60th pct,1.13
+2022,volatility,Nifty Auto,"Vol breakout: +1 ATR20, hold 20d",0.54
+2022,volatility,Nifty Metal,Low-vol regime: vol60 < 70th pct,0.7
+2022,volatility,Nifty Realty,"Vol breakout: +1 ATR20, hold 20d",0.9
+2022,volatility,Nifty Energy,"Vol breakout: +1 ATR10, hold 5d",1.02
+2022,volatility,Nifty Infra,"Vol breakout: +1.5 ATR20, hold 10d",0.91
+2022,volatility,Nifty PSU Bank,"Vol breakout: +1.5 ATR10, hold 5d",0.57
+2022,volatility,Nifty PSE,"Vol breakout: +2 ATR20, hold 10d",0.52
+2022,volatility,Nifty MNC,"Vol breakout: +1.5 ATR20, hold 20d",0.88
+2022,volatility,RELIANCE,Keltner breakout 1.5 ATR20 exit<EMA20,1.07
+2022,volatility,HDFCBANK,Low-vol regime: vol10 < 60th pct,0.8
+2022,volatility,ICICIBANK,Low-vol regime: vol10 < 80th pct,0.92
+2022,volatility,INFY,Low-vol regime: vol20 < 80th pct,1.38
+2022,volatility,TCS,Low-vol regime: vol20 < 80th pct,1.1
+2022,volatility,ITC,Low-vol regime: vol60 < 80th pct,0.55
+2022,volatility,LT,"Vol breakout: +2 ATR20, hold 5d",0.92
+2022,volatility,SBIN,Low-vol regime: vol60 < 60th pct,0.82
+2022,volatility,HINDUNILVR,"Vol breakout: +1 ATR10, hold 20d",0.96
+2022,volatility,BHARTIARTL,"Vol breakout: +1.5 ATR10, hold 5d",0.57
+2022,volatility,AXISBANK,"Vol breakout: +1 ATR10, hold 20d",0.65
+2022,volatility,KOTAKBANK,Low-vol regime: vol20 < 50th pct,0.99
+2022,volatility,MARUTI,Low-vol regime: vol60 < 50th pct,0.47
+2023,volatility,Nifty 50 (NIFTYBEES),Low-vol regime: vol20 < 80th pct,1.1
+2023,volatility,Bank Nifty (BANKBEES),Low-vol regime: vol20 < 50th pct,0.97
+2023,volatility,Nifty Next 50 (JUNIORBEES),Low-vol regime: vol20 < 50th pct,0.7
+2023,volatility,Gold (GOLDBEES),"Vol breakout: +0.5 ATR20, hold 20d",0.95
+2023,volatility,Nifty 500,"Vol breakout: +2 ATR20, hold 5d",0.75
+2023,volatility,Midcap 50,"Vol breakout: +1 ATR10, hold 10d",1.0
+2023,volatility,Nifty IT,"Vol breakout: +2 ATR20, hold 20d",1.3
+2023,volatility,Nifty Pharma,"Vol breakout: +1.5 ATR10, hold 5d",0.42
+2023,volatility,Nifty FMCG,Low-vol regime: vol10 < 60th pct,0.79
+2023,volatility,Nifty Auto,"Vol breakout: +2 ATR10, hold 20d",0.44
+2023,volatility,Nifty Metal,Low-vol regime: vol10 < 80th pct,0.57
+2023,volatility,Nifty Realty,"Vol breakout: +2 ATR10, hold 10d",0.68
+2023,volatility,Nifty Energy,"Vol breakout: +1 ATR10, hold 5d",1.15
+2023,volatility,Nifty Infra,"Vol breakout: +2 ATR10, hold 5d",0.95
+2023,volatility,Nifty PSU Bank,"Vol breakout: +1.5 ATR10, hold 5d",0.7
+2023,volatility,Nifty PSE,"Vol breakout: +2 ATR20, hold 10d",0.92
+2023,volatility,Nifty MNC,"Vol breakout: +2 ATR10, hold 20d",0.36
+2023,volatility,RELIANCE,Keltner breakout 2.5 ATR10 exit<EMA20,0.85
+2023,volatility,HDFCBANK,Low-vol regime: vol20 < 70th pct,0.62
+2023,volatility,ICICIBANK,Low-vol regime: vol10 < 80th pct,0.86
+2023,volatility,INFY,Low-vol regime: vol20 < 60th pct,1.17
+2023,volatility,TCS,"Vol breakout: +2 ATR20, hold 5d",0.89
+2023,volatility,ITC,Low-vol regime: vol60 < 80th pct,0.61
+2023,volatility,LT,"Vol breakout: +2 ATR20, hold 5d",0.84
+2023,volatility,SBIN,Low-vol regime: vol60 < 50th pct,1.15
+2023,volatility,HINDUNILVR,"Vol breakout: +1.5 ATR20, hold 20d",0.69
+2023,volatility,BHARTIARTL,Low-vol regime: vol10 < 50th pct,0.44
+2023,volatility,AXISBANK,Low-vol regime: vol20 < 50th pct,0.69
+2023,volatility,KOTAKBANK,"Vol breakout: +2 ATR10, hold 20d",0.66
+2023,volatility,MARUTI,Low-vol regime: vol60 < 50th pct,0.06
+2024,volatility,Nifty 50 (NIFTYBEES),Low-vol regime: vol60 < 70th pct,1.23
+2024,volatility,Bank Nifty (BANKBEES),"Vol breakout: +1.5 ATR10, hold 5d",1.11
+2024,volatility,Nifty Next 50 (JUNIORBEES),Low-vol regime: vol20 < 50th pct,1.09
+2024,volatility,Gold (GOLDBEES),"Vol breakout: +0.5 ATR20, hold 20d",1.0
+2024,volatility,Nifty 500,Keltner breakout 1.5 ATR20 exit<EMA20,1.35
+2024,volatility,Midcap 50,Keltner breakout 1.5 ATR10 exit<EMA20,1.21
+2024,volatility,Nifty IT,"Vol breakout: +2 ATR20, hold 20d",1.42
+2024,volatility,Nifty Pharma,Keltner breakout 2 ATR10 exit<EMA20,0.63
+2024,volatility,Nifty FMCG,Low-vol regime: vol20 < 50th pct,1.03
+2024,volatility,Nifty Auto,"Vol breakout: +1 ATR20, hold 20d",1.04
+2024,volatility,Nifty Metal,"Vol breakout: +2 ATR20, hold 5d",0.89
+2024,volatility,Nifty Realty,"Vol breakout: +1 ATR10, hold 20d",1.31
+2024,volatility,Nifty Energy,"Vol breakout: +1 ATR10, hold 5d",1.41
+2024,volatility,Nifty Infra,"Vol breakout: +2 ATR10, hold 5d",0.96
+2024,volatility,Nifty PSU Bank,"Vol breakout: +1 ATR10, hold 10d",0.74
+2024,volatility,Nifty PSE,"Vol breakout: +1.5 ATR10, hold 10d",1.25
+2024,volatility,Nifty MNC,Keltner breakout 2 ATR20 exit<EMA20,1.13
+2024,volatility,RELIANCE,Keltner breakout 2.5 ATR10 exit<EMA20,0.78
+2024,volatility,HDFCBANK,Low-vol regime: vol20 < 70th pct,0.52
+2024,volatility,ICICIBANK,Low-vol regime: vol10 < 80th pct,0.97
+2024,volatility,INFY,Low-vol regime: vol10 < 70th pct,0.91
+2024,volatility,TCS,"Vol breakout: +2 ATR10, hold 20d",0.66
+2024,volatility,ITC,Low-vol regime: vol20 < 60th pct,0.8
+2024,volatility,LT,Low-vol regime: vol60 < 70th pct,1.11
+2024,volatility,SBIN,Low-vol regime: vol60 < 50th pct,1.12
+2024,volatility,HINDUNILVR,"Vol breakout: +2 ATR20, hold 10d",0.67
+2024,volatility,BHARTIARTL,"Vol breakout: +0.5 ATR20, hold 20d",0.83
+2024,volatility,AXISBANK,Low-vol regime: vol20 < 70th pct,0.77
+2024,volatility,KOTAKBANK,Low-vol regime: vol20 < 50th pct,0.65
+2024,volatility,MARUTI,"Vol breakout: +1 ATR10, hold 20d",0.34
+2025,volatility,Nifty 50 (NIFTYBEES),Low-vol regime: vol60 < 70th pct,1.08
+2025,volatility,Bank Nifty (BANKBEES),"Vol breakout: +1.5 ATR10, hold 5d",1.16
+2025,volatility,Nifty Next 50 (JUNIORBEES),Low-vol regime: vol20 < 50th pct,1.14
+2025,volatility,Gold (GOLDBEES),"Vol breakout: +0.5 ATR20, hold 20d",0.91
+2025,volatility,Nifty 500,Keltner breakout 1.5 ATR20 exit<EMA20,0.91
+2025,volatility,Midcap 50,"Vol breakout: +1 ATR10, hold 10d",1.08
+2025,volatility,Nifty IT,"Vol breakout: +1.5 ATR10, hold 20d",1.47
+2025,volatility,Nifty Pharma,Keltner breakout 2 ATR10 exit<EMA20,0.99
+2025,volatility,Nifty FMCG,Low-vol regime: vol20 < 50th pct,1.47
+2025,volatility,Nifty Auto,"Vol breakout: +1 ATR20, hold 20d",1.39
+2025,volatility,Nifty Metal,Low-vol regime: vol60 < 80th pct,0.85
+2025,volatility,Nifty Realty,"Vol breakout: +1 ATR10, hold 20d",1.45
+2025,volatility,Nifty Energy,"Vol breakout: +1 ATR10, hold 5d",1.02
+2025,volatility,Nifty Infra,Keltner breakout 1.5 ATR20 exit<EMA20,0.77
+2025,volatility,Nifty PSU Bank,"Vol breakout: +1 ATR20, hold 10d",0.83
+2025,volatility,Nifty PSE,"Vol breakout: +0.5 ATR20, hold 5d",1.02
+2025,volatility,Nifty MNC,Keltner breakout 1.5 ATR20 exit<EMA20,1.1
+2025,volatility,RELIANCE,Keltner breakout 2.5 ATR10 exit<EMA20,0.76
+2025,volatility,HDFCBANK,Low-vol regime: vol20 < 80th pct,0.42
+2025,volatility,ICICIBANK,Low-vol regime: vol20 < 80th pct,0.81
+2025,volatility,INFY,"Vol breakout: +1.5 ATR20, hold 20d",1.07
+2025,volatility,TCS,"Vol breakout: +2 ATR10, hold 20d",0.76
+2025,volatility,ITC,Low-vol regime: vol60 < 50th pct,1.03
+2025,volatility,LT,Low-vol regime: vol10 < 80th pct,1.01
+2025,volatility,SBIN,Low-vol regime: vol60 < 50th pct,1.01
+2025,volatility,HINDUNILVR,"Vol breakout: +2 ATR20, hold 10d",0.66
+2025,volatility,BHARTIARTL,"Vol breakout: +0.5 ATR20, hold 20d",0.86
+2025,volatility,AXISBANK,Low-vol regime: vol20 < 70th pct,0.68
+2025,volatility,KOTAKBANK,"Vol breakout: +2 ATR10, hold 20d",0.63
+2025,volatility,MARUTI,"Vol breakout: +1 ATR10, hold 20d",0.45
+2026,volatility,Nifty 50 (NIFTYBEES),"Vol breakout: +0.5 ATR10, hold 10d",0.82
+2026,volatility,Bank Nifty (BANKBEES),"Vol breakout: +1.5 ATR20, hold 10d",0.89
+2026,volatility,Nifty Next 50 (JUNIORBEES),Low-vol regime: vol20 < 50th pct,0.91
+2026,volatility,Gold (GOLDBEES),"Vol breakout: +0.5 ATR20, hold 20d",1.37
+2026,volatility,Nifty 500,"Vol breakout: +2 ATR20, hold 10d",0.83
+2026,volatility,Midcap 50,"Vol breakout: +1.5 ATR20, hold 20d",1.1
+2026,volatility,Nifty IT,"Vol breakout: +2 ATR20, hold 20d",0.88
+2026,volatility,Nifty Pharma,Keltner breakout 2.5 ATR10 exit<EMA20,0.88
+2026,volatility,Nifty FMCG,Low-vol regime: vol20 < 50th pct,1.5
+2026,volatility,Nifty Auto,"Vol breakout: +0.5 ATR20, hold 5d",1.02
+2026,volatility,Nifty Metal,"Vol breakout: +1 ATR10, hold 20d",1.09
+2026,volatility,Nifty Realty,"Vol breakout: +1 ATR10, hold 20d",1.16
+2026,volatility,Nifty Energy,"Vol breakout: +1 ATR10, hold 5d",1.1
+2026,volatility,Nifty Infra,"Vol breakout: +0.5 ATR10, hold 20d",0.9
+2026,volatility,Nifty PSU Bank,Low-vol regime: vol60 < 70th pct,1.28
+2026,volatility,Nifty PSE,"Vol breakout: +0.5 ATR10, hold 20d",1.01
+2026,volatility,Nifty MNC,"Vol breakout: +2 ATR20, hold 20d",1.3
+2026,volatility,RELIANCE,"Vol breakout: +1.5 ATR20, hold 10d",0.37
+2026,volatility,HDFCBANK,Low-vol regime: vol20 < 80th pct,0.43
+2026,volatility,ICICIBANK,"Vol breakout: +1 ATR20, hold 20d",0.76
+2026,volatility,INFY,"Vol breakout: +1.5 ATR10, hold 20d",0.53
+2026,volatility,TCS,"Vol breakout: +2 ATR10, hold 20d",0.57
+2026,volatility,ITC,Low-vol regime: vol60 < 50th pct,1.12
+2026,volatility,LT,Low-vol regime: vol60 < 50th pct,1.12
+2026,volatility,SBIN,"Vol breakout: +1 ATR20, hold 5d",1.28
+2026,volatility,HINDUNILVR,"Vol breakout: +2 ATR10, hold 20d",0.53
+2026,volatility,BHARTIARTL,"Vol breakout: +0.5 ATR20, hold 20d",1.15
+2026,volatility,AXISBANK,"Vol breakout: +1 ATR20, hold 20d",0.64
+2026,volatility,KOTAKBANK,Low-vol regime: vol20 < 50th pct,0.37
+2026,volatility,MARUTI,Low-vol regime: vol20 < 50th pct,0.91
