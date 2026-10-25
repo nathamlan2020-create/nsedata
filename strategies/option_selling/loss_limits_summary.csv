@@ -1,0 +1,10 @@
+rule,rs_yr,pct_7_5L,worst_day,worst_month,max_dd,losing_months,days_below_minus15k
+"Base: 7 hedged lots, no extra limit",895202,119,-38844,-44863,-55046,5,24
+Day stop -Rs 15k (exit all),879338,117,-21042,-38424,-65322,4,50
+Day stop -Rs 20k,888259,118,-27434,-51071,-64589,4,30
+Day stop -Rs 30k,892327,119,-30764,-44863,-55046,5,24
+Re-enter only if day is green,808385,108,-24441,-27335,-62834,5,19
+Month limit -Rs 40k -> stop for month,895202,119,-38844,-44863,-55046,5,24
+Month limit -Rs 40k -> 3 lots rest of month,895202,119,-38844,-44863,-55046,5,24
+Drawdown > Rs 30k -> 3 lots till new high,842893,112,-38844,-38263,-47501,5,24
+Combo: day stop -20k + re-enter if green + DD>30k -> 3 lots,772023,103,-24354,-22684,-43126,5,19
