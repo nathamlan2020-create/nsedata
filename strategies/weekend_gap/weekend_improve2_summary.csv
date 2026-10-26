@@ -1,0 +1,8 @@
+variant,trades,win,rs_yr,worst,max_dd,worst_month,losing_yrs,avg_16_20,avg_21_26,ret_dd
+BASE: 50-EMA trend filter,278,56.8,44903,-10722,-27250,-14519,1,451,2798,1.65
+Skip long weekends,262,57.6,45888,-10722,-25870,-14519,1,595,2903,1.77
+Longs: 50 EMA | Shorts: also below 200 SMA,227,59.5,41717,-10722,-27250,-13403,1,511,3366,1.53
+  + skip long weekends,213,60.6,42836,-10722,-20415,-13403,1,683,3537,2.1
+Both sides need 200 SMA + skip long weekends,189,60.8,40652,-9399,-14976,-13194,0,713,3721,2.71
+Longs: 50 EMA | Shorts: 200 SMA + move>0.3%,219,59.8,40890,-10722,-22392,-13403,1,566,3348,1.83
+  + skip long weekends,206,60.7,41558,-10722,-18577,-13403,2,694,3522,2.24
