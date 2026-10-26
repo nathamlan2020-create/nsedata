@@ -1,0 +1,7 @@
+rule,trades,win,avg_pts,total_pts,rs_per_lot_yr_65,worst_pts,losing_yrs
+Always long Fri 15:20 -> Mon 9:16,518,57.1,1.4,737,4443,-831,2
+Follow Fri 12:30-15:20 move,518,51.2,6.8,3493,21042,-752,5
+Fade Fri 12:30-15:20 move,518,46.3,-10.8,-5557,-33475,-831,8
+Follow afternoon move only if > 0.3%,230,52.2,12.1,2776,16726,-752,5
+Follow Friday's full-day move,518,53.3,16.5,8528,51371,-752,3
+"Close near day high -> long, near low -> short",244,56.1,20.3,4959,29871,-752,3
