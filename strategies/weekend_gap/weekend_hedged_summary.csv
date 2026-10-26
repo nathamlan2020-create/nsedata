@@ -1,0 +1,6 @@
+version,trades,win,rs_per_yr,worst_weekend,best_weekend,max_dd,worst_month,losing_months,losing_yrs,avg_2016_20,avg_2021_26
+"Futures, no hedge",516,53.3,51008,-48126,54593,-135746,-85927,53/130,2,-186,2165
+Futures + 1% OTM protective option,516,50.4,37395,-24665,53621,-97824,-50390,55/130,4,-263,1697
+Futures + 2% OTM protective option,516,51.6,42914,-28741,54263,-104483,-55435,57/130,3,-225,1881
+Buy ATM call/put in Friday's direction,516,46.9,12495,-19701,38763,-69044,-32561,63/130,4,-218,681
+Debit spread (ATM / 1% OTM) in Friday's direction,516,42.2,-3210,-5794,7604,-53683,-7800,74/130,8,-180,32

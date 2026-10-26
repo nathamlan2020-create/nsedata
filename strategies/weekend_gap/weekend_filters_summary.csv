@@ -1,0 +1,9 @@
+version,trades,win,rs_per_yr,worst_weekend,max_dd,worst_month,losing_months,losing_yrs,avg_16_20,avg_21_26,ret_dd
+Futures no hedge | no filter,516,53.3,51008,-48126,-135746,-85927,53,2,-186,2165,0.38
+Futures no hedge | trend filter,278,59.7,59206,-21759,-34391,-21892,40,0,788,3532,1.72
+Futures no hedge | monthly stop -15k,500,53.4,55952,-39614,-77841,-44197,53,2,56,2221,0.72
+Futures no hedge | trend + monthly stop,276,59.8,58038,-21759,-34258,-21759,40,0,795,3471,1.69
+Futures + 1% hedge | no filter,516,50.4,37395,-24665,-97824,-50390,55,4,-263,1697,0.38
+Futures + 1% hedge | trend filter,278,56.8,44903,-10722,-27250,-14519,44,1,451,2798,1.65
+Futures + 1% hedge | monthly stop -15k,509,50.5,38857,-24665,-83184,-35749,55,4,-204,1733,0.47
+Futures + 1% hedge | trend + monthly stop,277,56.7,43786,-10722,-27250,-18577,44,1,451,2737,1.61
