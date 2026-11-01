@@ -26,6 +26,15 @@ into `$KOKORO_DIR` (default `~/kokoro`). Fonts are in `fonts/`.
   - `range`: 1 top at resistance · 2 bottom at support (2 labels max)
   - `trail`: 1 first swing low (stop) · 2 higher swing low (stop raised) · 3 drop that hits the trailed stop
 
+- `payoff` (trading only): expiry profit/loss diagram; `strategy` one of short_straddle, short_strangle, bull_put, bear_call,
+  batman, iron_fly, long_straddle. Up to 3 `labels` (one `vo` phrase each) at these points:
+  - short_straddle / iron_fly / long_straddle: 1 at the strike (max profit, or max loss for long) · 2 upper breakeven · 3 far move
+  - short_strangle: 1 middle (profit zone) · 2 upper breakeven · 3 far move (loss)
+  - bull_put: 1 above both strikes (full premium kept) · 2 breakeven · 3 below both (capped loss)
+  - bear_call: 1 below both strikes (full premium kept) · 2 breakeven · 3 above both (capped loss)
+  - batman (1 ATM buy + 2 OTM sells on each side): 1 peak at a short strike · 2 middle (small debit/credit) · 3 far move (unlimited loss)
+  Indian stock options are physically settled: mention closing before expiry when relevant.
+
 ## Content rules
 - Health: patient-friendly Hindi, conservative, cite-able numbers only (guidelines / PubMed / standard textbooks);
   always "see a doctor" for red zones; no drug doses; no diagnosis claims.

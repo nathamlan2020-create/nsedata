@@ -9,7 +9,8 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 KD = os.environ.get("KOKORO_DIR", os.path.expanduser("~/kokoro"))
 REL = "https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/"
 SR = 44100
-KINDS = {"hook", "steps", "counter", "zones", "chart", "caution"}
+KINDS = {"hook", "steps", "counter", "zones", "chart", "payoff", "caution"}
+STRATS = {"short_straddle", "short_strangle", "bull_put", "bear_call", "batman", "iron_fly", "long_straddle"}
 PATTERNS = {"breakout", "fakeout", "retest", "pullback", "downtrend", "range", "trail"}
 NKEYS = {"breakout": 3, "fakeout": 3, "retest": 3, "pullback": 3, "downtrend": 3, "range": 2, "trail": 3}
 
@@ -29,6 +30,9 @@ def validate(sp):
         if k == "chart":
             if s.get("pattern") not in PATTERNS: e.append(f"scene {i}: bad pattern")
             elif len(s.get("labels", [])) > NKEYS[s["pattern"]]: e.append(f"scene {i}: max {NKEYS[s['pattern']]} labels for {s['pattern']}")
+        if k == "payoff":
+            if s.get("strategy") not in STRATS: e.append(f"scene {i}: bad strategy (use one of {sorted(STRATS)})")
+            elif len(s.get("labels", [])) > 3: e.append(f"scene {i}: max 3 labels for payoff")
         if k == "counter" and not isinstance(s.get("to"), (int, float)): e.append(f"scene {i}: counter needs numeric 'to'")
     return e
 

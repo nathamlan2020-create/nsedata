@@ -55,7 +55,7 @@ def mix(c, a, base=BG): return tuple(int(base[k] + (c[k] - base[k]) * a) for k i
 
 # ---- mixed-script text (Devanagari font has no Latin letters) ----
 def _lat(f): return inter("SemiBold", int(f.size * 0.92))
-def _is_lat(ch): return (ch.isascii() and ch.isalpha()) or ch in "•%₹@×÷−"
+def _is_lat(ch): return (ch.isascii() and ch.isalpha()) or ch in "•%₹@×÷−↑↓→"
 def _runs(s):
     out = []
     for ch in s:
@@ -123,6 +123,19 @@ def pattern(name):
         walk(8, 1.0); k0 = len(C) - 1; walk(8, 1.2); k1 = len(C) - 1; walk(3, -2.0); k2 = len(C) - 1
         return C, [], [(k0, C[k0][2], AMBER), (k1, C[k1][2], AMBER), (k2, C[k2][3], RED)]
     raise ValueError("unknown pattern " + name)
+
+# expiry payoffs on an underlying of 80..120 (ATM 100); keys = x positions of the label points
+_P = lambda x, k: max(0.0, k - x)   # put intrinsic
+_C = lambda x, k: max(0.0, x - k)   # call intrinsic
+PAYOFFS = {
+    "short_straddle": (lambda x: 6 - _C(x, 100) - _P(x, 100), [100, 106, 115], [100]),
+    "short_strangle": (lambda x: 4 - _P(x, 95) - _C(x, 105), [100, 109, 116], [95, 105]),
+    "bull_put": (lambda x: 1.8 - _P(x, 97) + _P(x, 92), [108, 95.2, 85], [92, 97]),
+    "bear_call": (lambda x: 1.8 - _C(x, 103) + _C(x, 108), [92, 104.8, 115], [103, 108]),
+    "batman": (lambda x: -2 + _C(x, 100) - 2 * _C(x, 106) + _P(x, 100) - 2 * _P(x, 94), [106, 100, 116], [94, 100, 106]),
+    "iron_fly": (lambda x: 6 - _C(x, 100) - _P(x, 100) + _C(x, 108) + _P(x, 92), [100, 106, 115], [92, 100, 108]),
+    "long_straddle": (lambda x: -6 + _C(x, 100) + _P(x, 100), [100, 106, 115], [100]),
+}
 
 class Reel:
     def __init__(self, spec, timing):
@@ -303,6 +316,47 @@ class Reel:
             if box_a > 0.01:
                 d.rounded_rectangle([tx - 16, ty - 8, tx + w + 16, ty + 52], radius=12, fill=BG, outline=mix(col, box_a * 0.7), width=2)
                 T(d, (tx, ty), txt, f, mix(col, box_a))
+
+    def v_payoff(self, d, sc, t):
+        """Expiry payoff diagram of a generic option strategy (underlying 80..120, ATM 100)."""
+        f, keys, strikes = PAYOFFS[sc["strategy"]]
+        labels = sc.get("labels", []); cues = sc["cues"]
+        X0, X1, Y0, Y1 = 90, 1000, 660, 1420
+        xs = [80 + i * 0.1 for i in range(401)]; ys = [f(x) for x in xs]
+        lo, hi = max(min(ys), -12), max(ys) + 2.5; lo -= 1.5
+        px = lambda x: X0 + (x - 80) / 40 * (X1 - X0)
+        py = lambda v: Y1 - (max(lo, min(hi, v)) - lo) / (hi - lo) * (Y1 - Y0)
+        y0 = py(0)
+        # axes
+        d.line([(X0, y0), (X1, y0)], fill=MUTED, width=2)
+        d.line([(X0, Y0), (X0, Y1)], fill=CARD, width=2)
+        fs = hf("Regular", 30)
+        T(d, (X0 + 10, Y0 - 50), "मुनाफ़ा ↑", fs, GREEN); T(d, (X0 + 10, Y1 + 8), "नुकसान ↓", fs, RED)
+        for k in strikes:
+            d.line([(px(k), y0 - 10), (px(k), y0 + 10)], fill=MUTED, width=3)
+        # curve draws in left->right during the first ~1.4 s
+        g = ease((t - sc["start"] - 0.3) / 1.4); n = max(2, int(len(xs) * g))
+        for i in range(1, n):
+            a, b = (px(xs[i - 1]), py(ys[i - 1])), (px(xs[i]), py(ys[i]))
+            col = GREEN if (ys[i] + ys[i - 1]) / 2 >= 0 else RED
+            d.line([(a[0], y0), (a[0], a[1])], fill=mix(col, 0.22), width=3)
+            d.line([a, b], fill=col, width=7)
+        lab = "स्टॉक प्राइस →"; lw = tw(d, lab, fs)
+        d.rectangle([X1 - lw - 8, y0 + 6, X1 + 4, y0 + 46], fill=BG); T(d, (X1 - lw - 4, y0 + 8), lab, fs, MUTED)
+        for k, kx in enumerate(keys):
+            if k >= len(labels) or k >= len(cues): break
+            c0 = cues[k] + 0.35
+            if t < c0: continue
+            a = ease((t - c0) / 0.3)
+            nxt = cues[k + 1] + 0.35 if (k + 1 < len(labels) and k + 1 < len(cues)) else None
+            box_a = a * (1 - ease((t - nxt) / 0.25)) if nxt else a
+            x, y = px(kx), py(f(kx)); col = GREEN if f(kx) >= 0 else RED
+            rr = 24 * (0.6 + 0.4 * a); d.ellipse([x - rr, y - rr, x + rr, y + rr], outline=mix(col, a), width=4)
+            if box_a > 0.01:
+                txt = labels[k]; ft = fit(d, txt, "SemiBold", 36, 700); w = tw(d, txt, ft)
+                tx = max(30, min(W - 30 - w, x - w / 2)); ty = y - 105 if y > Y0 + 140 else y + 45
+                d.rounded_rectangle([tx - 16, ty - 8, tx + w + 16, ty + 52], radius=12, fill=BG, outline=mix(col, box_a * 0.7), width=2)
+                T(d, (tx, ty), txt, ft, mix(col, box_a))
 
     def v_caution(self, d, sc, t):
         items, cues = sc["items"], sc["cues"]; endc = cues[-1]
