@@ -108,7 +108,7 @@ def pattern(name):
         add(p, 104, 120); p = 104; k1 = len(C) - 1; walk(3, 1.2)
         for c in (104, 102, 100.6): add(p, c, 40); p = c
         k2 = len(C) - 1; walk(7, 1.5)
-        return C, [(lvl, "पुराना रेज़िस्टेंस = नया सपोर्ट", MUTED)], [(k1, C[k1][3], UP), (k2, C[k2][2], AMBER), (len(C) - 1, C[-1][3], UP)]
+        return C, [(lvl, "अब सपोर्ट", MUTED)], [(k1, C[k1][3], UP), (k2, C[k2][2], AMBER), (len(C) - 1, C[-1][3], UP)]
     if name == "pullback":
         walk(10, 1.1); k0 = len(C) - 1; walk(4, -1.3); k1 = len(C) - 1; walk(8, 1.3)
         return C, [], [(k0, C[k0][1], MUTED), (k1, C[k1][2], AMBER), (len(C) - 1, C[-1][3], UP)]
@@ -117,7 +117,8 @@ def pattern(name):
         return C, [], [(k0, C[k0][2], DOWN), (k1, C[k1][1], AMBER), (len(C) - 1, C[-1][3], DOWN)]
     if name == "range":
         clamp_walk(26, 94, 104)
-        return C, [(104.8, "रेज़िस्टेंस", RED), (93.2, "सपोर्ट", GREEN)], [(max(range(26), key=lambda i: C[i][1]), None, RED), (min(range(26), key=lambda i: C[i][2]), None, GREEN)]
+        hi_i = max(range(26), key=lambda i: C[i][1]); lo_i = min(range(26), key=lambda i: C[i][2])
+        return C, [(104.8, "रेज़िस्टेंस", RED), (93.2, "सपोर्ट", GREEN)], [(hi_i, C[hi_i][1], RED), (lo_i, C[lo_i][2], GREEN)]
     if name == "trail":
         walk(8, 1.0); k0 = len(C) - 1; walk(8, 1.2); k1 = len(C) - 1; walk(3, -2.0); k2 = len(C) - 1
         return C, [], [(k0, C[k0][2], AMBER), (k1, C[k1][2], AMBER), (k2, C[k2][3], RED)]
