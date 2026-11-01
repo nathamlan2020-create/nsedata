@@ -118,7 +118,7 @@ def pattern(name):
     if name == "range":
         clamp_walk(26, 94, 104)
         hi_i = max(range(26), key=lambda i: C[i][1]); lo_i = min(range(26), key=lambda i: C[i][2])
-        return C, [(104.8, "रेज़िस्टेंस", RED), (93.2, "सपोर्ट", GREEN)], [(hi_i, C[hi_i][1], RED), (lo_i, C[lo_i][2], GREEN)]
+        return C, [(C[hi_i][1] + 0.3, "रेज़िस्टेंस", RED), (C[lo_i][2] - 0.3, "सपोर्ट", GREEN)], [(hi_i, C[hi_i][1], RED), (lo_i, C[lo_i][2], GREEN)]
     if name == "trail":
         walk(8, 1.0); k0 = len(C) - 1; walk(8, 1.2); k1 = len(C) - 1; walk(3, -2.0); k2 = len(C) - 1
         return C, [], [(k0, C[k0][2], AMBER), (k1, C[k1][2], AMBER), (k2, C[k2][3], RED)]
