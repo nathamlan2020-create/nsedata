@@ -44,3 +44,9 @@ Icons: ring nail teeth glasses file pill person drop cube heart leaf clock glass
 - Every number or time you state (hours, days, %) must be checked against a reputable source (guideline, PubMed, NHS/ASA/RCoA/major hospital site) in this run. If not verifiable, say it without the number or pick the next topic.
 - Reassuring tone, never fear-mongering. Red-flag symptoms always say "turant doctor ko dikhaiye".
 - No promotion of any hospital, doctor or brand. No self-promotion of the owner.
+
+## Daily Bengali twin (since 9 Nov 2026)
+Every day, after the Hindi episode, make a Bengali twin of the SAME episode: copy the Hindi spec to `specs/ep<N>_<word>_bn.json`, set `"lang": "bn"`, slug `ep<N>_<word>_bn`, same `num`, `layout`, `patient`, `bullet_starts`.
+Translate everything into simple spoken Kolkata Bengali in Bengali script: intro, q_vo/a_vo/f_vo (Bengali script, numbers in words, first f_vo phrase `["সত্যিটা কী?", 0.3]`), bubbles, bullets (≤34 chars), captions, youtube title/description/tags.
+Names: Dr Saathi → ডাঃ সাথী; uncle → কাকু; dadi → দিদা; didi → দিদি. Header is automatic ("ডাঃ সাথীর OT গপ্পো #N"); in the youtube title use "| ডাঃ সাথীর OT গপ্পো #N #shorts"; description ends with "ভয় নয়, প্রস্তুতি!", the follow line and the Bengali AI disclaimer (see specs/ep16_bath_ot_bn.json).
+Build and Read its _check.jpg the same way, then send it with tg_send.py.
