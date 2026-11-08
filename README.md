@@ -14,6 +14,7 @@ Every video = Uncle's question → Dr Saathi's one-line answer → "SACH KYA HAI
 ## Spec format (JSON)
 | key | rule |
 |---|---|
+| `layout` | **"ot" (default for new episodes)**: conversation in an operating theatre (OT light, OT table, monitor with normal readings, laparoscopy tower); `tiles` and `stage` are ignored (use `[]` and `{}`), bullets ≤ 34 chars, one line each. "classic" (omit the key) = old infographic layout with tiles + checklist/meter |
 | `slug` | `ep<NUM>_<oneword>` ASCII |
 | `num` | episode number (int) |
 | `patient` | `uncle`, `dadi` or `didi` (sets the patient's art and voice). Captions and Dr Saathi's lines must address that patient ("Uncle", "Dadi", "Didi") |

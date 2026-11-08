@@ -4,6 +4,8 @@ Builds OUTDIR/<slug>.mp4 (1080x1920 Short) + OUTDIR/<slug>_cover.jpg + OUTDIR/<s
 See README.md for the spec format.
 """
 import json, math, os, subprocess, sys, urllib.request
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import ot_scene
 import numpy as np, soundfile as sf
 from PIL import Image, ImageDraw, ImageFont
 
@@ -20,6 +22,7 @@ LIM = dict(bubble=24, bullet=36, tile_k=11, tile_v=9, row=27, intro=16, intro_su
 ICONS = ["ring", "nail", "teeth", "glasses", "file", "pill", "person", "drop", "cube", "heart", "leaf", "clock", "glass", "plate", "bandage", "phone", "cigarette", "lungs", "thermo", "syringe"]
 def check(s):
     e = []
+    if s.get("layout") == "ot": s.setdefault("tiles", []); s.setdefault("stage", {})
     for k in ["slug", "num", "intro", "q_vo", "a_vo", "f_vo", "q_bubble", "a_bubble", "bullets", "bullet_starts", "cap", "tiles", "stage", "youtube"]:
         if k not in s: e.append(f"missing {k}")
     if e: return e
@@ -40,14 +43,19 @@ def check(s):
     for k in ("q", "a", "f", "f2"):
         if k not in s["cap"]: e.append(f"cap.{k} missing")
         elif len(s["cap"][k]) > 120: e.append(f"cap.{k} too long (>120)")
-    if len(s["tiles"]) != 4: e.append("tiles needs exactly 4")
-    for t in s["tiles"]:
+    ot = s.get("layout") == "ot"
+    if ot:
+        for x in s["bullets"]:
+            if len(x) > 34: e.append(f"ot layout bullet too long ({len(x)}>34): {x}")
+    if not ot and len(s["tiles"]) != 4: e.append("tiles needs exactly 4")
+    for t in ([] if ot else s["tiles"]):
         if len(t) != 3: e.append(f"tile needs [label, before, after]: {t}"); continue
         if len(t[0]) > LIM["tile_k"]: e.append(f"tile label too long: {t[0]}")
         for v in t[1:]:
             if len(v) > LIM["tile_v"]: e.append(f"tile value too long ({len(v)}>{LIM['tile_v']}): {v}")
     st = s["stage"]
-    if st.get("type") == "checklist":
+    if ot: pass
+    elif st.get("type") == "checklist":
         if len(st.get("rows", [])) != 4: e.append("checklist needs 4 rows")
         for r in st.get("rows", []):
             if r.get("icon") not in ICONS: e.append(f"unknown icon {r.get('icon')} (use {ICONS})")
@@ -393,6 +401,71 @@ def build(spec, outdir, preview=False):
             d.rectangle([0, 1680, W, H], fill=GREEN); ls = wrap(d, c, P(40), 980)[:3]; y0 = 1800 - (len(ls) - 1) * 27
             for i, l in enumerate(ls): d.text((W/2, y0 + i * 54), l, font=P(40), fill="white", anchor="mm")
         return im
+    OT = spec.get("layout") == "ot"
+    if OT:
+        FP = A("Poppins-Bold.ttf"); BG = ot_scene.static_bg(FP)
+        PH = 640; DH = 680
+        P_IMG = {k: cast(f"{pt}_{k}", PH) for k in ("worried", "doubt", "relieved", "thankful")}
+        D_IMG = {k: cast(f"dr_{k}", DH) for k in ("happy", "explain", "reassure", "surprised")}
+        _frame_classic = frame
+        def frame_ot(name, t, tseg, dseg=5.0):
+            if name == "e": return _frame_classic(name, t, tseg, dseg)
+            im = BG.copy(); d = ImageDraw.Draw(im)
+            ot_scene.glow(im, t); d = ImageDraw.Draw(im); ot_scene.lamp(d)
+            ot_scene.monitor(d, t, FP); ot_scene.lapscreen(d, t, FP)
+            # who talks, expressions
+            if name == "intro": pe, de, ptalk, dtalk = "worried", "reassure", 0, 0
+            elif name == "q": pe, de, ptalk, dtalk = "worried", "reassure", amp("q", tseg), 0
+            elif name == "a": pe, de, ptalk, dtalk = "doubt", "happy", 0, amp("a", tseg)
+            else:
+                pe = "relieved" if tseg >= btimes[1] else "doubt"; de = "explain"; ptalk, dtalk = 0, amp("f", tseg)
+            pin = ease_out_back((t) / 0.6)
+            char(im, P_IMG[pe], -40 - (1 - pin) * 500, 1420, talk=ptalk, t=t)
+            char(im, D_IMG[de], W - D_IMG[de].width + 30 + (1 - pin) * 500, 1420, talk=dtalk, t=t + 1.3)
+            d = ImageDraw.Draw(im); ot_scene.table_front(d)
+            c = None
+            if name == "intro":
+                def card(dd):
+                    dd.rounded_rectangle([90, 470, 990, 750], radius=40, fill=(255, 255, 255), outline=GREEN, width=8)
+                    dd.text((W/2, 560), spec["intro"][0], font=P(84), fill=GREEN, anchor="mm")
+                    dd.text((W/2, 665), spec["intro"][1], font=P(84), fill=RED, anchor="mm")
+                pop_layer(im, card, (80, 460, 1000, 760), ease_out_back((tseg - 0.3) / 0.4))
+                d = ImageDraw.Draw(im)
+                if tseg > 0.8: d.rounded_rectangle([200, 1470, 880, 1530], radius=30, fill=GREEN); d.text((W/2, 1500), spec["intro"][2], font=P(34), fill="white", anchor="mm")
+            if name == "q":
+                pop_layer(im, lambda dd: bubble(dd, [30, 470, 620, 720], spec["q_bubble"], P(42), DARK, [(180, 718), (230, 800), (260, 718)]), (20, 460, 630, 810), ease_out_back((tseg - 0.15) / 0.3))
+                c = cap["q"]
+            if name == "a":
+                pop_layer(im, lambda dd: bubble(dd, [460, 470, 1050, 720], spec["a_bubble"], P(42), RED, [(800, 718), (840, 790), (880, 718)]), (450, 460, 1060, 810), ease_out_back((tseg - 0.15) / 0.3))
+                c = cap["a"]
+            if name == "f":
+                k = ease_out_back(tseg / 0.35)
+                def fcard(dd):
+                    dd.rounded_rectangle([30, 470, 1050, 775], radius=30, fill=GREEN, outline="white", width=6)
+                    dd.text((60, 512), "SACH KYA HAI?", font=P(48), fill="white", anchor="lm")
+                pop_layer(im, fcard, (20, 460, 1060, 785), k)
+                lay = Image.new("RGBA", (W, H), (0, 0, 0, 0)); dl = ImageDraw.Draw(lay)
+                for i, (ptxt, tm) in enumerate(zip(spec["bullets"], btimes)):
+                    if tseg >= tm:
+                        p = ease_out((tseg - tm) / 0.3); dx = (1 - p) * -200; y = 572 + i * 56
+                        dl.ellipse([62 + dx, y - 13, 88 + dx, y + 13], fill=(255, 210, 80))
+                        dl.text((105 + dx, y), ptxt, font=P(36), fill=(255, 255, 255, int(255 * p)), anchor="lm")
+                im.paste(lay, (0, 0), lay)
+                c = cap["f"] if tseg < capsw else cap["f2"]
+            # camera: push towards the speaker
+            focus = {"q": 300, "a": 780, "f": 760}.get(name, 540)
+            z = 1 + (0.06 if name in ("q", "a") else 0.03) * ease_out(tseg / max(dseg, 0.1))
+            if z > 1.001:
+                reg = im.crop((0, 200, W, 1680)); rw, rh = reg.size; cw, ch = rw / z, rh / z
+                cx = min(max(focus, cw / 2), rw - cw / 2); cy = min(max(rh * 0.5, ch / 2), rh - ch / 2)
+                reg = reg.crop((cx - cw / 2, cy - ch / 2, cx + cw / 2, cy + ch / 2)).resize((rw, rh), Image.BILINEAR); im.paste(reg, (0, 200))
+            d = ImageDraw.Draw(im)
+            d.rectangle([0, 0, W, 200], fill=GREEN); d.text((W/2, 100), f"Dr Saathi ke OT Kisse #{num}", font=P(50), fill="white", anchor="mm")
+            if c:
+                d.rectangle([0, 1680, W, H], fill=GREEN); ls = wrap(d, c, P(40), 980)[:3]; y0 = 1800 - (len(ls) - 1) * 27
+                for i, l in enumerate(ls): d.text((W/2, y0 + i * 54), l, font=P(40), fill="white", anchor="mm")
+            return im
+        frame = frame_ot
     # contact sheet for checking
     starts = {}; t0 = 0
     for n, d_ in segs: starts[n] = (t0, d_); t0 += d_
