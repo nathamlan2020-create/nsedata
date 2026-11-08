@@ -1,6 +1,6 @@
 # SurgerySaathi daily Short pipeline ("Dr Saathi ke OT Kisse")
 
-Owner: an anaesthesiologist in India (timezone Asia/Kolkata). Brand: **SurgerySaathi**. Character: **Dr Saathi**, a 40-year-old female anaesthesiologist cartoon (AI character), who answers a nervous **Uncle**'s question before/after surgery.
+Owner: an anaesthesiologist in India (timezone Asia/Kolkata). Brand: **SurgerySaathi**. Characters (cutouts in assets/cast/): **Dr Saathi**, a female anaesthesiologist cartoon (AI character), answers a nervous patient: **uncle** (older man, moustache), **dadi** (elderly woman) or **didi** (young pregnant woman — use for C-section / pregnancy / women's topics). Rotate patients so the same one is not used 3 days running; pick the one that fits the topic.
 Every video = Uncle's question → Dr Saathi's one-line answer → "SACH KYA HAI?" with 4 facts → end card "Darr nahi, taiyaari!".
 
 ## Files
@@ -9,16 +9,17 @@ Every video = Uncle's question → Dr Saathi's one-line answer → "SACH KYA HAI
 - `topics.txt` — topic bank (take the first one not already in `used.txt`). `used.txt` — log of made episodes (last `ep` number + 1 = next number).
 - `examples/` — finished specs. **Read at least the latest example before writing a new spec**; copy its structure exactly.
 - `specs/` — every spec the agent made (keep them).
-- `assets/` — character art, end card, font. Do not change.
+- `assets/` — character art (cast/), font. Do not change. Channel handle shown on the end card comes from env SS_HANDLE (default @surgerysathi).
 
 ## Spec format (JSON)
 | key | rule |
 |---|---|
 | `slug` | `ep<NUM>_<oneword>` ASCII |
 | `num` | episode number (int) |
+| `patient` | `uncle`, `dadi` or `didi` (sets the patient's art and voice). Captions and Dr Saathi's lines must address that patient ("Uncle", "Dadi", "Didi") |
 | `topic` | short topic text (same as used.txt) |
 | `intro` | `[line1, line2, subtitle]` — lines ≤16 chars, CAPS Hinglish (line2 shows in red); subtitle ≤38 chars |
-| `q_vo` | Uncle's voice, list of `[Devanagari text, pause_seconds]`. Starts with `["डॉक्टर मैडम...", 0.22]`. 2–3 phrases, ≤ 5 s total |
+| `q_vo` | the patient's voice, list of `[Devanagari text, pause_seconds]`. Starts with `["डॉक्टर मैडम...", 0.22]`. 2–3 phrases, ≤ 5 s total |
 | `a_vo` | Dr Saathi's short answer, 2–3 phrases, ≤ 4.5 s |
 | `f_vo` | facts. First phrase `["सच क्या है?", 0.3]`. Then 6–9 short phrases (≤ 6 words each), pauses 0.06 inside a sentence, 0.2 at sentence end. 12–17 s total |
 | `bullet_starts` | 4 increasing indexes into `f_vo` where each on-screen bullet appears (index ≥ 1) |

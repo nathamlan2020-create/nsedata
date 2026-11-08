@@ -23,6 +23,7 @@ def check(s):
     for k in ["slug", "num", "intro", "q_vo", "a_vo", "f_vo", "q_bubble", "a_bubble", "bullets", "bullet_starts", "cap", "tiles", "stage", "youtube"]:
         if k not in s: e.append(f"missing {k}")
     if e: return e
+    if s.get("patient", "uncle") not in ("uncle", "dadi", "didi"): e.append("patient must be uncle, dadi or didi")
     if len(s["intro"]) != 3: e.append("intro needs 3 strings")
     for x in s["intro"][:2]:
         if len(x) > LIM["intro"]: e.append(f"intro line too long ({len(x)}>{LIM['intro']}): {x}")
@@ -95,9 +96,11 @@ def circ(box, size, ring=GREEN):
     m = Image.new("L", (size, size), 0); ImageDraw.Draw(m).ellipse([0, 0, size - 1, size - 1], fill=255)
     out = Image.new("RGBA", (size + 16, size + 16), (0, 0, 0, 0)); d = ImageDraw.Draw(out); d.ellipse([0, 0, size + 15, size + 15], fill=ring)
     out.paste(f, (8, 8), m); return out
-UNC = (312, 452, 542, 682); DR = (560, 335, 790, 565)
-unc_big = circ(UNC, 230, BLUE); dr_big = circ(DR, 230); dr_sm = circ(DR, 150)
-logo = Image.open(A("endcard.png")).convert("RGB")
+def cast(name, h):
+    im = Image.open(A(f"cast/{name}.png")).convert("RGBA"); k = h / im.height
+    return im.resize((int(im.width * k), h), Image.LANCZOS)
+SITE_HANDLE = os.environ.get("SS_HANDLE", "@surgerysathi")
+PATIENTS = {"uncle": ("Uncle", "hm_omega", 1.0), "dadi": ("Dadi", "hf_beta", 0.92), "didi": ("Didi", "hf_beta", 1.0)}
 
 def wrap(d, text, font, maxw):
     words = text.split(); L = []; cur = ""
@@ -164,7 +167,8 @@ def build(spec, outdir, preview=False):
     os.makedirs(outdir, exist_ok=True)
     slug = spec["slug"]; num = spec["num"]
     K = kokoro()
-    qa, sr, _ = say(K, spec["q_vo"], "hm_omega", 1.0)
+    pt = spec.get("patient", "uncle"); pname, pvoice, pspeed = PATIENTS[pt]
+    qa, sr, _ = say(K, spec["q_vo"], pvoice, pspeed)
     aa, _, _ = say(K, spec["a_vo"], "hf_alpha", 1.02)
     fa, _, fst = say(K, spec["f_vo"], "hf_alpha", 1.02)
     ea, _, _ = say(K, END_VO, "hf_alpha", 1.02)
@@ -175,7 +179,7 @@ def build(spec, outdir, preview=False):
     btimes = [fst[i] + 0.25 for i in spec["bullet_starts"]]
     sw_i = spec.get("switch_bullet", 2)  # tiles/meter switch at this bullet (1-based)
     SW = FST + btimes[sw_i - 1]
-    cap = dict(spec["cap"]); cap["e"] = "Darr nahi, taiyaari! Follow @surgerysaathi"
+    cap = dict(spec["cap"]); cap["e"] = f"Darr nahi, taiyaari! Follow {SITE_HANDLE}"
     capsw = btimes[2]
     # audio
     N = int(total * sr); track = np.zeros(N + sr, dtype=np.float32); t0 = 0
@@ -197,6 +201,8 @@ def build(spec, outdir, preview=False):
     wav = os.path.join(outdir, f"{slug}.wav"); sf.write(wav, track, sr)
 
     st = spec["stage"]
+    p_worried = cast(f"{pt}_worried", 600); p_thank = cast(f"{pt}_thankful", 380)
+    d_happy = cast("dr_happy", 600); d_explain = cast("dr_explain", 250); d_port = cast("dr_portrait", 560)
     def tiles(d, t):
         on = t >= SW
         for i, (k, b, a) in enumerate(spec["tiles"]):
@@ -246,23 +252,31 @@ def build(spec, outdir, preview=False):
         d.rectangle([0, 0, W, 200], fill=GREEN); d.text((W/2, 100), f"Dr Saathi ke OT Kisse #{num}", font=P(50), fill="white", anchor="mm")
         c = None
         if name == "e":
-            im.paste(logo, (0, 260)); d.text((W/2, 1220), "@surgerysaathi", font=P(46), fill=GREEN, anchor="mm")
-            d.text((W/2, 1290), "AI character · sirf jaankari ke liye", font=P(32), fill=(60, 90, 70), anchor="mm"); c = cap["e"]
+            d.ellipse([W/2 - 400, 250, W/2 + 260, 910], fill=(205, 232, 214))
+            pc = d_port.crop((0, 0, d_port.width, 560)); im.paste(pc, (int(W/2 - pc.width/2 - 70), 350), pc)
+            im.paste(p_thank, (W - p_thank.width + 20, 920 - p_thank.height), p_thank)
+            d = ImageDraw.Draw(im)
+            w1 = d.textlength("Surgery", font=P(120)); w2 = d.textlength("Saathi", font=P(120)); x0 = W/2 - (w1 + w2)/2
+            d.text((x0, 1010), "Surgery", font=P(120), fill=GREEN, anchor="lm"); d.text((x0 + w1, 1010), "Saathi", font=P(120), fill=RED, anchor="lm")
+            d.text((W/2, 1130), "Darr nahi, taiyaari!", font=P(60), fill=DARK, anchor="mm")
+            d.rounded_rectangle([W/2 - 300, 1200, W/2 + 300, 1290], radius=45, fill=RED); d.text((W/2, 1245), "SUBSCRIBE", font=P(48), fill="white", anchor="mm")
+            d.text((W/2, 1370), SITE_HANDLE, font=P(46), fill=GREEN, anchor="mm")
+            d.text((W/2, 1440), "AI character · sirf jaankari ke liye", font=P(32), fill=(60, 90, 70), anchor="mm"); c = cap["e"]
         else:
             stage(im, d, t)
             if name == "intro":
                 d.text((W/2, 1200), spec["intro"][0], font=P(96), fill=GREEN, anchor="mm"); d.text((W/2, 1330), spec["intro"][1], font=P(96), fill=RED, anchor="mm")
                 d.text((W/2, 1450), spec["intro"][2], font=P(40), fill=DARK, anchor="mm")
             if name == "q":
-                im.paste(unc_big, (810, 1170), unc_big)
-                bubble(d, [40, 1120, 770, 1440], spec["q_bubble"], P(46), DARK, [(768, 1260), (830, 1290), (768, 1330)]); c = cap["q"]
+                im.paste(p_worried, (W - p_worried.width + 40, 1680 - p_worried.height), p_worried); d = ImageDraw.Draw(im)
+                bubble(d, [30, 1000, 650, 1300], spec["q_bubble"], P(44), DARK, [(648, 1150), (720, 1190), (648, 1220)]); c = cap["q"]
             if name == "a":
-                im.paste(dr_big, (30, 1170), dr_big)
-                bubble(d, [310, 1120, 1045, 1440], spec["a_bubble"], P(46), RED, [(312, 1260), (250, 1290), (312, 1330)]); c = cap["a"]
+                im.paste(d_happy, (-40, 1680 - d_happy.height), d_happy); d = ImageDraw.Draw(im)
+                bubble(d, [430, 1000, 1050, 1300], spec["a_bubble"], P(44), RED, [(432, 1150), (360, 1190), (432, 1220)]); c = cap["a"]
             if name == "f":
                 d.rounded_rectangle([30, 990, 1050, 1650], radius=34, fill=GREEN)
                 d.text((60, 1040), "SACH KYA HAI?", font=P(70), fill="white", anchor="lm")
-                im.paste(dr_sm, (880, 985), dr_sm)
+                im.paste(d_explain, (W - d_explain.width - 20, 1050 - d_explain.height + 120), d_explain); d = ImageDraw.Draw(im)
                 for i, (ptxt, tm) in enumerate(zip(spec["bullets"], btimes)):
                     if tseg >= tm:
                         y = 1180 + i * 120; d.ellipse([62, y - 16, 94, y + 16], fill=(255, 210, 80))
