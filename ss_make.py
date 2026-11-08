@@ -12,15 +12,20 @@ from PIL import Image, ImageDraw, ImageFont
 HERE = os.path.dirname(os.path.abspath(__file__))
 A = lambda f: os.path.join(HERE, "assets", f)
 FPS = 30; W, H = 1080, 1920
-FONT = {"hi": "Poppins-Bold.ttf", "bn": "HindSiliguri-Bold.ttf"}
+FONT = {"hi": "Poppins-Bold.ttf", "bn": "HindSiliguri-Bold.ttf", "en": "Poppins-Bold.ttf", "or": "NotoSansOriya.ttf"}
 LANG = "hi"
 _fc = {}
 def P(s):
     k = (LANG, s)
-    if k not in _fc: _fc[k] = ImageFont.truetype(A(FONT[LANG]), int(s * (1.12 if LANG == "bn" else 1)))
+    if k not in _fc:
+        f = ImageFont.truetype(A(FONT[LANG]), int(s * (1.12 if LANG == "bn" else 0.95 if LANG == "or" else 1)))
+        if LANG == "or": f.set_variation_by_name("Bold")
+        _fc[k] = f
     return _fc[k]
 LATIN = lambda s: ImageFont.truetype(A("Poppins-Bold.ttf"), s)
 STR = {"hi": dict(sach="SACH KYA HAI?", tag="Darr nahi, taiyaari!", ai="AI character · sirf jaankari ke liye", follow="Follow", header="Dr Saathi ke OT Kisse #{n}"),
+       "en": dict(sach="WHAT'S THE TRUTH?", tag="No fear, just prepare!", ai="AI character · for information only", follow="Follow", header="Dr Saathi's OT Stories #{n}"),
+       "or": dict(sach="ସତ କଥା କ'ଣ?", tag="ଭୟ ନୁହେଁ, ପ୍ରସ୍ତୁତି!", ai="AI ଚରିତ୍ର · କେବଳ ଜାଣିବା ପାଇଁ", follow="ଫଲୋ କରନ୍ତୁ", header="ଡାକ୍ତର ସାଥୀଙ୍କ OT ଗପ #{n}"),
        "bn": dict(sach="সত্যিটা কী?", tag="ভয় নয়, প্রস্তুতি!", ai="AI চরিত্র · শুধু জানার জন্য", follow="ফলো করুন", header="ডাঃ সাথীর OT গপ্পো #{n}")}
 GREEN = (18, 83, 42); LIGHT = (232, 245, 236); RED = (200, 30, 40); DARK = (25, 45, 30); OK = (30, 140, 60); BLUE = (40, 110, 200)
 KDIR = os.environ.get("KOKORO_DIR", "/home/claude/kokoro")
@@ -77,7 +82,7 @@ def check(s):
         e.append("stage.type must be checklist or meter")
     for vo in ("q_vo", "a_vo", "f_vo"):
         for p in s[vo]:
-            if any("a" <= ch.lower() <= "z" for ch in p[0]): e.append(f"{vo} must be Devanagari only (no Latin letters): {p[0]}")
+            if s.get("lang") != "en" and any("a" <= ch.lower() <= "z" for ch in p[0]): e.append(f"{vo} must be Devanagari only (no Latin letters): {p[0]}")
             if any(ch.isdigit() for ch in p[0]): e.append(f"{vo}: write numbers in words: {p[0]}")
     y = s["youtube"]
     if len(y.get("title", "")) > LIM["title"]: e.append("youtube.title too long (>95 chars)")
@@ -108,6 +113,8 @@ def say(K, parts, voice, speed):
 # Microsoft Edge neural voices (preferred), Kokoro fallback
 EDGE_ALL = {"hi": {"dr": ("hi-IN-SwaraNeural", "+6%", "+0Hz"), "uncle": ("hi-IN-MadhurNeural", "+0%", "-4Hz"),
                     "dadi": ("hi-IN-SwaraNeural", "-10%", "-40Hz"), "didi": ("hi-IN-SwaraNeural", "+2%", "+22Hz")},
+            "en": {"dr": ("en-IN-NeerjaNeural", "+4%", "+0Hz"), "uncle": ("en-IN-PrabhatNeural", "+0%", "-4Hz"),
+                    "dadi": ("en-IN-NeerjaNeural", "-10%", "-40Hz"), "didi": ("en-IN-NeerjaNeural", "+2%", "+22Hz")},
             "bn": {"dr": ("bn-IN-TanishaaNeural", "+6%", "+0Hz"), "uncle": ("bn-IN-BashkarNeural", "+0%", "-4Hz"),
                     "dadi": ("bn-IN-TanishaaNeural", "-10%", "-40Hz"), "didi": ("bn-IN-TanishaaNeural", "+2%", "+22Hz")}}
 KOK = {"dr": ("hf_alpha", 1.02), "uncle": ("hm_omega", 1.0), "dadi": ("hf_beta", 0.92), "didi": ("hf_beta", 1.0)}
@@ -128,6 +135,20 @@ def edge_clip(text, voice, rate, pitch, sr=24000):
     s = np.frombuffer(raw, dtype=np.float32)
     if len(s) < 1000: raise RuntimeError("edge tts failed")
     return s
+_MMS = None
+MMS_SHIFT = {"dr": 1.18, "didi": 1.25, "dadi": 1.05, "uncle": 0.92}
+def mms_clip(text, role, sr=24000):
+    global _MMS
+    if _MMS is None:
+        import torch
+        from transformers import VitsModel, AutoTokenizer
+        _MMS = (VitsModel.from_pretrained("facebook/mms-tts-ory"), AutoTokenizer.from_pretrained("facebook/mms-tts-ory"), torch)
+    m, tok, torch = _MMS
+    with torch.no_grad(): w = m(**tok(text, return_tensors="pt")).waveform[0].numpy().astype(np.float32)
+    msr = m.config.sampling_rate; k = MMS_SHIFT[role]
+    raw = subprocess.run(["ffmpeg", "-loglevel", "error", "-f", "f32le", "-ar", str(msr), "-ac", "1", "-i", "-", "-af", f"asetrate={int(msr * k)},aresample={sr},atempo={1 / k:.4f}", "-f", "f32le", "-ac", "1", "-"],
+                         input=w.tobytes(), capture_output=True).stdout
+    return np.frombuffer(raw, dtype=np.float32)
 _K = None
 def say_role(role, parts):
     global _K
@@ -135,7 +156,8 @@ def say_role(role, parts):
     out = []; starts = []; t = 0.0; sr = 24000
     for txt, pause in parts:
         s = None
-        if use_edge:
+        if LANG == "or": s = mms_clip(txt, role)
+        elif use_edge:
             try: s = edge_clip(txt, *EDGE_ALL[LANG][role])
             except Exception:
                 if LANG != "hi": raise
@@ -148,6 +170,8 @@ def say_role(role, parts):
         starts.append(t); out += [s.astype(np.float32), np.zeros(int(pause * sr), dtype=np.float32)]; t += len(s) / sr + pause
     return np.concatenate(out).astype(np.float32), sr, starts
 
+END_VO_EN = [["No fear,", 0.1], ["just prepare!", 0.25], ["Follow Surgery Saathi.", 0.1]]
+END_VO_OR = [["ଭୟ ନୁହେଁ,", 0.1], ["ପ୍ରସ୍ତୁତି!", 0.25], ["ଫଲୋ କରନ୍ତୁ, ସର୍ଜରୀ ସାଥୀ।", 0.1]]
 END_VO_BN = [["ভয় নয়,", 0.1], ["প্রস্তুতি!", 0.25], ["ফলো করুন, সার্জারি সাথী।", 0.1]]
 END_VO = [["डर नहीं,", 0.1], ["तैयारी!", 0.25], ["फ़ॉलो कीजिए, सर्जरी साथी।", 0.1]]
 
@@ -235,7 +259,7 @@ def build(spec, outdir, preview=False):
     qa, sr, _ = say_role(pt, spec["q_vo"])
     aa, _, _ = say_role("dr", spec["a_vo"])
     fa, _, fst = say_role("dr", spec["f_vo"])
-    ea, _, _ = say_role("dr", END_VO_BN if LANG == "bn" else END_VO)
+    ea, _, _ = say_role("dr", {"bn": END_VO_BN, "en": END_VO_EN, "or": END_VO_OR}.get(LANG, END_VO))
     aud = dict(q=qa, a=aa, f=fa, e=ea)
     segs = [("intro", 1.8), ("q", len(qa)/sr + 0.6), ("a", len(aa)/sr + 0.7), ("f", len(fa)/sr + 0.8), ("e", len(ea)/sr + 0.9)]
     total = sum(d for _, d in segs)

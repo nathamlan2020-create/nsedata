@@ -1,0 +1,29 @@
+{
+ "slug": "ep16_bath_ot_en",
+ "num": 16,
+ "lang": "en",
+ "layout": "ot",
+ "patient": "uncle",
+ "topic": "Operation se pehle naha kar aana kyun? (English)",
+ "intro": ["BATHE BEFORE", "SURGERY?", "The truth before your operation"],
+ "q_vo": [["Doctor Madam...", 0.22], ["before my operation,", 0.1], ["do I really need to bathe?", 0.1]],
+ "a_vo": [["Yes Uncle!", 0.15], ["Clean skin means,", 0.06], ["less infection.", 0.1]],
+ "f_vo": [["What's the truth?", 0.3], ["The day before your operation,", 0.06], ["or on the same day,", 0.06], ["take a bath with soap.", 0.2], ["It reduces germs on your skin.", 0.2], ["Don't shave the area yourself with a razor,", 0.06], ["it raises the risk of infection.", 0.2], ["If hair must be removed,", 0.06], ["the hospital staff will use clippers.", 0.1]],
+ "bullet_starts": [1, 4, 5, 7],
+ "q_bubble": ["Before my operation,", "do I really need", "to bathe?"],
+ "a_bubble": ["Yes Uncle!", "Clean skin means", "less infection."],
+ "bullets": ["Soap bath: day before or same day", "Fewer germs on your skin", "Don't shave yourself with a razor", "If needed, staff use clippers"],
+ "cap": {
+  "q": "Uncle: \"Doctor Madam, before my operation, do I really need to bathe?\"",
+  "a": "Dr Saathi: \"Yes Uncle! Clean skin means less infection.\"",
+  "f": "Take a bath with soap the day before your operation or on the same day. It reduces germs on your skin.",
+  "f2": "Don't shave the area yourself with a razor, it raises infection risk. If needed, hospital staff use clippers."
+ },
+ "tiles": [],
+ "stage": {},
+ "youtube": {
+  "title": "Why bathe before surgery? 🛁 | Dr Saathi's OT Stories #16 #shorts",
+  "description": "Uncle asked: \"Do I really need to bathe before my operation?\" 🛁\nDr Saathi said: Yes! Clean skin means less infection. 💚\n\nWhat's the truth?\n✅ Take a bath with soap the day before your operation or on the same day\n✅ It reduces germs on your skin\n✅ Don't shave the area yourself with a razor, it raises the risk of infection\n✅ If hair must be removed, hospital staff will use clippers\n\nNo fear, just prepare!\nFollow @surgerysathi for more OT Stories\n\n⚠️ AI character. This video is only for general information. Ask your own doctor about your treatment.\n\n#SurgerySaathi #SurgeryTips #PatientEducation #HealthTips #Shorts",
+  "tags": ["bath before surgery", "shower before surgery", "surgery preparation", "how to prepare for surgery", "surgical site infection", "shaving before surgery", "pre operative instructions", "anaesthesia explained", "doctor cartoon", "patient education", "health tips india", "surgerysaathi", "OT stories", "shorts"]
+ }
+}
