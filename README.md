@@ -4,7 +4,7 @@ Owner: an anaesthesiologist in India (timezone Asia/Kolkata). Brand: **SurgerySa
 Every video = Uncle's question → Dr Saathi's one-line answer → "SACH KYA HAI?" with 4 facts → end card "Darr nahi, taiyaari!".
 
 ## Files
-- `ss_make.py spec.json OUTDIR` — validates the spec, makes TTS (Kokoro, Hindi voices), renders `OUTDIR/<slug>.mp4` (1080×1920, ~30–36 s), `<slug>_cover.jpg` and `<slug>_check.jpg` (6-frame contact sheet). Add `--preview` to make only the jpgs. Invalid spec → prints `{"ok":false,"invalid":[...]}` and exits 1: fix and rerun.
+- `ss_make.py spec.json OUTDIR` — validates the spec, makes TTS (Microsoft Edge neural voices via `edge-tts`: Swara for Dr Saathi/Dadi/Didi, Madhur for Uncle; automatic fallback to Kokoro if Edge fails), animates (slide-ins, talking bounce, bubble pops, camera push-in, whooshes), renders `OUTDIR/<slug>.mp4` (1080×1920, ~30–36 s), `<slug>_cover.jpg` and `<slug>_check.jpg` (6-frame contact sheet). Add `--preview` to make only the jpgs. Invalid spec → prints `{"ok":false,"invalid":[...]}` and exits 1: fix and rerun.
 - `tg_send.py spec.json video.mp4` — sends the video + an "upload kit" (title, description, tags, settings) to the owner's Telegram. Needs env `TG_TOKEN`, `TG_CHAT`.
 - `topics.txt` — topic bank (take the first one not already in `used.txt`). `used.txt` — log of made episodes (last `ep` number + 1 = next number).
 - `examples/` — finished specs. **Read at least the latest example before writing a new spec**; copy its structure exactly.

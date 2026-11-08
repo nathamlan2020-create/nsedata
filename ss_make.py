@@ -87,6 +87,46 @@ def say(K, parts, voice, speed):
         starts.append(t); out += [s, np.zeros(int(pause * sr), dtype=np.float32)]; t += len(s) / sr + pause
     return np.concatenate(out).astype(np.float32), sr, starts
 
+
+# Microsoft Edge neural voices (preferred), Kokoro fallback
+EDGE = {"dr": ("hi-IN-SwaraNeural", "+6%", "+0Hz"), "uncle": ("hi-IN-MadhurNeural", "+0%", "-4Hz"),
+        "dadi": ("hi-IN-SwaraNeural", "-10%", "-40Hz"), "didi": ("hi-IN-SwaraNeural", "+2%", "+22Hz")}
+KOK = {"dr": ("hf_alpha", 1.02), "uncle": ("hm_omega", 1.0), "dadi": ("hf_beta", 0.92), "didi": ("hf_beta", 1.0)}
+def edge_clip(text, voice, rate, pitch, sr=24000):
+    import asyncio, ssl, tempfile
+    import edge_tts, edge_tts.communicate as C
+    ca = os.path.expanduser("~/.ccr/ca-bundle.crt")
+    if os.path.exists(ca): C._SSL_CTX = ssl.create_default_context(cafile=ca)
+    tmp = tempfile.mktemp(suffix=".mp3")
+    for a in range(3):
+        try:
+            asyncio.run(edge_tts.Communicate(text, voice, rate=rate, pitch=pitch).save(tmp))
+            if os.path.getsize(tmp) > 500: break
+        except Exception as e:
+            err = e
+    raw = subprocess.run(["ffmpeg", "-loglevel", "error", "-i", tmp, "-f", "f32le", "-ac", "1", "-ar", str(sr), "-"], capture_output=True).stdout
+    os.remove(tmp)
+    s = np.frombuffer(raw, dtype=np.float32)
+    if len(s) < 1000: raise RuntimeError("edge tts failed")
+    return s
+_K = None
+def say_role(role, parts):
+    global _K
+    use_edge = os.environ.get("SS_TTS", "edge") == "edge"
+    out = []; starts = []; t = 0.0; sr = 24000
+    for txt, pause in parts:
+        s = None
+        if use_edge:
+            try: s = edge_clip(txt, *EDGE[role])
+            except Exception: use_edge = False
+        if s is None:
+            if _K is None: _K = kokoro()
+            v, sp = KOK[role]; s, sr = _K.create(txt, voice=v, speed=sp, lang="hi")
+        nz = np.where(np.abs(s) > 0.01)[0]
+        s = s[max(0, nz[0] - 240): nz[-1] + 480] if len(nz) else s
+        starts.append(t); out += [s.astype(np.float32), np.zeros(int(pause * sr), dtype=np.float32)]; t += len(s) / sr + pause
+    return np.concatenate(out).astype(np.float32), sr, starts
+
 END_VO = [["डर नहीं,", 0.1], ["तैयारी!", 0.25], ["फ़ॉलो कीजिए, सर्जरी साथी।", 0.1]]
 
 # ---------------- drawing helpers ----------------
@@ -166,12 +206,11 @@ def mix(c1, c2, p): return tuple(int(c1[k] + (c2[k] - c1[k]) * p) for k in range
 def build(spec, outdir, preview=False):
     os.makedirs(outdir, exist_ok=True)
     slug = spec["slug"]; num = spec["num"]
-    K = kokoro()
-    pt = spec.get("patient", "uncle"); pname, pvoice, pspeed = PATIENTS[pt]
-    qa, sr, _ = say(K, spec["q_vo"], pvoice, pspeed)
-    aa, _, _ = say(K, spec["a_vo"], "hf_alpha", 1.02)
-    fa, _, fst = say(K, spec["f_vo"], "hf_alpha", 1.02)
-    ea, _, _ = say(K, END_VO, "hf_alpha", 1.02)
+    pt = spec.get("patient", "uncle")
+    qa, sr, _ = say_role(pt, spec["q_vo"])
+    aa, _, _ = say_role("dr", spec["a_vo"])
+    fa, _, fst = say_role("dr", spec["f_vo"])
+    ea, _, _ = say_role("dr", END_VO)
     aud = dict(q=qa, a=aa, f=fa, e=ea)
     segs = [("intro", 1.8), ("q", len(qa)/sr + 0.6), ("a", len(aa)/sr + 0.7), ("f", len(fa)/sr + 0.8), ("e", len(ea)/sr + 0.9)]
     total = sum(d for _, d in segs)
@@ -191,6 +230,16 @@ def build(spec, outdir, preview=False):
     ding = np.arange(int(0.25 * sr)) / sr
     for bt in btimes:
         i = int((FST + bt) * sr); track[i:i + len(ding)] += 0.06 * np.sin(2*np.pi*1320*ding) * np.exp(-ding*12)
+    rng = np.random.default_rng(1); t0 = 0
+    for n, d in segs:
+        if t0 > 0:
+            L = int(0.32 * sr); x = np.arange(L) / L; nse = rng.standard_normal(L)
+            nse = np.convolve(nse, np.ones(6) / 6, mode="same") * np.sin(np.pi * x) ** 2
+            i = int(max(0, t0 - 0.16) * sr); track[i:i + L] += 0.10 * nse
+        if n in ("q", "a"):
+            L = int(0.09 * sr); x = np.arange(L) / sr; i = int((t0 + 0.18) * sr)
+            track[i:i + L] += 0.12 * np.sin(2 * np.pi * (500 + 3000 * x) * x) * np.exp(-x * 40)
+        t0 += d
     track = track[:N]; tt = np.arange(N) / sr
     bed = np.zeros(N); chords = [(261.6, 329.6, 392.0), (220.0, 261.6, 329.6), (174.6, 220.0, 261.6), (196.0, 246.9, 293.7)]
     for i, ch in enumerate(chords * 40):
@@ -201,6 +250,35 @@ def build(spec, outdir, preview=False):
     wav = os.path.join(outdir, f"{slug}.wav"); sf.write(wav, track, sr)
 
     st = spec["stage"]
+    def envelope(a):
+        hop = sr // FPS; n = len(a) // hop + 1
+        e = np.array([np.sqrt(np.mean(a[i*hop:(i+1)*hop] ** 2)) if i*hop < len(a) else 0 for i in range(n)])
+        e = e / (e.max() + 1e-6); return np.convolve(e, np.ones(3) / 3, mode="same")
+    ENV = {k: envelope(v) for k, v in aud.items()}
+    def amp(name, tseg):
+        e = ENV.get(name); i = int((tseg - 0.25) * FPS)
+        return float(e[i]) if e is not None and 0 <= i < len(e) else 0.0
+    _cache = {}
+    def scaled(img, k):
+        key = (id(img), round(k, 2))
+        if key not in _cache:
+            if len(_cache) > 400: _cache.clear()
+            _cache[key] = img.resize((max(1, int(img.width * k)), max(1, int(img.height * k))), Image.BILINEAR)
+        return _cache[key]
+    def ease_out_back(p):
+        p = max(0.0, min(1.0, p)); c1 = 1.70158; c3 = c1 + 1; return 1 + c3 * (p - 1) ** 3 + c1 * (p - 1) ** 2
+    def ease_out(p): p = max(0.0, min(1.0, p)); return 1 - (1 - p) ** 3
+    def pop_layer(im, draw_fn, box, k):
+        lay = Image.new("RGBA", (W, H), (0, 0, 0, 0)); draw_fn(ImageDraw.Draw(lay))
+        if k >= 0.999: im.paste(lay, (0, 0), lay); return
+        x0, y0, x1, y1 = box; part = lay.crop(box); cx, cy = (x0 + x1) / 2, (y0 + y1) / 2
+        if k <= 0.02: return
+        sp = scaled(part, k) if False else part.resize((max(1, int(part.width * k)), max(1, int(part.height * k))), Image.BILINEAR)
+        im.paste(sp, (int(cx - sp.width / 2), int(cy - sp.height / 2)), sp)
+    def char(im, img, x, bottom, k=1.0, talk=0.0, t=0.0):
+        kk = k * (1 + 0.025 * talk); c = scaled(img, kk)
+        dy = -18 * talk + 4 * math.sin(t * 2.2)
+        im.paste(c, (int(x + (img.width - c.width) / 2), int(bottom - c.height + dy)), c)
     p_worried = cast(f"{pt}_worried", 600); p_thank = cast(f"{pt}_thankful", 380)
     d_happy = cast("dr_happy", 600); d_explain = cast("dr_explain", 250); d_port = cast("dr_portrait", 560)
     def tiles(d, t):
@@ -208,7 +286,8 @@ def build(spec, outdir, preview=False):
         for i, (k, b, a) in enumerate(spec["tiles"]):
             x = 30 + i * 258; v = a if on else b
             col = (OK if on else RED) if a != b else DARK
-            d.rounded_rectangle([x, 240, x + 246, 420], radius=26, fill="white", outline=GREEN, width=5)
+            glow = on and a != b and t - SW < 0.8
+            d.rounded_rectangle([x, 240, x + 246, 420], radius=26, fill=(255, 250, 220) if glow else "white", outline=(255, 190, 0) if glow else GREEN, width=9 if glow else 5)
             d.text((x + 123, 285), k, font=P(28), fill=(70, 110, 80), anchor="mm")
             d.text((x + 123, 360), v, font=P(46 if len(v) <= 6 else 38 if len(v) <= 8 else 32), fill=col, anchor="mm")
     def stage(im, d, t):
@@ -247,41 +326,69 @@ def build(spec, outdir, preview=False):
             wbox = max(70, d.textlength(lab, font=P(44)) / 2 + 26)
             d.rounded_rectangle([x - wbox, Y + 90, x + wbox, Y + 165], radius=18, fill=pc(v), outline=DARK, width=3)
             d.text((x, Y + 128), lab, font=P(44), fill="white", anchor="mm")
-    def frame(name, t, tseg):
+    def frame(name, t, tseg, dseg=5.0):
         im = Image.new("RGB", (W, H), LIGHT); d = ImageDraw.Draw(im)
-        d.rectangle([0, 0, W, 200], fill=GREEN); d.text((W/2, 100), f"Dr Saathi ke OT Kisse #{num}", font=P(50), fill="white", anchor="mm")
         c = None
         if name == "e":
             d.ellipse([W/2 - 400, 250, W/2 + 260, 910], fill=(205, 232, 214))
-            pc = d_port.crop((0, 0, d_port.width, 560)); im.paste(pc, (int(W/2 - pc.width/2 - 70), 350), pc)
-            im.paste(p_thank, (W - p_thank.width + 20, 920 - p_thank.height), p_thank)
-            d = ImageDraw.Draw(im)
-            w1 = d.textlength("Surgery", font=P(120)); w2 = d.textlength("Saathi", font=P(120)); x0 = W/2 - (w1 + w2)/2
-            d.text((x0, 1010), "Surgery", font=P(120), fill=GREEN, anchor="lm"); d.text((x0 + w1, 1010), "Saathi", font=P(120), fill=RED, anchor="lm")
-            d.text((W/2, 1130), "Darr nahi, taiyaari!", font=P(60), fill=DARK, anchor="mm")
-            d.rounded_rectangle([W/2 - 300, 1200, W/2 + 300, 1290], radius=45, fill=RED); d.text((W/2, 1245), "SUBSCRIBE", font=P(48), fill="white", anchor="mm")
+            for k in range(12):
+                ang = k * math.pi / 6 + t * 0.4
+                d.line([W/2 - 70 + 300 * math.cos(ang), 580 + 300 * math.sin(ang), W/2 - 70 + 360 * math.cos(ang), 580 + 360 * math.sin(ang)], fill=(180, 220, 195), width=10)
+            pc = d_port.crop((0, 0, d_port.width, 560)); kin = ease_out_back(tseg / 0.45)
+            char(im, pc, W/2 - pc.width/2 - 70, 910, k=max(0.05, kin), talk=amp("e", tseg), t=t)
+            pk = ease_out(max(0, tseg - 0.3) / 0.4)
+            im.paste(p_thank, (int(W - p_thank.width + 20 + (1 - pk) * 400), 920 - p_thank.height), p_thank)
+            def wm(dd):
+                w1 = dd.textlength("Surgery", font=P(120)); w2 = dd.textlength("Saathi", font=P(120)); x0 = W/2 - (w1 + w2)/2
+                dd.text((x0, 1010), "Surgery", font=P(120), fill=GREEN, anchor="lm"); dd.text((x0 + w1, 1010), "Saathi", font=P(120), fill=RED, anchor="lm")
+                dd.text((W/2, 1130), "Darr nahi, taiyaari!", font=P(60), fill=DARK, anchor="mm")
+            pop_layer(im, wm, (0, 930, W, 1180), ease_out_back((tseg - 0.2) / 0.4))
+            d = ImageDraw.Draw(im); pulse = 1 + 0.05 * math.sin(t * 7)
+            bw, bh = 300 * pulse, 45 * pulse
+            if tseg > 0.6:
+                d.rounded_rectangle([W/2 - bw, 1245 - bh, W/2 + bw, 1245 + bh], radius=45, fill=RED); d.text((W/2, 1245), "SUBSCRIBE", font=P(48), fill="white", anchor="mm")
             d.text((W/2, 1370), SITE_HANDLE, font=P(46), fill=GREEN, anchor="mm")
             d.text((W/2, 1440), "AI character · sirf jaankari ke liye", font=P(32), fill=(60, 90, 70), anchor="mm"); c = cap["e"]
         else:
             stage(im, d, t)
             if name == "intro":
-                d.text((W/2, 1200), spec["intro"][0], font=P(96), fill=GREEN, anchor="mm"); d.text((W/2, 1330), spec["intro"][1], font=P(96), fill=RED, anchor="mm")
-                d.text((W/2, 1450), spec["intro"][2], font=P(40), fill=DARK, anchor="mm")
+                k1 = ease_out_back(tseg / 0.35); k2 = ease_out_back((tseg - 0.2) / 0.35)
+                pop_layer(im, lambda dd: dd.text((W/2, 1200), spec["intro"][0], font=P(96), fill=GREEN, anchor="mm"), (0, 1130, W, 1270), k1)
+                pop_layer(im, lambda dd: dd.text((W/2, 1330), spec["intro"][1], font=P(96), fill=RED, anchor="mm"), (0, 1260, W, 1400), k2)
+                d = ImageDraw.Draw(im); d.text((W/2, 1450), spec["intro"][2], font=P(40), fill=DARK, anchor="mm")
+                pk = ease_out(max(0, tseg - 0.8) / 0.6); peek = cast(f"{pt}_worried", 300)
+                im.paste(peek, (W - peek.width - 10, int(1680 - peek.height * 0.55 * pk)), peek)
             if name == "q":
-                im.paste(p_worried, (W - p_worried.width + 40, 1680 - p_worried.height), p_worried); d = ImageDraw.Draw(im)
-                bubble(d, [30, 1000, 650, 1300], spec["q_bubble"], P(44), DARK, [(648, 1150), (720, 1190), (648, 1220)]); c = cap["q"]
+                sl = ease_out_back(tseg / 0.4)
+                char(im, p_worried, W - p_worried.width + 40 + (1 - sl) * 500, 1680, talk=amp("q", tseg), t=t)
+                pop_layer(im, lambda dd: bubble(dd, [30, 1000, 650, 1300], spec["q_bubble"], P(44), DARK, [(648, 1150), (720, 1190), (648, 1220)]), (20, 990, 730, 1310), ease_out_back((tseg - 0.15) / 0.3))
+                c = cap["q"]
             if name == "a":
-                im.paste(d_happy, (-40, 1680 - d_happy.height), d_happy); d = ImageDraw.Draw(im)
-                bubble(d, [430, 1000, 1050, 1300], spec["a_bubble"], P(44), RED, [(432, 1150), (360, 1190), (432, 1220)]); c = cap["a"]
+                sl = ease_out_back(tseg / 0.4)
+                char(im, d_happy, -40 - (1 - sl) * 500, 1680, talk=amp("a", tseg), t=t)
+                pop_layer(im, lambda dd: bubble(dd, [430, 1000, 1050, 1300], spec["a_bubble"], P(44), RED, [(432, 1150), (360, 1190), (432, 1220)]), (350, 990, 1060, 1310), ease_out_back((tseg - 0.15) / 0.3))
+                c = cap["a"]
             if name == "f":
-                d.rounded_rectangle([30, 990, 1050, 1650], radius=34, fill=GREEN)
-                d.text((60, 1040), "SACH KYA HAI?", font=P(70), fill="white", anchor="lm")
-                im.paste(d_explain, (W - d_explain.width - 20, 1050 - d_explain.height + 120), d_explain); d = ImageDraw.Draw(im)
+                up = (1 - ease_out(tseg / 0.35)) * 700
+                lay = Image.new("RGBA", (W, H), (0, 0, 0, 0)); dl = ImageDraw.Draw(lay)
+                dl.rounded_rectangle([30, 990, 1050, 1650], radius=34, fill=GREEN)
+                dl.text((60, 1040), "SACH KYA HAI?", font=P(70), fill="white", anchor="lm")
                 for i, (ptxt, tm) in enumerate(zip(spec["bullets"], btimes)):
                     if tseg >= tm:
-                        y = 1180 + i * 120; d.ellipse([62, y - 16, 94, y + 16], fill=(255, 210, 80))
-                        for j, l in enumerate(wrap(d, ptxt, P(40), 760 if i == 0 else 900)[:2]): d.text((120, y + j * 50), l, font=P(40), fill="white", anchor="lm")
+                        p = ease_out((tseg - tm) / 0.3); dx = (1 - p) * -260
+                        y = 1180 + i * 120; dl.ellipse([62 + dx, y - 16, 94 + dx, y + 16], fill=(255, 210, 80))
+                        col = (255, 255, 255, int(255 * p))
+                        for j, l in enumerate(wrap(dl, ptxt, P(40), 760 if i == 0 else 900)[:2]): dl.text((120 + dx, y + j * 50), l, font=P(40), fill=col, anchor="lm")
+                im.paste(lay, (0, int(up)), lay)
+                char(im, d_explain, W - d_explain.width - 20, 1050 + 120 + up, talk=amp("f", tseg), t=t)
                 c = cap["f"] if tseg < capsw else cap["f2"]
+        # slow camera push-in on the middle area
+        z = 1 + 0.03 * min(1, tseg / max(dseg, 0.1))
+        if z > 1.001:
+            reg = im.crop((0, 200, W, 1680)); rw, rh = reg.size; cw, ch = rw / z, rh / z
+            reg = reg.crop(((rw - cw) / 2, (rh - ch) / 2, (rw + cw) / 2, (rh + ch) / 2)).resize((rw, rh), Image.BILINEAR); im.paste(reg, (0, 200))
+        d = ImageDraw.Draw(im)
+        d.rectangle([0, 0, W, 200], fill=GREEN); d.text((W/2, 100), f"Dr Saathi ke OT Kisse #{num}", font=P(50), fill="white", anchor="mm")
         if c:
             d.rectangle([0, 1680, W, H], fill=GREEN); ls = wrap(d, c, P(40), 980)[:3]; y0 = 1800 - (len(ls) - 1) * 27
             for i, l in enumerate(ls): d.text((W/2, y0 + i * 54), l, font=P(40), fill="white", anchor="mm")
@@ -290,7 +397,7 @@ def build(spec, outdir, preview=False):
     starts = {}; t0 = 0
     for n, d_ in segs: starts[n] = (t0, d_); t0 += d_
     picks = [("intro", 1.0), ("q", starts["q"][1] - 0.5), ("a", starts["a"][1] - 0.5), ("f", btimes[1] + 0.5), ("f", starts["f"][1] - 0.3), ("e", 1.0)]
-    thumbs = [frame(n, starts[n][0] + ts, ts).resize((270, 480)) for n, ts in picks]
+    thumbs = [frame(n, starts[n][0] + ts, ts, starts[n][1]).resize((270, 480)) for n, ts in picks]
     sheet = Image.new("RGB", (270 * 3, 960)); [sheet.paste(im, ((i % 3) * 270, (i // 3) * 480)) for i, im in enumerate(thumbs)]
     sheet.save(os.path.join(outdir, f"{slug}_check.jpg"), quality=85)
     frame("q", starts["q"][0] + 1, 1).convert("RGB").save(os.path.join(outdir, f"{slug}_cover.jpg"), quality=88)
@@ -301,7 +408,7 @@ def build(spec, outdir, preview=False):
                           "-c:a", "aac", "-b:a", "160k", "-shortest", "-movflags", "+faststart", "-metadata", f"title={spec['youtube']['title']}", mp4], stdin=subprocess.PIPE)
     for n, d_ in segs:
         s0 = starts[n][0]
-        for f in range(int(round(d_ * FPS))): p.stdin.write(frame(n, s0 + f / FPS, f / FPS).tobytes())
+        for f in range(int(round(d_ * FPS))): p.stdin.write(frame(n, s0 + f / FPS, f / FPS, d_).tobytes())
     p.stdin.close(); p.wait(); os.remove(wav)
     return dict(ok=p.returncode == 0, mp4=mp4, seconds=round(total, 1), check=os.path.join(outdir, f"{slug}_check.jpg"))
 

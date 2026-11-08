@@ -1,0 +1,28 @@
+{
+ "slug": "ep16_bath",
+ "num": 16,
+ "patient": "uncle",
+ "topic": "Operation se pehle naha kar aana kyun?",
+ "intro": ["NAHA KAR", "AAYEIN?", "Operation se pehle ka sach"],
+ "q_vo": [["डॉक्टर मैडम...", 0.22], ["ऑपरेशन से पहले,", 0.1], ["नहाना ज़रूरी है क्या?", 0.1]],
+ "a_vo": [["हाँ अंकल!", 0.15], ["साफ़ त्वचा,", 0.06], ["मतलब कम इन्फ़ेक्शन।", 0.1]],
+ "f_vo": [["सच क्या है?", 0.3], ["ऑपरेशन से एक दिन पहले,", 0.06], ["या उसी दिन,", 0.06], ["साबुन से नहाइए।", 0.2], ["इससे त्वचा के कीटाणु कम होते हैं।", 0.2], ["ख़ुद रेज़र से बाल मत हटाइए,", 0.06], ["इससे इन्फ़ेक्शन का ख़तरा बढ़ता है।", 0.2], ["ज़रूरत हो तो,", 0.06], ["अस्पताल का स्टाफ़ क्लिपर से करेगा।", 0.1]],
+ "bullet_starts": [1, 4, 5, 7],
+ "switch_bullet": 2,
+ "q_bubble": ["Operation se pehle", "nahana zaroori", "hai kya?"],
+ "a_bubble": ["Haan Uncle!", "Saaf skin matlab", "kam infection."],
+ "bullets": ["Sabun se nahaiye: 1 din pehle", "Skin ke germs kam hote hain", "Khud razor se baal mat hataiye", "Zaroorat ho, staff clipper se"],
+ "cap": {
+  "q": "Uncle: \"Doctor Madam, operation se pehle nahana zaroori hai kya?\"",
+  "a": "Dr Saathi: \"Haan Uncle! Saaf skin matlab kam infection.\"",
+  "f": "Operation se ek din pehle ya usi din sabun se nahaiye. Isse skin ke germs kam hote hain.",
+  "f2": "Khud razor se baal mat hataiye, infection ka khatra badhta hai. Zaroorat ho toh staff clipper se karega."
+ },
+ "tiles": [["NAHAYA?", "NAHI", "HAAN"], ["GERMS", "ZYADA", "KAM"], ["RAZOR", "HAAN", "NAHI"], ["INFECTION", "KHATRA", "KAM"]],
+ "stage": {"type": "meter", "title": "SKIN PAR GERMS", "min": 0, "max": 10, "from": 8, "to": 2, "left": "Kam", "right": "Zyada", "good_low": true},
+ "youtube": {
+  "title": "Operation se pehle naha kar aana kyun? 🛁 | Dr Saathi ke OT Kisse #16 #shorts",
+  "description": "Uncle ne poocha: \"Operation se pehle nahana zaroori hai kya?\" 🛁\nDr Saathi ne kaha: haan! Saaf skin matlab kam infection. 💚\n\nSach kya hai?\n✅ Operation se ek din pehle ya usi din sabun se nahaiye\n✅ Isse skin ke germs kam hote hain\n✅ Khud razor se baal mat hataiye, infection ka khatra badhta hai\n✅ Zaroorat ho toh hospital staff clipper se karega\n\nDarr nahi, taiyaari!\nFollow @surgerysathi for more OT Kisse\n\n⚠️ AI character. This video is only for general information. Ask your own doctor about your treatment.\n\n#SurgerySaathi #OTKisse #SurgeryTips #HealthHindi #Shorts",
+  "tags": ["operation se pehle nahana", "bath before surgery", "shower before surgery", "surgical site infection", "operation ki taiyari", "surgery se pehle kya kare", "shaving before surgery", "infection kaise roke", "pre operative instructions", "anaesthesia hindi", "OT kisse", "doctor cartoon", "surgerysaathi", "health hindi", "hinglish health", "patient education", "shorts"]
+ }
+}
