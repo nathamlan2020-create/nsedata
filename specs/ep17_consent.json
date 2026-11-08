@@ -1,0 +1,28 @@
+{
+ "slug": "ep17_consent",
+ "num": 17,
+ "patient": "dadi",
+ "topic": "Consent form par sign kyun? kya likha hota hai",
+ "intro": ["CONSENT FORM", "SIGN KYUN?", "Sign se pehle ka sach"],
+ "q_vo": [["डॉक्टर मैडम...", 0.22], ["ये फ़ॉर्म पर साइन,", 0.1], ["क्यों करवाते हो?", 0.1]],
+ "a_vo": [["दादी, घबराइए मत!", 0.15], ["ये आपकी सहमति है,", 0.06], ["समझ कर दीजिए।", 0.1]],
+ "f_vo": [["सच क्या है?", 0.3], ["डॉक्टर बताएँगे,", 0.06], ["ऑपरेशन क्या है,", 0.06], ["फ़ायदे, ख़तरे और दूसरे रास्ते।", 0.2], ["जो समझ न आए,", 0.06], ["बेझिझक पूछिए।", 0.2], ["जल्दबाज़ी नहीं,", 0.06], ["सोचने का समय लीजिए।", 0.2], ["मन बदले तो,", 0.06], ["सहमति वापस ले सकते हैं।", 0.1]],
+ "bullet_starts": [1, 4, 6, 8],
+ "switch_bullet": 2,
+ "q_bubble": ["Ye form par sign", "kyun karwate ho?"],
+ "a_bubble": ["Dadi, ghabraiye mat!", "Ye aapki sehmati hai,", "samajh kar dijiye."],
+ "bullets": ["Doctor batayenge: fayde, khatre", "Jo samajh na aaye, poochhiye", "Jaldi nahi, sochne ka samay", "Mann badle toh consent wapas"],
+ "cap": {
+  "q": "Dadi: \"Doctor Madam, ye form par sign kyun karwate ho?\"",
+  "a": "Dr Saathi: \"Dadi, ghabraiye mat! Ye aapki sehmati hai, samajh kar dijiye.\"",
+  "f": "Doctor batayenge operation kya hai, fayde, khatre aur doosre raaste. Jo samajh na aaye, bejhijhak poochhiye.",
+  "f2": "Jaldbaazi nahi, sochne ka samay lijiye. Mann badle toh sehmati wapas le sakte hain."
+ },
+ "tiles": [["JAANKARI", "ADHOORI", "POORI"], ["SAWAAL", "MANN MEIN", "POOCHHE"], ["JALDI", "HAAN", "NAHI"], ["FAISLA", "DARR", "AAPKA"]],
+ "stage": {"type": "checklist", "title": "SIGN SE PEHLE", "rows": [{"icon": "file", "label": "Operation samjha"}, {"icon": "person", "label": "Sawaal poochhe"}, {"icon": "clock", "label": "Sochne ka samay liya"}, {"icon": "heart", "label": "Faisla mera apna"}]},
+ "youtube": {
+  "title": "Consent form par sign kyun? ✍️ | Dr Saathi ke OT Kisse #17 #shorts",
+  "description": "Dadi ne poocha: \"Ye form par sign kyun karwate ho?\" ✍️\nDr Saathi ne kaha: ghabraiye mat! Ye aapki sehmati hai, samajh kar dijiye. 💚\n\nSach kya hai?\n✅ Doctor batayenge operation kya hai, fayde, khatre aur doosre raaste\n✅ Jo samajh na aaye, bejhijhak poochhiye\n✅ Jaldbaazi nahi, sochne ka samay lijiye\n✅ Mann badle toh sehmati wapas le sakte hain\n\nDarr nahi, taiyaari!\nFollow @surgerysathi for more OT Kisse\n\n⚠️ AI character. This video is only for general information. Ask your own doctor about your treatment.\n\n#SurgerySaathi #OTKisse #SurgeryTips #HealthHindi #Shorts",
+  "tags": ["consent form operation", "informed consent hindi", "surgery consent form", "operation se pehle sign", "consent form kya hai", "anaesthesia consent", "operation ki taiyari", "surgery se pehle kya kare", "patient rights hindi", "anaesthesia hindi", "OT kisse", "doctor cartoon", "surgerysaathi", "health hindi", "hinglish health", "patient education", "shorts"]
+ }
+}
