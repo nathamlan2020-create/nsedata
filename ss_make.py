@@ -12,7 +12,16 @@ from PIL import Image, ImageDraw, ImageFont
 HERE = os.path.dirname(os.path.abspath(__file__))
 A = lambda f: os.path.join(HERE, "assets", f)
 FPS = 30; W, H = 1080, 1920
-P = lambda s: ImageFont.truetype(A("Poppins-Bold.ttf"), s)
+FONT = {"hi": "Poppins-Bold.ttf", "bn": "HindSiliguri-Bold.ttf"}
+LANG = "hi"
+_fc = {}
+def P(s):
+    k = (LANG, s)
+    if k not in _fc: _fc[k] = ImageFont.truetype(A(FONT[LANG]), int(s * (1.12 if LANG == "bn" else 1)))
+    return _fc[k]
+LATIN = lambda s: ImageFont.truetype(A("Poppins-Bold.ttf"), s)
+STR = {"hi": dict(sach="SACH KYA HAI?", tag="Darr nahi, taiyaari!", ai="AI character · sirf jaankari ke liye", follow="Follow", header="Dr Saathi ke OT Kisse #{n}"),
+       "bn": dict(sach="সত্যিটা কী?", tag="ভয় নয়, প্রস্তুতি!", ai="AI চরিত্র · শুধু জানার জন্য", follow="ফলো করুন", header="ডাঃ সাথীর OT কিস্‌সা #{n}")}
 GREEN = (18, 83, 42); LIGHT = (232, 245, 236); RED = (200, 30, 40); DARK = (25, 45, 30); OK = (30, 140, 60); BLUE = (40, 110, 200)
 KDIR = os.environ.get("KOKORO_DIR", "/home/claude/kokoro")
 KURL = "https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/"
@@ -97,8 +106,10 @@ def say(K, parts, voice, speed):
 
 
 # Microsoft Edge neural voices (preferred), Kokoro fallback
-EDGE = {"dr": ("hi-IN-SwaraNeural", "+6%", "+0Hz"), "uncle": ("hi-IN-MadhurNeural", "+0%", "-4Hz"),
-        "dadi": ("hi-IN-SwaraNeural", "-10%", "-40Hz"), "didi": ("hi-IN-SwaraNeural", "+2%", "+22Hz")}
+EDGE_ALL = {"hi": {"dr": ("hi-IN-SwaraNeural", "+6%", "+0Hz"), "uncle": ("hi-IN-MadhurNeural", "+0%", "-4Hz"),
+                    "dadi": ("hi-IN-SwaraNeural", "-10%", "-40Hz"), "didi": ("hi-IN-SwaraNeural", "+2%", "+22Hz")},
+            "bn": {"dr": ("bn-IN-TanishaaNeural", "+6%", "+0Hz"), "uncle": ("bn-IN-BashkarNeural", "+0%", "-4Hz"),
+                    "dadi": ("bn-IN-TanishaaNeural", "-10%", "-40Hz"), "didi": ("bn-IN-TanishaaNeural", "+2%", "+22Hz")}}
 KOK = {"dr": ("hf_alpha", 1.02), "uncle": ("hm_omega", 1.0), "dadi": ("hf_beta", 0.92), "didi": ("hf_beta", 1.0)}
 def edge_clip(text, voice, rate, pitch, sr=24000):
     import asyncio, ssl, tempfile
@@ -125,8 +136,10 @@ def say_role(role, parts):
     for txt, pause in parts:
         s = None
         if use_edge:
-            try: s = edge_clip(txt, *EDGE[role])
-            except Exception: use_edge = False
+            try: s = edge_clip(txt, *EDGE_ALL[LANG][role])
+            except Exception:
+                if LANG != "hi": raise
+                use_edge = False
         if s is None:
             if _K is None: _K = kokoro()
             v, sp = KOK[role]; s, sr = _K.create(txt, voice=v, speed=sp, lang="hi")
@@ -135,6 +148,7 @@ def say_role(role, parts):
         starts.append(t); out += [s.astype(np.float32), np.zeros(int(pause * sr), dtype=np.float32)]; t += len(s) / sr + pause
     return np.concatenate(out).astype(np.float32), sr, starts
 
+END_VO_BN = [["ভয় নয়,", 0.1], ["প্রস্তুতি!", 0.25], ["ফলো করুন, সার্জারি সাথী।", 0.1]]
 END_VO = [["डर नहीं,", 0.1], ["तैयारी!", 0.25], ["फ़ॉलो कीजिए, सर्जरी साथी।", 0.1]]
 
 # ---------------- drawing helpers ----------------
@@ -213,12 +227,15 @@ def mix(c1, c2, p): return tuple(int(c1[k] + (c2[k] - c1[k]) * p) for k in range
 # ---------------- build ----------------
 def build(spec, outdir, preview=False):
     os.makedirs(outdir, exist_ok=True)
+    global LANG
+    LANG = spec.get("lang", "hi"); LS = STR[LANG]
     slug = spec["slug"]; num = spec["num"]
+    HEADER = spec.get("header") or LS["header"].format(n=num)
     pt = spec.get("patient", "uncle")
     qa, sr, _ = say_role(pt, spec["q_vo"])
     aa, _, _ = say_role("dr", spec["a_vo"])
     fa, _, fst = say_role("dr", spec["f_vo"])
-    ea, _, _ = say_role("dr", END_VO)
+    ea, _, _ = say_role("dr", END_VO_BN if LANG == "bn" else END_VO)
     aud = dict(q=qa, a=aa, f=fa, e=ea)
     segs = [("intro", 1.8), ("q", len(qa)/sr + 0.6), ("a", len(aa)/sr + 0.7), ("f", len(fa)/sr + 0.8), ("e", len(ea)/sr + 0.9)]
     total = sum(d for _, d in segs)
@@ -226,7 +243,7 @@ def build(spec, outdir, preview=False):
     btimes = [fst[i] + 0.25 for i in spec["bullet_starts"]]
     sw_i = spec.get("switch_bullet", 2)  # tiles/meter switch at this bullet (1-based)
     SW = FST + btimes[sw_i - 1]
-    cap = dict(spec["cap"]); cap["e"] = f"Darr nahi, taiyaari! Follow {SITE_HANDLE}"
+    cap = dict(spec["cap"]); cap["e"] = f"{LS['tag']} {LS['follow']} {SITE_HANDLE}"
     capsw = btimes[2]
     # audio
     N = int(total * sr); track = np.zeros(N + sr, dtype=np.float32); t0 = 0
@@ -347,16 +364,16 @@ def build(spec, outdir, preview=False):
             pk = ease_out(max(0, tseg - 0.3) / 0.4)
             im.paste(p_thank, (int(W - p_thank.width + 20 + (1 - pk) * 400), 920 - p_thank.height), p_thank)
             def wm(dd):
-                w1 = dd.textlength("Surgery", font=P(120)); w2 = dd.textlength("Saathi", font=P(120)); x0 = W/2 - (w1 + w2)/2
-                dd.text((x0, 1010), "Surgery", font=P(120), fill=GREEN, anchor="lm"); dd.text((x0 + w1, 1010), "Saathi", font=P(120), fill=RED, anchor="lm")
-                dd.text((W/2, 1130), "Darr nahi, taiyaari!", font=P(60), fill=DARK, anchor="mm")
+                w1 = dd.textlength("Surgery", font=LATIN(120)); w2 = dd.textlength("Saathi", font=LATIN(120)); x0 = W/2 - (w1 + w2)/2
+                dd.text((x0, 1010), "Surgery", font=LATIN(120), fill=GREEN, anchor="lm"); dd.text((x0 + w1, 1010), "Saathi", font=LATIN(120), fill=RED, anchor="lm")
+                dd.text((W/2, 1130), LS["tag"], font=P(60), fill=DARK, anchor="mm")
             pop_layer(im, wm, (0, 930, W, 1180), ease_out_back((tseg - 0.2) / 0.4))
             d = ImageDraw.Draw(im); pulse = 1 + 0.05 * math.sin(t * 7)
             bw, bh = 300 * pulse, 45 * pulse
             if tseg > 0.6:
-                d.rounded_rectangle([W/2 - bw, 1245 - bh, W/2 + bw, 1245 + bh], radius=45, fill=RED); d.text((W/2, 1245), "SUBSCRIBE", font=P(48), fill="white", anchor="mm")
-            d.text((W/2, 1370), SITE_HANDLE, font=P(46), fill=GREEN, anchor="mm")
-            d.text((24, 1662), "AI character · sirf jaankari ke liye", font=P(22), fill=(110, 140, 120), anchor="ls"); c = cap["e"]
+                d.rounded_rectangle([W/2 - bw, 1245 - bh, W/2 + bw, 1245 + bh], radius=45, fill=RED); d.text((W/2, 1245), "SUBSCRIBE", font=LATIN(48), fill="white", anchor="mm")
+            d.text((W/2, 1370), SITE_HANDLE, font=LATIN(46), fill=GREEN, anchor="mm")
+            d.text((24, 1662), LS["ai"], font=P(22), fill=(110, 140, 120), anchor="ls"); c = cap["e"]
         else:
             stage(im, d, t)
             if name == "intro":
@@ -380,7 +397,7 @@ def build(spec, outdir, preview=False):
                 up = (1 - ease_out(tseg / 0.35)) * 700
                 lay = Image.new("RGBA", (W, H), (0, 0, 0, 0)); dl = ImageDraw.Draw(lay)
                 dl.rounded_rectangle([30, 990, 1050, 1650], radius=34, fill=GREEN)
-                dl.text((60, 1040), "SACH KYA HAI?", font=P(70), fill="white", anchor="lm")
+                dl.text((60, 1040), LS["sach"], font=P(70), fill="white", anchor="lm")
                 for i, (ptxt, tm) in enumerate(zip(spec["bullets"], btimes)):
                     if tseg >= tm:
                         p = ease_out((tseg - tm) / 0.3); dx = (1 - p) * -260
@@ -396,7 +413,7 @@ def build(spec, outdir, preview=False):
             reg = im.crop((0, 200, W, 1680)); rw, rh = reg.size; cw, ch = rw / z, rh / z
             reg = reg.crop(((rw - cw) / 2, (rh - ch) / 2, (rw + cw) / 2, (rh + ch) / 2)).resize((rw, rh), Image.BILINEAR); im.paste(reg, (0, 200))
         d = ImageDraw.Draw(im)
-        d.rectangle([0, 0, W, 200], fill=GREEN); d.text((W/2, 100), f"Dr Saathi ke OT Kisse #{num}", font=P(50), fill="white", anchor="mm")
+        d.rectangle([0, 0, W, 200], fill=GREEN); d.text((W/2, 100), HEADER, font=P(50), fill="white", anchor="mm")
         if c:
             d.rectangle([0, 1680, W, H], fill=GREEN); ls = wrap(d, c, P(40), 980)[:3]; y0 = 1800 - (len(ls) - 1) * 27
             for i, l in enumerate(ls): d.text((W/2, y0 + i * 54), l, font=P(40), fill="white", anchor="mm")
@@ -442,7 +459,7 @@ def build(spec, outdir, preview=False):
                 k = ease_out_back(tseg / 0.35)
                 def fcard(dd):
                     dd.rounded_rectangle([30, 470, 1050, 775], radius=30, fill=GREEN, outline="white", width=6)
-                    dd.text((60, 512), "SACH KYA HAI?", font=P(48), fill="white", anchor="lm")
+                    dd.text((60, 512), LS["sach"], font=P(48), fill="white", anchor="lm")
                 pop_layer(im, fcard, (20, 460, 1060, 785), k)
                 lay = Image.new("RGBA", (W, H), (0, 0, 0, 0)); dl = ImageDraw.Draw(lay)
                 for i, (ptxt, tm) in enumerate(zip(spec["bullets"], btimes)):
@@ -460,7 +477,7 @@ def build(spec, outdir, preview=False):
                 cx = min(max(focus, cw / 2), rw - cw / 2); cy = min(max(rh * 0.5, ch / 2), rh - ch / 2)
                 reg = reg.crop((cx - cw / 2, cy - ch / 2, cx + cw / 2, cy + ch / 2)).resize((rw, rh), Image.BILINEAR); im.paste(reg, (0, 200))
             d = ImageDraw.Draw(im)
-            d.rectangle([0, 0, W, 200], fill=GREEN); d.text((W/2, 100), f"Dr Saathi ke OT Kisse #{num}", font=P(50), fill="white", anchor="mm")
+            d.rectangle([0, 0, W, 200], fill=GREEN); d.text((W/2, 100), HEADER, font=P(50), fill="white", anchor="mm")
             if c:
                 d.rectangle([0, 1680, W, H], fill=GREEN); ls = wrap(d, c, P(40), 980)[:3]; y0 = 1800 - (len(ls) - 1) * 27
                 for i, l in enumerate(ls): d.text((W/2, y0 + i * 54), l, font=P(40), fill="white", anchor="mm")

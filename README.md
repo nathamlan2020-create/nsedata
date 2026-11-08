@@ -14,6 +14,7 @@ Every video = Uncle's question → Dr Saathi's one-line answer → "SACH KYA HAI
 ## Spec format (JSON)
 | key | rule |
 |---|---|
+| `lang` | "hi" (default, Hinglish captions + Hindi voices) or "bn" (Bengali script captions/bubbles/bullets + Microsoft Bengali voices Tanishaa/Bashkar; patient names কাকু / দিদা / দিদি). Voice text for bn is Bengali script, numbers in words |
 | `layout` | **"ot" (default for new episodes)**: conversation in an operating theatre (OT light, OT table, monitor with normal readings, laparoscopy tower); `tiles` and `stage` are ignored (use `[]` and `{}`), bullets ≤ 34 chars, one line each. "classic" (omit the key) = old infographic layout with tiles + checklist/meter |
 | `slug` | `ep<NUM>_<oneword>` ASCII |
 | `num` | episode number (int) |
