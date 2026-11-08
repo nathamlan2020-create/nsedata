@@ -356,7 +356,7 @@ def build(spec, outdir, preview=False):
             if tseg > 0.6:
                 d.rounded_rectangle([W/2 - bw, 1245 - bh, W/2 + bw, 1245 + bh], radius=45, fill=RED); d.text((W/2, 1245), "SUBSCRIBE", font=P(48), fill="white", anchor="mm")
             d.text((W/2, 1370), SITE_HANDLE, font=P(46), fill=GREEN, anchor="mm")
-            d.text((W/2, 1440), "AI character · sirf jaankari ke liye", font=P(32), fill=(60, 90, 70), anchor="mm"); c = cap["e"]
+            d.text((24, 1662), "AI character · sirf jaankari ke liye", font=P(22), fill=(110, 140, 120), anchor="ls"); c = cap["e"]
         else:
             stage(im, d, t)
             if name == "intro":
