@@ -21,7 +21,7 @@ def P(s):
     return _fc[k]
 LATIN = lambda s: ImageFont.truetype(A("Poppins-Bold.ttf"), s)
 STR = {"hi": dict(sach="SACH KYA HAI?", tag="Darr nahi, taiyaari!", ai="AI character · sirf jaankari ke liye", follow="Follow", header="Dr Saathi ke OT Kisse #{n}"),
-       "bn": dict(sach="সত্যিটা কী?", tag="ভয় নয়, প্রস্তুতি!", ai="AI চরিত্র · শুধু জানার জন্য", follow="ফলো করুন", header="ডাঃ সাথীর OT কিস্‌সা #{n}")}
+       "bn": dict(sach="সত্যিটা কী?", tag="ভয় নয়, প্রস্তুতি!", ai="AI চরিত্র · শুধু জানার জন্য", follow="ফলো করুন", header="ডাঃ সাথীর OT গপ্পো #{n}")}
 GREEN = (18, 83, 42); LIGHT = (232, 245, 236); RED = (200, 30, 40); DARK = (25, 45, 30); OK = (30, 140, 60); BLUE = (40, 110, 200)
 KDIR = os.environ.get("KOKORO_DIR", "/home/claude/kokoro")
 KURL = "https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/"
