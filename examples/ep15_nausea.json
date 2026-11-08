@@ -1,0 +1,27 @@
+{
+ "slug": "ep15_nausea",
+ "num": 15,
+ "topic": "Operation ke baad ji machlana / ulti (PONV)",
+ "intro": ["JI MACHLANA?", "ULTI?", "Operation ke baad ka sach"],
+ "q_vo": [["डॉक्टर मैडम...", 0.22], ["ऑपरेशन के बाद,", 0.1], ["जी क्यों मचला रहा है?", 0.1]],
+ "a_vo": [["अंकल,", 0.12], ["घबराइए मत!", 0.15], ["इसकी दवा है।", 0.1]],
+ "f_vo": [["सच क्या है?", 0.3], ["एनेस्थीसिया के बाद,", 0.06], ["कुछ लोगों का जी मचलता है।", 0.2], ["नर्स को तुरंत बताइए,", 0.06], ["उल्टी रोकने की दवा दी जाती है।", 0.2], ["डॉक्टर के कहने पर ही,", 0.06], ["पानी घूँट-घूँट पीजिए।", 0.2], ["ज़्यादातर यह कुछ घंटों में ठीक हो जाता है।", 0.1]],
+ "bullet_starts": [1, 3, 5, 7],
+ "switch_bullet": 2,
+ "q_bubble": ["Operation ke baad", "ji kyun machla", "raha hai?"],
+ "a_bubble": ["Uncle,", "ghabraiye mat!", "Iski dawa hai."],
+ "bullets": ["Kuch logon ka ji machalta hai", "Nurse ko turant bataiye", "Paani ghoont-ghoont piyein", "Kuch ghanton mein theek"],
+ "cap": {
+  "q": "Uncle: \"Doctor Madam, operation ke baad ji kyun machla raha hai?\"",
+  "a": "Dr Saathi: \"Uncle, ghabraiye mat! Iski dawa hai.\"",
+  "f": "Anaesthesia ke baad kuch logon ka ji machalta hai. Nurse ko turant bataiye, dawa di jaati hai.",
+  "f2": "Doctor ke kehne par hi paani ghoont-ghoont piyein. Zyadatar kuch ghanton mein theek ho jaata hai."
+ },
+ "tiles": [["JI MACHLANA", "ZYADA", "KAM"], ["DAWA", "NAHI", "DI GAYI"], ["NURSE", "BULAO", "AA GAYI"], ["AARAM", "NAHI", "HAAN"]],
+ "stage": {"type": "meter", "title": "JI MACHLANA KITNA? (0-10)", "min": 0, "max": 10, "from": 7, "to": 1, "left": "Theek hai", "right": "Bahut zyada", "good_low": true},
+ "youtube": {
+  "title": "Operation ke baad ji machlana, ulti? 🤢 | Dr Saathi ke OT Kisse #15 #shorts",
+  "description": "Uncle ne poocha: \"Operation ke baad ji kyun machla raha hai?\" 🤢\nDr Saathi ne kaha: ghabraiye mat, iski dawa hai! 💚\n\nSach kya hai?\n✅ Anaesthesia ke baad kuch logon ka ji machalta hai\n✅ Nurse ko turant bataiye, ulti rokne ki dawa di jaati hai\n✅ Doctor ke kehne par hi paani ghoont-ghoont piyein\n✅ Zyadatar kuch ghanton mein theek ho jaata hai\n\nDarr nahi, taiyaari!\nFollow @surgerysaathi for more OT Kisse\n\n⚠️ AI character. This video is only for general information. Ask your own doctor about your treatment.\n\n#SurgerySaathi #OTKisse #Anaesthesia #HealthHindi #Shorts",
+  "tags": ["operation ke baad ulti", "nausea after surgery", "PONV", "ji machlana", "anaesthesia side effects", "operation ke baad kya hota hai", "anaesthesia hindi", "anaesthesiologist", "OT kisse", "doctor cartoon", "surgerysaathi", "surgery saathi", "health hindi", "hinglish health", "patient education", "shorts"]
+ }
+}

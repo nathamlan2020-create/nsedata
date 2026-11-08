@@ -1,0 +1,16 @@
+# date | ep | topic | slug
+2026-11-07 | 1 | Spinal se pehle ghabrahat / patient ko samjhana | manual
+2026-11-08 | 2 | Spinal injection dard karega? | manual
+2026-11-08 | 3 | 6 Minute Walk Test | manual
+2026-11-08 | 4 | Operation se pehle khaali pet (fasting) | manual
+2026-11-08 | 5 | Operation ke beech jaag gaya toh (awareness) | manual
+2026-11-08 | 6 | Gehne, nail polish, nakli daant kyun utaarte | manual
+2026-11-08 | 7 | Operation ke baad thand / kaanpna | manual
+2026-11-08 | 8 | Operation se pehle cigarette chhodna | manual
+2026-11-08 | 9 | Operation ke baad dard, pain score | manual
+2026-11-08 | 10 | Operation ke din kya laayein | manual
+2026-11-08 | 11 | Operation ke baad jaldi chalna | manual
+2026-11-08 | 12 | Behoshi ke baad gala kharab | manual
+2026-11-08 | 13 | Operation ke baad oxygen mask | manual
+2026-11-08 | 14 | Apni dawa doctor ko batana | manual
+2026-11-08 | 15 | Operation ke baad ji machlana / ulti (PONV) | ep15_nausea
