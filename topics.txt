@@ -1,62 +1,77 @@
 # SurgerySaathi topic bank — one per line. Agent takes the first one not in used.txt.
 # Format: short topic | stage idea
-Operation se pehle naha kar aana kyun? | checklist
-Consent form par sign kyun? kya likha hota hai | checklist
-Operation se pehle kaun se blood test hote hain | checklist
-Pre-anaesthesia checkup (PAC) mein kya hota hai | checklist
-Sugar zyada ho toh operation ruk sakta hai? | meter blood sugar
-BP high ho toh operation ruk sakta hai? | meter BP
-Khaansi-zukaam mein operation? | checklist
-Operation se pehle period ho toh? | checklist
-Spinal ke baad sar dard kyun? | meter
-Spinal ke baad pair kab hilenge? | meter hours
-Anaesthesia se yaadaasht jaati hai kya? | checklist
-Bachche ke operation se pehle kya karein | checklist
-Bachche ko khaali pet kitni der? (doctor ki timing) | checklist
-Buzurg aur anaesthesia: kya dhyan rakhein | checklist
-Mota hone par anaesthesia safe? | checklist
-Saans ki bimari (asthma) aur operation | checklist
-Dil ki bimari aur operation se pehle | checklist
-Khoon patla karne ki dawa kab band | checklist
-Operation ke baad peshab nahi aa raha? | meter hours
-Operation ke baad gas/pet phoolna | checklist
-Operation ke baad kab khaana shuru | checklist
-Taanke (stitches) ki dekhbhaal | checklist
-Ghav mein infection ke lakshan | checklist
-Operation ke baad bukhaar: kab chinta karein | meter temp
-Operation ke baad saans ki exercise (spirometer) | meter
-Operation ke baad kab naha sakte hain | checklist
-Discharge ke baad kya dhyan rakhein | checklist
-Discharge ke baad kab turant doctor ke paas jaayein | checklist
-C-section se pehle ki taiyaari | checklist
-C-section ke baad pehla din | checklist
-C-section ke baad spinal: kya mehsoos hoga | meter
-Normal delivery mein epidural kya hai | checklist
-Hernia operation ke baad kya karein | checklist
-Gallbladder (pitte ki pathri) operation ke baad khaana | checklist
-Appendix operation: jaldi kyun zaroori | checklist
-Bawaseer (piles) operation ke baad dard | meter
-Ghutne ke operation (knee replacement) ki taiyaari | checklist
-Cataract operation se pehle | checklist
-Daant nikalwane se pehle (local anaesthesia) | checklist
-Local, spinal, general anaesthesia mein fark | checklist
-Sedation kya hai? | checklist
-ICU mein kyun rakhte hain? | checklist
-Ventilator ka matlab kya hai? | checklist
-Catheter kyun lagate hain? | checklist
-Drain pipe kyun lagti hai? | checklist
-IV line / cannula kyun? | checklist
-Operation ke din attendant kya karein | checklist
-Operation kitni der chalega? intezaar kaise karein | meter
-Recovery room mein kya hota hai | checklist
-Operation se pehle ghabrahat kaise kam karein | meter
-Operation se pehle neend nahi aa rahi? | checklist
-Alcohol peene waale operation se pehle | checklist
-Gutka/tambaku aur operation | checklist
-Pregnancy mein operation aur anaesthesia | checklist
-Allergy batana kyun zaroori | checklist
-Purane operation ka record kyun laayein | checklist
-Pet ka operation: khaansi mein taanke kaise sambhaalein | checklist
-Operation ke baad pair mein sujan/dard: kab chinta | checklist
-Operation ke baad kab gaadi chala sakte hain | checklist
-Operation ke baad kab kaam par laut sakte hain | checklist
+Operation se pehle naha kar aana kyun? | checklist | pre
+Consent form par sign kyun? kya likha hota hai | checklist | pre
+Operation se pehle kaun se blood test hote hain | checklist | pre
+Anaesthesia doctor sirf behosh karte hain? | checklist | doctor
+Pre-anaesthesia checkup (PAC) mein kya hota hai | checklist | pre
+Sugar zyada ho toh operation ruk sakta hai? | meter blood sugar | pre
+Anaesthesia doctor operation ke beech chale jaate hain? | checklist | doctor
+BP high ho toh operation ruk sakta hai? | meter BP | pre
+Khaansi-zukaam mein operation? | checklist | pre
+Surgeon aur anaesthesia doctor mein fark | checklist | doctor
+Operation se pehle period ho toh? | checklist | pre
+Spinal ke baad sar dard kyun? | meter | post
+Mahila doctor se operation: koi fark? | checklist | doctor
+Spinal ke baad pair kab hilenge? | meter hours | intra
+Anaesthesia se yaadaasht jaati hai kya? | checklist | intra
+Raat ko operation zyada risky? | checklist | time
+Bachche ke operation se pehle kya karein | checklist | patient
+Bachche ko khaali pet kitni der? (doctor ki timing) | checklist | patient
+Garmi/barsaat mein operation nahi karwana chahiye? | checklist | time
+Buzurg aur anaesthesia: kya dhyan rakhein | checklist | patient
+Mota hone par anaesthesia safe? | checklist | patient
+Shubh muhurat dekh kar operation? | checklist | time
+Saans ki bimari (asthma) aur operation | checklist | patient
+Dil ki bimari aur operation se pehle | checklist | patient
+Subah pehla operation sabse safe? | checklist | time
+Khoon patla karne ki dawa kab band | checklist | pre
+Operation ke baad peshab nahi aa raha? | meter hours | post
+Sarkari hospital mein anaesthesia safe nahi? | checklist | place
+Operation ke baad gas/pet phoolna | checklist | post
+Operation ke baad kab khaana shuru | checklist | post
+Chhote nursing home mein operation khatarnaak? | checklist | place
+Taanke (stitches) ki dekhbhaal | checklist | post
+Ghav mein infection ke lakshan | checklist | post
+Bade shehar mein hi operation karwana chahiye? | checklist | place
+Operation ke baad bukhaar: kab chinta karein | meter temp | post
+Operation ke baad saans ki exercise (spirometer) | meter | post
+OT mein ghar wale kyun nahi ja sakte? | checklist | place
+Operation ke baad kab naha sakte hain | checklist | post
+Discharge ke baad kya dhyan rakhein | checklist | post
+Doctor ko gift dena zaroori? | checklist | doctor
+Discharge ke baad kab turant doctor ke paas jaayein | checklist | post
+C-section se pehle ki taiyaari | checklist | surgery
+Purani dawa wala doctor behtar? | checklist | doctor
+C-section ke baad pehla din | checklist | surgery
+C-section ke baad spinal: kya mehsoos hoga | meter | surgery
+Saal ke aakhir mein operation mat karo? | checklist | time
+Normal delivery mein epidural kya hai | checklist | surgery
+Hernia operation ke baad kya karein | checklist | surgery
+Gallbladder (pitte ki pathri) operation ke baad khaana | checklist | surgery
+Appendix operation: jaldi kyun zaroori | checklist | surgery
+Bawaseer (piles) operation ke baad dard | meter | surgery
+Ghutne ke operation (knee replacement) ki taiyaari | checklist | surgery
+Cataract operation se pehle | checklist | surgery
+Daant nikalwane se pehle (local anaesthesia) | checklist | surgery
+Local, spinal, general anaesthesia mein fark | checklist | intra
+Sedation kya hai? | checklist | intra
+ICU mein kyun rakhte hain? | checklist | post
+Ventilator ka matlab kya hai? | checklist | post
+Catheter kyun lagate hain? | checklist | post
+Drain pipe kyun lagti hai? | checklist | post
+IV line / cannula kyun? | checklist | place
+Operation ke din attendant kya karein | checklist | place
+Operation kitni der chalega? intezaar kaise karein | meter | intra
+Recovery room mein kya hota hai | checklist | post
+Operation se pehle ghabrahat kaise kam karein | meter | pre
+Operation se pehle neend nahi aa rahi? | checklist | pre
+Alcohol peene waale operation se pehle | checklist | pre
+Gutka/tambaku aur operation | checklist | pre
+Pregnancy mein operation aur anaesthesia | checklist | patient
+Allergy batana kyun zaroori | checklist | pre
+Purane operation ka record kyun laayein | checklist | pre
+Pet ka operation: khaansi mein taanke kaise sambhaalein | checklist | surgery
+Operation ke baad pair mein sujan/dard: kab chinta | checklist | post
+Operation ke baad kab gaadi chala sakte hain | checklist | post
+Operation ke baad kab kaam par laut sakte hain | checklist | post

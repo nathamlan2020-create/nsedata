@@ -6,7 +6,7 @@ Every video = Uncle's question → Dr Saathi's one-line answer → "SACH KYA HAI
 ## Files
 - `ss_make.py spec.json OUTDIR` — validates the spec, makes TTS (Microsoft Edge neural voices via `edge-tts`: Swara for Dr Saathi/Dadi/Didi, Madhur for Uncle; automatic fallback to Kokoro if Edge fails), animates (slide-ins, talking bounce, bubble pops, camera push-in, whooshes), renders `OUTDIR/<slug>.mp4` (1080×1920, ~30–36 s), `<slug>_cover.jpg` and `<slug>_check.jpg` (6-frame contact sheet). Add `--preview` to make only the jpgs. Invalid spec → prints `{"ok":false,"invalid":[...]}` and exits 1: fix and rerun.
 - `tg_send.py spec.json video.mp4` — sends the video + an "upload kit" (title, description, tags, settings) to the owner's Telegram. Needs env `TG_TOKEN`, `TG_CHAT`.
-- `topics.txt` — topic bank (take the first one not already in `used.txt`). `used.txt` — log of made episodes (last `ep` number + 1 = next number).
+- `topics.txt` — topic bank (`topic | stage idea | category`) (take the first one not already in `used.txt`). `used.txt` — log of made episodes (last `ep` number + 1 = next number).
 - `examples/` — finished specs. **Read at least the latest example before writing a new spec**; copy its structure exactly.
 - `specs/` — every spec the agent made (keep them).
 - `assets/` — character art (cast/), font. Do not change. Channel handle shown on the end card comes from env SS_HANDLE (default @surgerysathi).
@@ -20,6 +20,7 @@ Every video = Uncle's question → Dr Saathi's one-line answer → "SACH KYA HAI
 | `num` | episode number (int) |
 | `patient` | `uncle`, `dadi` or `didi` (sets the patient's art and voice). Captions and Dr Saathi's lines must address that patient ("Uncle", "Dadi", "Didi") |
 | `topic` | short topic text (same as used.txt) |
+| `category` | REQUIRED: the topic's last field in topics.txt — one of pre, intra, post, surgery, doctor, patient, time, place. It picks the YouTube playlist (playlists.json) shown in the upload kit. Frame every episode as a common MYTH (the patient's question/belief) answered by the SACH. Spread categories: avoid the same category 3 days running (skip ahead in topics.txt if needed) |
 | `intro` | `[line1, line2, subtitle]` — lines ≤16 chars, CAPS Hinglish (line2 shows in red); subtitle ≤38 chars |
 | `q_vo` | the patient's voice, list of `[Devanagari text, pause_seconds]`. Starts with `["डॉक्टर मैडम...", 0.22]`. 2–3 phrases, ≤ 5 s total |
 | `a_vo` | Dr Saathi's short answer, 2–3 phrases, ≤ 4.5 s |

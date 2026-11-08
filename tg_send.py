@@ -24,6 +24,8 @@ spec = json.load(open(sys.argv[1])); y = spec["youtube"]
 fn = os.path.basename(sys.argv[2])
 r1 = post("sendVideo", {"chat_id": CHAT, "caption": f"🎬 New SurgerySaathi Short #{spec['num']}\n{y['title']}", "supports_streaming": "true", "width": "1080", "height": "1920"},
           {"video": (fn, open(sys.argv[2], "rb").read(), "video/mp4")})
-txt = f"📋 Upload kit #{spec['num']} (YouTube app → + → Short → pick this video)\n\nTITLE:\n{y['title']}\n\nDESCRIPTION:\n{y['description']}\n\nTAGS (Studio → Show more → Tags):\n{', '.join(y['tags'])}\n\nSettings: Not made for kids · Altered/synthetic content: Yes (AI voice) · Playlist: OT Kisse"
+PL = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "playlists.json")))
+pl = PL.get(spec.get("category", ""), "")
+txt = f"📋 Upload kit #{spec['num']} (YouTube app → + → Short → pick this video)\n\nTITLE:\n{y['title']}\n\nDESCRIPTION:\n{y['description']}\n\nTAGS (Studio → Show more → Tags):\n{', '.join(y['tags'])}\n\nSettings: Not made for kids · Altered/synthetic content: Yes (AI voice) · Playlist: {pl or 'OT Kisse'}"
 r2 = post("sendMessage", {"chat_id": CHAT, "text": txt[:4000], "disable_web_page_preview": "true"})
 print(json.dumps(dict(ok=bool(r1.get("ok") and r2.get("ok")), video=r1.get("ok"), text=r2.get("ok"), error=(r1.get("description") or "") + " " + (r2.get("description") or "")), ensure_ascii=False))
