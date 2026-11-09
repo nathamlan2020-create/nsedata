@@ -1,0 +1,40 @@
+{
+ "slug": "ep18_anaesthetist",
+ "num": 18,
+ "layout": "ot",
+ "patient": "didi",
+ "topic": "Anaesthesia doctor sirf behosh karte hain?",
+ "category": "doctor",
+ "intro": ["ANAESTHESIA DR", "SIRF BEHOSHI?", "Unke kaam ka poora sach"],
+ "q_vo": [["डॉक्टर मैडम...", 0.22], ["आप बस बेहोश करके,", 0.1], ["चली जाती हो क्या?", 0.1]],
+ "a_vo": [["नहीं दीदी!", 0.15], ["मैं शुरू से आख़िर तक,", 0.06], ["आपके साथ हूँ।", 0.1]],
+ "f_vo": [
+  ["सच क्या है?", 0.3],
+  ["एनेस्थीसिया डॉक्टर,", 0.06],
+  ["स्पेशलिस्ट डॉक्टर होते हैं।", 0.2],
+  ["ऑपरेशन से पहले,", 0.06],
+  ["आपकी जाँच करते हैं।", 0.2],
+  ["ऑपरेशन के दौरान,", 0.06],
+  ["दिल और साँस पर नज़र।", 0.2],
+  ["बाद में दर्द सँभालते हैं,", 0.06],
+  ["आई सी यू और लेबर रूम में भी।", 0.1]
+ ],
+ "bullet_starts": [1, 3, 5, 7],
+ "switch_bullet": 2,
+ "q_bubble": ["Aap bas behosh", "karke chali", "jaati ho kya?"],
+ "a_bubble": ["Nahi Didi!", "Main shuru se aakhir", "tak aapke saath hoon."],
+ "bullets": ["Ye specialist doctor hote hain", "Operation se pehle jaanch", "Beech mein dil-saans par nazar", "Baad mein dard, ICU, labour"],
+ "cap": {
+  "q": "Didi: \"Doctor Madam, aap bas behosh karke chali jaati ho kya?\"",
+  "a": "Dr Saathi: \"Nahi Didi! Main shuru se aakhir tak aapke saath hoon.\"",
+  "f": "Anaesthesia doctor specialist doctor hote hain. Operation se pehle aapki jaanch karte hain.",
+  "f2": "Operation ke dauraan dil aur saans par nazar. Baad mein dard sambhalte hain, ICU aur labour room mein bhi."
+ },
+ "tiles": [],
+ "stage": {},
+ "youtube": {
+  "title": "Anaesthesia doctor sirf behosh karte hain? 🩺 | Dr Saathi ke OT Kisse #18 #shorts",
+  "description": "Didi ne poocha: \"Aap bas behosh karke chali jaati ho kya?\" 🩺\nDr Saathi ne kaha: nahi! Main shuru se aakhir tak aapke saath hoon. 💚\n\nSach kya hai?\n✅ Anaesthesia doctor specialist doctor hote hain\n✅ Operation se pehle aapki jaanch karte hain\n✅ Operation ke dauraan dil aur saans par nazar rakhte hain\n✅ Baad mein dard sambhalte hain, ICU aur labour room mein bhi kaam karte hain\n\nDarr nahi, taiyaari!\nFollow @surgerysathi for more OT Kisse\n\n⚠️ AI character. This video is only for general information. Ask your own doctor about your treatment.\n\n#SurgerySaathi #OTKisse #SurgeryTips #HealthHindi #Shorts",
+  "tags": ["anaesthesia doctor kya karte hain", "anesthesiologist role", "what does an anaesthetist do", "anaesthetist kaun hota hai", "behosh karne wala doctor", "anaesthesia hindi", "operation ke dauraan kya hota hai", "labour pain doctor", "ICU doctor", "operation ki taiyari", "OT kisse", "doctor cartoon", "surgerysaathi", "health hindi", "hinglish health", "patient education", "shorts"]
+ }
+}
