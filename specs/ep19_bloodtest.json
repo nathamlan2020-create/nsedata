@@ -1,0 +1,40 @@
+{
+ "slug": "ep19_bloodtest",
+ "num": 19,
+ "layout": "ot",
+ "patient": "dadi",
+ "topic": "Operation se pehle kaun se blood test hote hain",
+ "category": "pre",
+ "intro": ["ITNE SAARE", "TEST KYUN?", "Operation se pehle kaunse test"],
+ "q_vo": [["डॉक्टर मैडम...", 0.22], ["इतने सारे टेस्ट,", 0.1], ["सबके एक जैसे होते हैं?", 0.1]],
+ "a_vo": [["नहीं दादी!", 0.15], ["आपकी सेहत देखकर,", 0.06], ["टेस्ट चुनते हैं।", 0.1]],
+ "f_vo": [
+  ["सच क्या है?", 0.3],
+  ["टेस्ट उम्र और बीमारी से,", 0.06],
+  ["और ऑपरेशन से तय होते हैं।", 0.2],
+  ["बड़े ऑपरेशन में,", 0.06],
+  ["खून की जाँच होती है।", 0.2],
+  ["शुगर या किडनी की बीमारी?", 0.06],
+  ["तो उनकी जाँच भी।", 0.2],
+  ["दिल की बीमारी हो,", 0.06],
+  ["तो ई सी जी होता है।", 0.1]
+ ],
+ "bullet_starts": [1, 3, 5, 7],
+ "switch_bullet": 2,
+ "q_bubble": ["Itne saare test,", "sabke ek jaise", "hote hain?"],
+ "a_bubble": ["Nahi Dadi!", "Aapki sehat dekhkar", "test chunte hain."],
+ "bullets": ["Test umar-bimari-operation se", "Bade operation mein blood test", "Sugar/kidney rog: unki jaanch", "Dil ki bimari ho toh ECG"],
+ "cap": {
+  "q": "Dadi: \"Doctor Madam, itne saare test, sabke ek jaise hote hain?\"",
+  "a": "Dr Saathi: \"Nahi Dadi! Aapki sehat dekhkar test chunte hain.\"",
+  "f": "Test umar aur bimari se, aur operation se tay hote hain. Bade operation mein khoon ki jaanch hoti hai.",
+  "f2": "Sugar ya kidney ki bimari? Toh unki jaanch bhi. Dil ki bimari ho, toh ECG hota hai."
+ },
+ "tiles": [],
+ "stage": {},
+ "youtube": {
+  "title": "Operation se pehle kaunse test hote hain? 🩸 | Dr Saathi ke OT Kisse #19 #shorts",
+  "description": "Dadi ne poocha: \"Itne saare test, sabke ek jaise hote hain?\" 🩸\nDr Saathi ne kaha: nahi! Aapki sehat dekhkar test chunte hain. 💚\n\nSach kya hai?\n✅ Test aapki umar, bimari aur operation ke hisaab se tay hote hain\n✅ Bade operation mein khoon ki jaanch (blood count) hoti hai\n✅ Sugar ya kidney ki bimari ho toh unki jaanch bhi hoti hai\n✅ Dil ki bimari ho toh ECG hota hai\nKaunsa test aapke liye zaroori hai, apne doctor se poochhiye.\n\nDarr nahi, taiyaari!\nFollow @surgerysathi for more OT Kisse\n\n⚠️ AI character. This video is only for general information. Ask your own doctor about your treatment.\n\n#SurgerySaathi #OTKisse #SurgeryTips #HealthHindi #Shorts",
+  "tags": ["operation se pehle test", "operation se pehle blood test", "pre operative tests", "tests before surgery", "surgery se pehle kaunse test", "ECG before surgery", "blood test before operation", "pre anaesthesia checkup", "sugar test before surgery", "kidney test before surgery", "operation ki taiyari", "OT kisse", "doctor cartoon", "surgerysaathi", "health hindi", "hinglish health", "patient education", "shorts"]
+ }
+}

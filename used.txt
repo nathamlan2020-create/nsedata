@@ -17,3 +17,4 @@
 2026-11-08 | 16 | Operation se pehle naha kar aana kyun? | ep16_bath
 2026-11-08 | 17 | Consent form par sign kyun? kya likha hota hai | ep17_consent
 2026-11-09 | 18 | Anaesthesia doctor sirf behosh karte hain? | ep18_anaesthetist + ep18_anaesthetist_bn
+2026-11-10 | 19 | Operation se pehle kaun se blood test hote hain | ep19_bloodtest + ep19_bloodtest_bn
