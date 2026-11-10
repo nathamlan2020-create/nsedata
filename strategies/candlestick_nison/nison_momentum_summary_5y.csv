@@ -1,0 +1,7 @@
+version,CAGR,maxDD,cagr_first_half,cagr_second_half,trades_yr,win,avg_trade,losing_yrs,CAGR_after_tax
+top 20% momentum | trail 20 SMA,4.4,-11.4,5.3,3.1,43,33.2,1.15,2,3.5
+top 20% momentum | target 2R,6.5,-10.7,6.6,5.3,43,49.1,1.58,3,5.1
+top 20% momentum | 20 days,5.4,-14.9,7.4,2.4,41,38.9,1.52,2,3.9
+top 10% momentum | trail 20 SMA,4.1,-6.0,2.9,4.9,20,36.0,2.09,2,3.3
+top 10% momentum | target 2R,5.9,-7.6,5.6,5.9,20,52.0,3.03,1,4.8
+top 10% momentum | 20 days,5.3,-7.8,4.4,5.9,20,40.8,2.9,1,4.2

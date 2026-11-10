@@ -1,0 +1,42 @@
+pattern,context,signals,avg5d%,avg10d%,avg20d%,win10d%,t10
+BASELINE: any liquid stock-day,-,507655,-0.09,0.31,1.13,48.5,29.7
+Hammer,raw (with Nison trend rule),1773,0.22,0.6,1.38,52.5,3.3
+Hammer,"+ confirmation, entry at confirm close",718,0.69,1.02,2.32,55.2,3.7
+Hammer,+ stock above 200 SMA (pullback in uptrend),747,0.49,1.03,1.64,56.1,3.7
+Hammer,+ 200 SMA + volume > 1.5x,118,0.69,1.67,2.73,59.5,2.1
+Hammer,+ 200 SMA + confirmation,308,0.95,1.4,2.84,57.1,3.5
+Bullish engulfing,raw (with Nison trend rule),3929,-0.0,0.39,1.32,48.8,3.2
+Bullish engulfing,"+ confirmation, entry at confirm close",1278,-0.12,0.64,1.75,49.9,3.0
+Bullish engulfing,+ stock above 200 SMA (pullback in uptrend),2020,0.06,0.35,1.24,48.8,2.1
+Bullish engulfing,+ 200 SMA + volume > 1.5x,399,-0.0,0.32,1.58,46.8,0.8
+Bullish engulfing,+ 200 SMA + confirmation,605,0.26,0.46,1.56,49.7,1.5
+Piercing line,raw (with Nison trend rule),388,-0.06,0.41,1.37,51.4,1.0
+Piercing line,"+ confirmation, entry at confirm close",113,-0.06,0.52,2.17,50.0,0.7
+Piercing line,+ stock above 200 SMA (pullback in uptrend),202,-0.34,0.26,0.93,50.7,0.5
+Piercing line,+ 200 SMA + volume > 1.5x,36,0.02,0.27,3.42,54.3,0.2
+Piercing line,+ 200 SMA + confirmation,67,-0.13,-0.18,1.06,41.5,-0.2
+Morning star,raw (with Nison trend rule),404,0.25,0.53,1.12,49.6,1.4
+Morning star,"+ confirmation, entry at confirm close",135,0.0,0.42,0.49,50.4,0.7
+Morning star,+ stock above 200 SMA (pullback in uptrend),202,0.44,0.78,0.42,50.8,1.6
+Morning star,+ 200 SMA + volume > 1.5x,51,1.27,2.58,2.18,60.8,2.2
+Morning star,+ 200 SMA + confirmation,72,-0.0,0.29,0.62,44.9,0.3
+Bullish harami,raw (with Nison trend rule),5422,0.22,0.69,1.33,50.2,6.5
+Bullish harami,"+ confirmation, entry at confirm close",1734,0.51,0.91,2.01,52.4,4.8
+Bullish harami,+ stock above 200 SMA (pullback in uptrend),2536,0.46,1.1,1.83,51.9,6.7
+Bullish harami,+ 200 SMA + volume > 1.5x,285,1.13,2.0,3.06,55.3,4.0
+Bullish harami,+ 200 SMA + confirmation,818,0.91,1.2,2.31,53.2,4.2
+Dragonfly / doji in downtrend,raw (with Nison trend rule),3275,0.28,0.4,1.36,50.1,3.1
+Dragonfly / doji in downtrend,"+ confirmation, entry at confirm close",1245,0.65,0.57,1.71,52.2,2.7
+Dragonfly / doji in downtrend,+ stock above 200 SMA (pullback in uptrend),1428,0.53,0.99,1.48,54.3,5.2
+Dragonfly / doji in downtrend,+ 200 SMA + volume > 1.5x,146,1.53,1.7,2.67,60.7,2.9
+Dragonfly / doji in downtrend,+ 200 SMA + confirmation,567,0.95,0.83,1.6,54.7,2.7
+Three white soldiers,raw (with Nison trend rule),451,-0.62,0.01,0.18,48.0,0.0
+Three white soldiers,"+ confirmation, entry at confirm close",175,-0.67,0.31,0.33,47.7,0.5
+Three white soldiers,+ stock above 200 SMA (pullback in uptrend),298,-0.35,-0.04,0.04,46.8,-0.1
+Three white soldiers,+ 200 SMA + volume > 1.5x,100,-0.47,-0.62,-0.93,43.9,-0.6
+Three white soldiers,+ 200 SMA + confirmation,112,-0.09,0.43,0.37,43.2,0.5
+Shooting star (bearish),raw (with Nison trend rule),2186,-0.13,0.36,1.75,48.6,2.0
+Hanging man (bearish),raw (with Nison trend rule),2013,-0.12,0.26,1.36,47.1,1.4
+Bearish engulfing,raw (with Nison trend rule),9321,-0.14,0.3,1.43,48.3,3.7
+Dark cloud cover,raw (with Nison trend rule),831,0.16,0.16,1.71,48.6,0.6
+Evening star,raw (with Nison trend rule),714,-0.33,0.18,1.03,47.5,0.6
