@@ -1,0 +1,40 @@
+{
+ "slug": "ep20_pac",
+ "num": 20,
+ "layout": "ot",
+ "patient": "uncle",
+ "topic": "Pre-anaesthesia checkup (PAC) mein kya hota hai",
+ "category": "pre",
+ "intro": ["CHECKUP KI", "KYA ZAROORAT?", "Pre-anaesthesia checkup (PAC)"],
+ "q_vo": [["डॉक्टर मैडम...", 0.22], ["ऑपरेशन से पहले चेकअप क्यों?", 0.1], ["सीधा कर दो ना!", 0.1]],
+ "a_vo": [["नहीं अंकल!", 0.15], ["चेकअप से,", 0.06], ["प्लान सुरक्षित बनता है।", 0.1]],
+ "f_vo": [
+  ["सच क्या है?", 0.3],
+  ["सेहत, पुरानी बीमारी,", 0.06],
+  ["और एलर्जी पूछते हैं।", 0.2],
+  ["अपनी सारी दवाइयाँ,", 0.06],
+  ["साथ लेकर आइए।", 0.2],
+  ["ज़रूरत हो तो,", 0.06],
+  ["खून की जाँच और ई सी जी।", 0.2],
+  ["खाना कब बंद करना है,", 0.06],
+  ["डॉक्टर की टीम बताएगी।", 0.1]
+ ],
+ "bullet_starts": [1, 3, 5, 7],
+ "switch_bullet": 2,
+ "q_bubble": ["Operation se pehle", "checkup kyun?", "Seedha kar do na!"],
+ "a_bubble": ["Nahi Uncle!", "Checkup se plan", "surakshit banta hai."],
+ "bullets": ["Sehat, bimari, allergy poochhenge", "Apni saari dawaiyan saath laaiye", "Zaroorat ho toh blood test, ECG", "Khaana kab band, team batayegi"],
+ "cap": {
+  "q": "Uncle: \"Doctor Madam, operation se pehle checkup kyun? Seedha kar do na!\"",
+  "a": "Dr Saathi: \"Nahi Uncle! Checkup se plan surakshit banta hai.\"",
+  "f": "Sehat, purani bimari, aur allergy poochhte hain. Apni saari dawaiyan saath lekar aaiye.",
+  "f2": "Zaroorat ho toh, khoon ki jaanch aur ECG. Khaana kab band karna hai, doctor ki team batayegi."
+ },
+ "tiles": [],
+ "stage": {},
+ "youtube": {
+  "title": "Pre-anaesthesia checkup (PAC) mein kya hota hai? 🩺 | Dr Saathi ke OT Kisse #20 #shorts",
+  "description": "Uncle ne poocha: \"Operation se pehle checkup kyun? Seedha kar do na!\" 🩺\nDr Saathi ne kaha: nahi! Checkup se aapka anaesthesia plan surakshit banta hai. 💚\n\nSach kya hai?\n✅ Aapki sehat, purani bimari aur allergy ke baare mein poochha jaata hai\n✅ Apni saari dawaiyan (ya unki list) saath lekar aaiye\n✅ Zaroorat ho toh khoon ki jaanch aur ECG hota hai\n✅ Khaana-peena kab band karna hai aur kaunsi dawa leni hai, doctor ki team batayegi\nApni dawa khud band mat kijiye, doctor se poochhiye.\n\nDarr nahi, taiyaari!\nFollow @surgerysathi for more OT Kisse\n\n⚠️ AI character. This video is only for general information. Ask your own doctor about your treatment.\n\n#SurgerySaathi #OTKisse #SurgeryTips #HealthHindi #Shorts",
+  "tags": ["pre anaesthesia checkup", "PAC kya hai", "pre anesthesia check up", "operation se pehle checkup", "anaesthesia checkup hindi", "pre operative assessment", "operation se pehle kya hota hai", "surgery se pehle checkup", "anaesthesia doctor checkup", "operation ki taiyari", "ECG before surgery", "OT kisse", "doctor cartoon", "surgerysaathi", "health hindi", "hinglish health", "patient education", "shorts"]
+ }
+}

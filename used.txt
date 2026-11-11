@@ -18,3 +18,4 @@
 2026-11-08 | 17 | Consent form par sign kyun? kya likha hota hai | ep17_consent
 2026-11-09 | 18 | Anaesthesia doctor sirf behosh karte hain? | ep18_anaesthetist + ep18_anaesthetist_bn
 2026-11-10 | 19 | Operation se pehle kaun se blood test hote hain | ep19_bloodtest + ep19_bloodtest_bn
+2026-11-11 | 20 | Pre-anaesthesia checkup (PAC) mein kya hota hai | ep20_pac + ep20_pac_bn
