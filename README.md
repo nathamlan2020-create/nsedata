@@ -51,3 +51,9 @@ Every day, after the Hindi episode, make a Bengali twin of the SAME episode: cop
 Translate everything into simple spoken Kolkata Bengali in Bengali script: intro, q_vo/a_vo/f_vo (Bengali script, numbers in words, first f_vo phrase `["সত্যিটা কী?", 0.3]`), bubbles, bullets (≤34 chars), captions, youtube title/description/tags.
 Names: Dr Saathi → ডাঃ সাথী; uncle → কাকু; dadi → দিদা; didi → দিদি. Header is automatic ("ডাঃ সাথীর OT গপ্পো #N"); in the youtube title use "| ডাঃ সাথীর OT গপ্পো #N #shorts"; description ends with "ভয় নয়, প্রস্তুতি!", the follow line and the Bengali AI disclaimer (see specs/ep16_bath_ot_bn.json).
 Build and Read its _check.jpg the same way, then send it with tg_send.py.
+
+## Long videos (16:9, normal uploads) — since 11 Nov 2026
+- `long_make.py spec.json OUTDIR [--preview]` — story video, 1920×1080: title card → "STEP i/n" chapter cards → Dr Saathi + patient talking in the OT with a board of bullets that tick in → end card. Spec: see `specs/long01_poora_din.json` (lines = `[role p|dr, Devanagari voice, Hinglish caption, expression, bullets_visible]`). Writes `<slug>.mp4`, `<slug>_thumb.jpg` (1280×720), `<slug>_check.jpg`.
+- `comp_make.py spec.json OUTDIR` — compilation of finished Shorts in 16:9 (Short on the left over a blurred copy, "SAWAAL i/n" panel on the right; end cards trimmed except the last; prints chapter timestamps). Spec: `specs/comp01_6sawaal.json`.
+- `tg_send_long.py spec.json video.mp4 thumb.jpg` — sends video, thumbnail and long-video upload kit (chapters in description).
+- Same medical rules apply: every fact verified in the run, no numbers unless verified.

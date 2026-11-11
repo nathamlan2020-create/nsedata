@@ -1,0 +1,305 @@
+{
+ "slug": "long01_poora_din",
+ "lang": "hi",
+ "patient": "uncle",
+ "title": "Operation ka poora din",
+ "subtitle": "Ghar se ward tak, step by step",
+ "thumb_text": "Operation ke din kya hota hai?",
+ "intro_vo": [
+  "नमस्ते! मैं डॉक्टर साथी। आज देखेंगे ऑपरेशन का पूरा दिन, घर से वार्ड तक, स्टेप बाय स्टेप।",
+  "Namaste! Main Dr Saathi. Aaj dekhenge operation ka poora din, ghar se ward tak, step by step."
+ ],
+ "chapters": [
+  {
+   "title": "Ghar se nikalne se pehle",
+   "bullets": [
+    "Khaana kab band: team ki timing",
+    "Dawa: doctor se poochh kar",
+    "Naha kar aaiye",
+    "Gehne, nail polish, makeup hatayein"
+   ],
+   "lines": [
+    [
+     "p",
+     "डॉक्टर मैडम, कल मेरा ऑपरेशन है। बहुत डर लग रहा है!",
+     "Doctor Madam, kal mera operation hai. Bahut darr lag raha hai!",
+     "worried",
+     0
+    ],
+    [
+     "dr",
+     "अंकल, डरिए मत! आज पूरा दिन, स्टेप बाय स्टेप समझाती हूँ।",
+     "Uncle, dariye mat! Aaj poora din, step by step samjhaati hoon.",
+     "happy"
+    ],
+    [
+     "dr",
+     "खाना-पीना कब बंद करना है, ये आपकी टीम बताएगी। बस उसी टाइमिंग को मानिए।",
+     "Khaana-peena kab band karna hai, ye aapki team batayegi. Bas usi timing ko maaniye.",
+     "explain",
+     1
+    ],
+    [
+     "dr",
+     "कौन सी दवा लेनी है, ये भी डॉक्टर से पूछकर। अपने आप कोई दवा बंद मत कीजिए।",
+     "Kaunsi dawa leni hai, ye bhi doctor se poochh kar. Apne aap koi dawa band mat kijiye.",
+     "explain",
+     2
+    ],
+    [
+     "dr",
+     "नहाकर आइए। गहने, नेल पॉलिश और मेकअप उतारकर आइए।",
+     "Naha kar aaiye. Gehne, nail polish aur makeup utaar kar aaiye.",
+     "reassure",
+     4
+    ]
+   ]
+  },
+  {
+   "title": "Hospital pahunch kar",
+   "bullets": [
+    "Baar-baar sawaal = safety check",
+    "Naam, operation, allergy confirm",
+    "Hospital ka gown",
+    "Chashma, daant: anaesthesia room tak"
+   ],
+   "lines": [
+    [
+     "p",
+     "वहाँ सब लोग बार-बार मेरा नाम क्यों पूछते हैं?",
+     "Wahan sab log baar-baar mera naam kyun poochhte hain?",
+     "doubt",
+     0
+    ],
+    [
+     "dr",
+     "ये सुरक्षा की जाँच है, अंकल। हर कदम पर सही जानकारी पक्की की जाती है।",
+     "Ye suraksha ki jaanch hai, Uncle. Har kadam par sahi jaankari pakki ki jaati hai.",
+     "explain",
+     1
+    ],
+    [
+     "dr",
+     "आपका नाम, जन्मतिथि, कौन सा ऑपरेशन है, और कोई एलर्जी, ये सब पूछा जाता है।",
+     "Aapka naam, janmtithi, kaunsa operation hai, aur koi allergy, ye sab poochha jaata hai.",
+     "explain",
+     2
+    ],
+    [
+     "dr",
+     "फिर आपको अस्पताल का गाउन पहनने को मिलेगा।",
+     "Phir aapko hospital ka gown pehenne ko milega.",
+     "happy",
+     3
+    ],
+    [
+     "dr",
+     "चश्मा, सुनने की मशीन और नकली दाँत, आमतौर पर एनेस्थीसिया रूम तक पहन सकते हैं।",
+     "Chashma, sunne ki machine aur nakli daant, aamtaur par anaesthesia room tak pehen sakte hain.",
+     "reassure",
+     4
+    ]
+   ]
+  },
+  {
+   "title": "OT ke andar",
+   "bullets": [
+    "Haath mein cannula (patli nali)",
+    "Dawaiyan isi nali se",
+    "Ungli par clip: oxygen",
+    "BP aur dhadkan monitor par"
+   ],
+   "lines": [
+    [
+     "p",
+     "ओटी के अंदर क्या-क्या होगा?",
+     "OT ke andar kya-kya hoga?",
+     "worried",
+     0
+    ],
+    [
+     "dr",
+     "हाथ में एक पतली प्लास्टिक की नली लगेगी, इसे कैनुला कहते हैं।",
+     "Haath mein ek patli plastic ki nali lagegi, ise cannula kehte hain.",
+     "explain",
+     1
+    ],
+    [
+     "dr",
+     "एनेस्थीसिया की दवा और बाकी दवाइयाँ, इसी नली से दी जाती हैं।",
+     "Anaesthesia ki dawa aur baaki dawaiyan, isi nali se di jaati hain.",
+     "explain",
+     2
+    ],
+    [
+     "dr",
+     "उंगली पर एक क्लिप लगेगी, जो ऑक्सीजन नापती है। बीपी और दिल की धड़कन भी मशीन पर दिखती रहेगी।",
+     "Ungli par ek clip lagegi, jo oxygen naapti hai. BP aur dil ki dhadkan bhi machine par dikhti rahegi.",
+     "reassure",
+     4
+    ]
+   ]
+  },
+  {
+   "title": "Anaesthesia ka time",
+   "bullets": [
+    "Kaunsa: operation dekh kar tay",
+    "General: gehri neend, dard nahi",
+    "Spinal: jaage, par dard nahi",
+    "Anaesthesia doctor poora time saath"
+   ],
+   "lines": [
+    [
+     "p",
+     "मुझे पूरी तरह बेहोश करेंगे?",
+     "Mujhe poori tarah behosh karenge?",
+     "doubt",
+     0
+    ],
+    [
+     "dr",
+     "ये आपके ऑपरेशन के हिसाब से तय होता है।",
+     "Ye aapke operation ke hisaab se tay hota hai.",
+     "explain",
+     1
+    ],
+    [
+     "dr",
+     "जनरल एनेस्थीसिया में मास्क से ऑक्सीजन मिलती है, और दवा से आप पूरे ऑपरेशन में गहरी नींद में रहते हैं।",
+     "General anaesthesia mein mask se oxygen milti hai, aur dawa se aap poore operation mein gehri neend mein rehte hain.",
+     "explain",
+     2
+    ],
+    [
+     "dr",
+     "स्पाइनल जैसे एनेस्थीसिया में आप जागते रह सकते हैं, पर दर्द नहीं होता। शरीर का वो हिस्सा सुन्न रहता है।",
+     "Spinal jaise anaesthesia mein aap jaagte reh sakte hain, par dard nahi hota. Shareer ka wo hissa sunn rehta hai.",
+     "explain",
+     3
+    ],
+    [
+     "dr",
+     "और सबसे ज़रूरी बात, एनेस्थीसिया डॉक्टर पूरे ऑपरेशन में आपके साथ रहते हैं।",
+     "Aur sabse zaroori baat, anaesthesia doctor poore operation mein aapke saath rehte hain.",
+     "reassure",
+     4
+    ]
+   ]
+  },
+  {
+   "title": "Recovery room",
+   "bullets": [
+    "Staff kareeb se dekhta hai",
+    "Gala kharab, munh sookha ho sakta",
+    "Ji machlana aam hai",
+    "Dard ya ulti: turant batayiye"
+   ],
+   "lines": [
+    [
+     "p",
+     "आँख खुलेगी, तो मैं कहाँ रहूँगा?",
+     "Aankh khulegi, toh main kahan rahunga?",
+     "doubt",
+     0
+    ],
+    [
+     "dr",
+     "रिकवरी रूम में। यहाँ स्टाफ आपको बहुत ध्यान से देखता है।",
+     "Recovery room mein. Yahan staff aapko bahut dhyaan se dekhta hai.",
+     "happy",
+     1
+    ],
+    [
+     "dr",
+     "गला खराब या मुँह सूखा लग सकता है। जी मचलना भी आम बात है।",
+     "Gala kharab ya munh sookha lag sakta hai. Ji machlana bhi aam baat hai.",
+     "explain",
+     3
+    ],
+    [
+     "dr",
+     "दर्द हो या जी मचले, तो तुरंत नर्स को बताइए। इलाज जल्दी मिल जाता है।",
+     "Dard ho ya ji machle, toh turant nurse ko batayiye. Ilaaj jaldi mil jaata hai.",
+     "reassure",
+     4
+    ]
+   ]
+  },
+  {
+   "title": "Ward aur ghar",
+   "bullets": [
+    "Jaldi chalna-phirna behtar",
+    "Khaana-peena doctor ki salaah se",
+    "Pareshani ho toh turant doctor"
+   ],
+   "lines": [
+    [
+     "p",
+     "फिर मैं कब चल-फिर सकूँगा?",
+     "Phir main kab chal-phir sakunga?",
+     "doubt",
+     0
+    ],
+    [
+     "dr",
+     "डॉक्टर जैसा बताएँ, उस हिसाब से जितना जल्दी चलना-फिरना शुरू करें, उतना अच्छा।",
+     "Doctor jaisa batayein, us hisaab se jitna jaldi chalna-phirna shuru karein, utna achha.",
+     "explain",
+     1
+    ],
+    [
+     "dr",
+     "खाना-पीना भी डॉक्टर की सलाह से शुरू होगा।",
+     "Khaana-peena bhi doctor ki salaah se shuru hoga.",
+     "explain",
+     2
+    ],
+    [
+     "dr",
+     "कोई भी परेशानी लगे, तो तुरंत डॉक्टर को दिखाइए।",
+     "Koi bhi pareshani lage, toh turant doctor ko dikhaiye.",
+     "reassure",
+     3
+    ],
+    [
+     "p",
+     "अब डर कम हो गया, डॉक्टर मैडम! धन्यवाद!",
+     "Ab darr kam ho gaya, Doctor Madam! Dhanyavaad!",
+     "thankful",
+     3
+    ],
+    [
+     "dr",
+     "डर नहीं, तैयारी! अपने इलाज के बारे में, हमेशा अपने डॉक्टर से पूछिए।",
+     "Darr nahi, taiyaari! Apne ilaaj ke baare mein, hamesha apne doctor se poochhiye.",
+     "happy",
+     3
+    ]
+   ]
+  }
+ ],
+ "youtube": {
+  "title": "Operation ke din kya hota hai? Ghar se ward tak poori jaankari 🏥 | Dr Saathi ke OT Kisse",
+  "description": "Operation ka din kaisa hota hai? Uncle ki tarah aapko bhi darr lagta hai? Dr Saathi aapko ghar se ward tak, step by step samjhaati hain. 💚\n\n00:00 Step 1 – Ghar se nikalne se pehle\n00:43 Step 2 – Hospital pahunch kar\n01:13 Step 3 – OT ke andar\n01:35 Step 4 – Anaesthesia ka time\n02:06 Step 5 – Recovery room\n02:28 Step 6 – Ward aur ghar\n\nSach kya hai?\n✅ Khaana-peena kab band karna hai, aapki team batati hai\n✅ Koi dawa apne aap band mat kijiye, doctor se poochhiye\n✅ Baar-baar naam poochhna ek safety check hai\n✅ Haath mein cannula, ungli par oxygen clip, BP aur dhadkan monitor par\n✅ Anaesthesia doctor poore operation mein aapke saath rehte hain\n✅ Recovery room mein dard ya ji machle toh turant batayiye\n\nDarr nahi, taiyaari!\nApna sawaal comment mein likhiye. Subscribe @surgerysathi\n\n⚠️ AI character. This video is only for general information. Ask your own doctor about your treatment.\n\n#SurgerySaathi #OTKisse #Anaesthesia #HealthHindi #SurgeryTips",
+  "tags": [
+   "operation ke din kya hota hai",
+   "operation ka din",
+   "surgery day explained hindi",
+   "operation se pehle kya karein",
+   "anaesthesia kaise dete hain",
+   "general anaesthesia hindi",
+   "spinal anaesthesia hindi",
+   "recovery room",
+   "operation theatre ke andar",
+   "operation ki taiyari",
+   "surgery tips hindi",
+   "anaesthesia doctor",
+   "OT kisse",
+   "doctor cartoon",
+   "surgerysaathi",
+   "health hindi",
+   "patient education",
+   "hinglish health"
+  ]
+ }
+}

@@ -1,0 +1,74 @@
+{
+ "slug": "comp01_6sawaal",
+ "lang": "hi",
+ "title": "Operation se pehle aur baad: 6 sawaal, 6 sach",
+ "subtitle": "Dr Saathi ke OT Kisse · Compilation",
+ "intro_vo": "नमस्ते! मैं डॉक्टर साथी। ऑपरेशन से पहले और बाद के, छह सबसे आम सवाल। चलिए, एक-एक करके सच जानते हैं!",
+ "outro_vo": [
+  [
+   "डर नहीं, तैयारी!",
+   0.3
+  ],
+  [
+   "अपना सवाल कमेंट में लिखिए।",
+   0.2
+  ],
+  [
+   "अपने इलाज के बारे में, हमेशा अपने डॉक्टर से पूछिए।",
+   0.2
+  ],
+  [
+   "फ़ॉलो कीजिए, सर्जरी साथी।",
+   0.1
+  ]
+ ],
+ "clips": [
+  {
+   "mp4": "/home/claude/comp/ep20_pac.mp4",
+   "q": "Operation se pehle checkup kyun?"
+  },
+  {
+   "mp4": "/home/claude/comp/ep19_bloodtest.mp4",
+   "q": "Itne saare blood test kyun?"
+  },
+  {
+   "mp4": "/home/claude/comp/ep17_consent_ot.mp4",
+   "q": "Consent form par sign kyun?"
+  },
+  {
+   "mp4": "/home/claude/comp/ep16_bath_ot.mp4",
+   "q": "Operation se pehle nahana zaroori?"
+  },
+  {
+   "mp4": "/home/claude/comp/ep18_anaesthetist.mp4",
+   "q": "Anaesthesia doctor sirf behosh karte hain?"
+  },
+  {
+   "mp4": "/home/claude/comp/ep15_nausea_ot.mp4",
+   "q": "Operation ke baad ji kyun machlata hai?"
+  }
+ ],
+ "youtube": {
+  "title": "Operation se pehle aur baad: 6 sawaal, 6 sach 🏥 | Dr Saathi ke OT Kisse",
+  "description": "Operation se pehle aur baad ke 6 sabse common sawaal, ek hi video mein! Dr Saathi seedhe, aasaan shabdon mein sach batati hain. 💚\n\n00:00 Shuruaat\n00:12 Operation se pehle checkup kyun?\n00:36 Itne saare blood test kyun?\n01:01 Consent form par sign kyun?\n01:27 Operation se pehle nahana zaroori?\n01:53 Anaesthesia doctor sirf behosh karte hain?\n02:17 Operation ke baad ji kyun machlata hai?\n\nDarr nahi, taiyaari!\nApna sawaal comment mein likhiye. Subscribe @surgerysathi\n\n⚠️ AI character. This video is only for general information. Ask your own doctor about your treatment.\n\n#SurgerySaathi #OTKisse #Anaesthesia #HealthHindi #SurgeryTips",
+  "tags": [
+   "operation se pehle kya karein",
+   "operation ke baad",
+   "pre anaesthesia checkup",
+   "operation se pehle blood test",
+   "consent form operation",
+   "operation se pehle nahana",
+   "anaesthesia doctor kya karte hain",
+   "operation ke baad ulti",
+   "surgery tips hindi",
+   "anaesthesia hindi",
+   "operation ki taiyari",
+   "OT kisse",
+   "doctor cartoon",
+   "surgerysaathi",
+   "health hindi",
+   "patient education",
+   "hinglish health"
+  ]
+ }
+}
