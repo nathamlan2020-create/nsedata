@@ -1,0 +1,40 @@
+{
+ "slug": "ep21_saathrehte",
+ "num": 21,
+ "layout": "ot",
+ "patient": "dadi",
+ "topic": "Anaesthesia doctor operation ke beech chale jaate hain?",
+ "category": "doctor",
+ "intro": ["BEHOSH KARKE", "CHALE JAATE?", "Operation mein anaesthesia doctor"],
+ "q_vo": [["डॉक्टर मैडम...", 0.22], ["बेहोश करके,", 0.06], ["आप चली तो नहीं जाएँगी?", 0.1]],
+ "a_vo": [["नहीं दादी!", 0.15], ["पूरे ऑपरेशन में,", 0.06], ["मैं आपके पास रहूँगी।", 0.1]],
+ "f_vo": [
+  ["सच क्या है?", 0.3],
+  ["एनेस्थीसिया टीम,", 0.06],
+  ["पूरे समय पास रहती है।", 0.2],
+  ["बीपी, धड़कन, ऑक्सीजन,", 0.06],
+  ["मशीन पर लगातार देखते हैं।", 0.2],
+  ["दवा की मात्रा,", 0.06],
+  ["ज़रूरत के हिसाब से सही रखते हैं।", 0.2],
+  ["ऑपरेशन के बाद भी,", 0.06],
+  ["रिकवरी में ध्यान रखा जाता है।", 0.1]
+ ],
+ "bullet_starts": [1, 3, 5, 7],
+ "switch_bullet": 2,
+ "q_bubble": ["Behosh karke", "aap chali toh", "nahi jaayengi?"],
+ "a_bubble": ["Nahi Dadi!", "Poore operation mein", "main paas rahungi."],
+ "bullets": ["Anaesthesia team poore samay paas", "BP, dhadkan, oxygen lagataar", "Dawa ki maatra sahi rakhte hain", "Baad mein recovery mein dekhbhaal"],
+ "cap": {
+  "q": "Dadi: \"Doctor Madam, behosh karke aap chali toh nahi jaayengi?\"",
+  "a": "Dr Saathi: \"Nahi Dadi! Poore operation mein, main aapke paas rahungi.\"",
+  "f": "Anaesthesia team poore samay paas rehti hai. BP, dhadkan, oxygen, machine par lagataar dekhte hain.",
+  "f2": "Dawa ki maatra zaroorat ke hisaab se sahi rakhte hain. Operation ke baad bhi recovery mein dhyaan rakha jaata hai."
+ },
+ "tiles": [],
+ "stage": {},
+ "youtube": {
+  "title": "Anaesthesia doctor beech mein chale jaate hain? 🩺 | Dr Saathi ke OT Kisse #21 #shorts",
+  "description": "Dadi ne poocha: \"Behosh karke aap chali toh nahi jaayengi?\" 😟\nDr Saathi ne kaha: nahi Dadi! Poore operation mein main aapke paas rahungi. 💚\n\nSach kya hai?\n✅ Anaesthesia doctor ya unki team poore operation mein aapke paas rehti hai\n✅ BP, dil ki dhadkan, oxygen aur saans machine par lagataar dekhe jaate hain\n✅ Dawa ki maatra zaroorat ke hisaab se sahi rakhi jaati hai, taaki aap aaraam se aur surakshit rahein\n✅ Operation ke baad recovery room mein bhi aapka dhyaan rakha jaata hai\nKoi bhi sawaal ho, apne doctor se poochhiye.\n\nDarr nahi, taiyaari!\nFollow @surgerysathi for more OT Kisse\n\n⚠️ AI character. This video is only for general information. Ask your own doctor about your treatment.\n\n#SurgerySaathi #OTKisse #SurgeryTips #HealthHindi #Shorts",
+  "tags": ["anaesthesia doctor kya karte hain", "anaesthesia doctor operation mein", "anesthesiologist role hindi", "operation ke time kaun rehta hai", "behoshi ke baad kya hota hai", "anaesthesia monitoring", "operation mein BP oxygen", "recovery room kya hai", "anaesthesia safe hai", "operation ka darr", "OT kisse", "doctor cartoon", "surgerysaathi", "health hindi", "hinglish health", "patient education", "shorts"]
+ }
+}
