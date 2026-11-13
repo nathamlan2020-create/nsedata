@@ -1,5 +1,5 @@
 """Send a finished SurgerySaathi video + upload text to the user's Telegram.
-Usage: python3 tg_send.py spec.json video.mp4   (env TG_TOKEN, TG_CHAT)
+Usage: python3 tg_send.py spec.json video.mp4|https-url [--video-only]   (env TG_TOKEN, TG_CHAT)
 Prints JSON {ok, video, text, error}."""
 import json, os, sys, uuid, urllib.request, urllib.parse, time
 TOKEN = os.environ["TG_TOKEN"]; CHAT = os.environ["TG_CHAT"]
@@ -16,14 +16,19 @@ def post(method, fields, files=None):
     else:
         req = urllib.request.Request(API + method, data=urllib.parse.urlencode(fields).encode())
     for a in range(2):
-        try: return json.loads(urllib.request.urlopen(req, timeout=120).read())
+        try: return json.loads(urllib.request.urlopen(req, timeout=280).read())
         except Exception as e:
             err = str(e); time.sleep(3)
     return {"ok": False, "description": err}
 spec = json.load(open(sys.argv[1])); y = spec["youtube"]
 fn = os.path.basename(sys.argv[2])
-r1 = post("sendVideo", {"chat_id": CHAT, "caption": f"🎬 New SurgerySaathi Short #{spec['num']}\n{y['title']}", "supports_streaming": "true", "width": "1080", "height": "1920"},
-          {"video": (fn, open(sys.argv[2], "rb").read(), "video/mp4")})
+VF = {"chat_id": CHAT, "caption": f"🎬 New SurgerySaathi Short #{spec['num']}\n{y['title']}", "supports_streaming": "true", "width": "1080", "height": "1920"}
+if sys.argv[2].startswith("http"):  # public URL (e.g. raw.githubusercontent ssmedia) - Telegram fetches it; avoids slow proxy uploads
+    r1 = post("sendVideo", dict(VF, video=sys.argv[2]))
+else:
+    r1 = post("sendVideo", VF, {"video": (fn, open(sys.argv[2], "rb").read(), "video/mp4")})
+if "--video-only" in sys.argv:
+    print(json.dumps(dict(ok=bool(r1.get("ok")), video=r1.get("ok"), error=r1.get("description") or ""), ensure_ascii=False)); sys.exit(0)
 PL = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "playlists.json")))
 pl = PL.get(spec.get("category", ""), "")
 txt = f"📋 Upload kit #{spec['num']} (YouTube app → + → Short → pick this video)\n\nTITLE:\n{y['title']}\n\nDESCRIPTION:\n{y['description']}\n\nTAGS (Studio → Show more → Tags):\n{', '.join(y['tags'])}\n\nSettings: Not made for kids · Altered/synthetic content: Yes (AI voice) · Playlist: {pl or 'OT Kisse'}"

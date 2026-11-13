@@ -1,0 +1,40 @@
+{
+ "slug": "ep22_sugar",
+ "num": 22,
+ "layout": "ot",
+ "patient": "uncle",
+ "topic": "Sugar zyada ho toh operation ruk sakta hai?",
+ "category": "pre",
+ "intro": ["SUGAR HIGH?", "OPERATION RUKEGA", "Diabetes aur operation ka sach"],
+ "q_vo": [["डॉक्टर मैडम...", 0.22], ["मेरी शुगर ज़्यादा है,", 0.06], ["क्या ऑपरेशन रुक जाएगा?", 0.1]],
+ "a_vo": [["कभी-कभी अंकल!", 0.15], ["पहले शुगर कंट्रोल,", 0.06], ["फिर सेफ ऑपरेशन।", 0.1]],
+ "f_vo": [
+  ["सच क्या है?", 0.3],
+  ["शुगर बहुत ज़्यादा हो,", 0.06],
+  ["तो प्लान्ड ऑपरेशन टल सकता है।", 0.2],
+  ["ज़्यादा शुगर से,", 0.06],
+  ["इन्फेक्शन का खतरा बढ़ता है।", 0.2],
+  ["ज़रूरत हो तो ऑपरेशन में भी,", 0.06],
+  ["शुगर कंट्रोल में रखी जाती है।", 0.2],
+  ["शुगर की दवा,", 0.06],
+  ["डॉक्टर की बताई टाइमिंग पर लीजिए।", 0.1]
+ ],
+ "bullet_starts": [1, 3, 5, 7],
+ "switch_bullet": 2,
+ "q_bubble": ["Meri sugar zyada hai,", "kya operation", "ruk jaayega?"],
+ "a_bubble": ["Kabhi-kabhi Uncle!", "Pehle sugar control,", "phir safe operation."],
+ "bullets": ["Bahut zyada sugar: OT tal sakta", "Zyada sugar = infection ka khatra", "OT mein bhi sugar control", "Dawa: doctor ki batayi timing"],
+ "cap": {
+  "q": "Uncle: \"Doctor Madam, meri sugar zyada hai, kya operation ruk jaayega?\"",
+  "a": "Dr Saathi: \"Kabhi-kabhi Uncle! Pehle sugar control, phir safe operation.\"",
+  "f": "Sugar bahut zyada ho, toh planned operation tal sakta hai. Zyada sugar se infection ka khatra badhta hai.",
+  "f2": "Zaroorat ho toh operation mein bhi sugar control mein rakhi jaati hai. Sugar ki dawa doctor ki batayi timing par lijiye."
+ },
+ "tiles": [],
+ "stage": {},
+ "youtube": {
+  "title": "Sugar zyada ho toh operation ruk jaata hai? 🩸 | Dr Saathi ke OT Kisse #22 #shorts",
+  "description": "Uncle ne poocha: \"Meri sugar zyada hai, kya operation ruk jaayega?\" 😟\nDr Saathi ne kaha: kabhi-kabhi Uncle! Pehle sugar control, phir safe operation. 💚\n\nSach kya hai?\n✅ Sugar bahut zyada ho toh planned operation kuch samay ke liye tal sakta hai, taaki pehle sugar control ho\n✅ Zyada sugar se operation ke baad infection jaisi pareshaani ka khatra badhta hai\n✅ Zaroorat ho toh operation ke dauraan aur baad mein bhi sugar control mein rakhi jaati hai\n✅ Sugar ki dawa ya insulin kab leni hai, yeh apne doctor ki batayi timing se hi kijiye\nKoi bhi sawaal ho, apne doctor se poochhiye.\n\nDarr nahi, taiyaari!\nFollow @surgerysathi for more OT Kisse\n\n⚠️ AI character. This video is only for general information. Ask your own doctor about your treatment.\n\n#SurgerySaathi #OTKisse #SurgeryTips #HealthHindi #Shorts",
+  "tags": ["sugar mein operation", "diabetes aur operation", "sugar high operation cancel", "operation se pehle sugar", "diabetes surgery hindi", "blood sugar before surgery", "sugar control kaise karein operation se pehle", "operation postpone kyun", "infection after surgery diabetes", "anaesthesia diabetes", "operation ka darr", "OT kisse", "doctor cartoon", "surgerysaathi", "health hindi", "patient education", "shorts"]
+ }
+}
