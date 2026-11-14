@@ -1,0 +1,41 @@
+{
+ "slug": "ep23_bp",
+ "num": 23,
+ "layout": "ot",
+ "patient": "dadi",
+ "topic": "BP high ho toh operation ruk sakta hai?",
+ "category": "pre",
+ "intro": ["BP HIGH?", "OPERATION RUKEGA", "BP aur operation ka sach"],
+ "q_vo": [["डॉक्टर मैडम...", 0.22], ["मेरा बीपी हाई रहता है,", 0.06], ["क्या ऑपरेशन रुक जाएगा?", 0.1]],
+ "a_vo": [["हर बार नहीं दादी!", 0.15], ["बहुत ज़्यादा हो तभी,", 0.06], ["पहले कंट्रोल करते हैं।", 0.1]],
+ "f_vo": [
+  ["सच क्या है?", 0.3],
+  ["घबराहट से भी,", 0.06],
+  ["बीपी थोड़ा बढ़ जाता है।", 0.2],
+  ["बीपी एक सौ अस्सी बटा,", 0.06],
+  ["एक सौ दस से ऊपर हो,", 0.06],
+  ["तो प्लान्ड ऑपरेशन टल सकता है।", 0.2],
+  ["ऑपरेशन में हर पाँच मिनट,", 0.06],
+  ["बीपी चेक होता है।", 0.2],
+  ["बीपी की दवा,", 0.06],
+  ["डॉक्टर की बताई टाइमिंग पर लीजिए।", 0.1]
+ ],
+ "bullet_starts": [1, 3, 6, 8],
+ "switch_bullet": 2,
+ "q_bubble": ["Mera BP high rehta hai,", "kya operation", "ruk jaayega?"],
+ "a_bubble": ["Har baar nahi Dadi!", "Bahut zyada ho tabhi,", "pehle control."],
+ "bullets": ["Ghabrahat se BP thoda badhta", "180/110 se upar: OT tal sakta", "OT mein har 5 min BP check", "BP dawa: doctor ki batayi timing"],
+ "cap": {
+  "q": "Dadi: \"Doctor Madam, mera BP high rehta hai, kya operation ruk jaayega?\"",
+  "a": "Dr Saathi: \"Har baar nahi Dadi! Bahut zyada ho tabhi, pehle control karte hain.\"",
+  "f": "Ghabrahat se bhi BP thoda badh jaata hai. BP 180/110 se upar ho, toh planned operation tal sakta hai.",
+  "f2": "Operation mein har 5 minute BP check hota hai. BP ki dawa doctor ki batayi timing par lijiye."
+ },
+ "tiles": [],
+ "stage": {},
+ "youtube": {
+  "title": "BP high ho toh operation ruk jaata hai? 🩺 | Dr Saathi ke OT Kisse #23 #shorts",
+  "description": "Dadi ne poocha: \"Mera BP high rehta hai, kya operation ruk jaayega?\" 😟\nDr Saathi ne kaha: har baar nahi Dadi! Bahut zyada ho tabhi, pehle BP control karte hain. 💚\n\nSach kya hai?\n✅ Hospital mein ghabrahat ya tension se bhi BP thoda badh jaata hai\n✅ BP 180/110 se upar ho toh planned operation kuch samay ke liye tal sakta hai, taaki pehle BP control ho\n✅ Operation ke dauraan anaesthesia doctor kam se kam har 5 minute mein BP check karte hain\n✅ BP ki dawa kab leni hai, yeh apne doctor ki batayi timing se hi kijiye\nKoi bhi sawaal ho, apne doctor se poochhiye.\n\nDarr nahi, taiyaari!\nFollow @surgerysathi for more OT Kisse\n\n⚠️ AI character. This video is only for general information. Ask your own doctor about your treatment.\n\n#SurgerySaathi #OTKisse #SurgeryTips #HealthHindi #Shorts",
+  "tags": ["bp high operation", "high bp mein operation", "blood pressure aur operation", "operation se pehle bp", "bp high operation cancel", "hypertension surgery hindi", "blood pressure before surgery", "operation postpone kyun", "bp ki dawa operation se pehle", "anaesthesia bp", "operation ka darr", "OT kisse", "doctor cartoon", "surgerysaathi", "health hindi", "patient education", "shorts"]
+ }
+}

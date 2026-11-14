@@ -21,3 +21,4 @@
 2026-11-11 | 20 | Pre-anaesthesia checkup (PAC) mein kya hota hai | ep20_pac + ep20_pac_bn
 2026-11-12 | 21 | Anaesthesia doctor operation ke beech chale jaate hain? | ep21_saathrehte + ep21_saathrehte_bn
 2026-11-13 | 22 | Sugar zyada ho toh operation ruk sakta hai? | ep22_sugar + ep22_sugar_bn
+2026-11-14 | 23 | BP high ho toh operation ruk sakta hai? | ep23_bp + ep23_bp_bn
