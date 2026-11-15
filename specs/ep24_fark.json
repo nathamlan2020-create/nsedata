@@ -1,0 +1,40 @@
+{
+ "slug": "ep24_fark",
+ "num": 24,
+ "layout": "ot",
+ "patient": "uncle",
+ "topic": "Surgeon aur anaesthesia doctor mein fark",
+ "category": "doctor",
+ "intro": ["SURGEON YA", "ANAESTHESIA DR?", "Dono doctor ka kaam alag"],
+ "q_vo": [["डॉक्टर मैडम...", 0.22], ["ऑपरेशन तो सर्जन करते हैं,", 0.06], ["आप क्या करती हैं?", 0.1]],
+ "a_vo": [["अंकल, सर्जन ऑपरेशन करते हैं,", 0.06], ["और मैं आपको", 0.06], ["सुरक्षित रखती हूँ!", 0.1]],
+ "f_vo": [
+  ["सच क्या है?", 0.3],
+  ["एनेस्थीसिया डॉक्टर भी पूरे डॉक्टर हैं,", 0.06],
+  ["ऊपर से स्पेशल ट्रेनिंग।", 0.2],
+  ["ऑपरेशन से पहले,", 0.06],
+  ["जाँच करके प्लान बनाते हैं।", 0.2],
+  ["पूरे ऑपरेशन में,", 0.06],
+  ["दिल और साँस पर नज़र।", 0.2],
+  ["ऑपरेशन के बाद,", 0.06],
+  ["दर्द का प्लान भी।", 0.1]
+ ],
+ "bullet_starts": [1, 3, 5, 7],
+ "switch_bullet": 2,
+ "q_bubble": ["Operation toh surgeon", "karte hain, aap", "kya karti hain?"],
+ "a_bubble": ["Uncle, surgeon operation", "karte hain, main aapko", "surakshit rakhti hoon!"],
+ "bullets": ["Poore doctor + special training", "Pehle jaanch karke plan", "Poore OT dil-saans par nazar", "Operation ke baad dard ka plan"],
+ "cap": {
+  "q": "Uncle: \"Doctor Madam, operation toh surgeon karte hain, aap kya karti hain?\"",
+  "a": "Dr Saathi: \"Uncle, surgeon operation karte hain, aur main aapko surakshit rakhti hoon!\"",
+  "f": "Anaesthesia doctor bhi poore doctor hain, upar se special training. Operation se pehle jaanch karke plan banate hain.",
+  "f2": "Poore operation mein dil aur saans par nazar. Operation ke baad dard ka plan bhi."
+ },
+ "tiles": [],
+ "stage": {},
+ "youtube": {
+  "title": "Surgeon aur anaesthesia doctor mein kya fark? 👩‍⚕️ | Dr Saathi ke OT Kisse #24 #shorts",
+  "description": "Uncle ne poocha: \"Operation toh surgeon karte hain, aap kya karti hain?\" 🤔\nDr Saathi ne kaha: Uncle, surgeon operation karte hain, aur main aapko surakshit rakhti hoon! 💚\n\nSach kya hai?\n✅ Anaesthesia doctor bhi poore qualified doctor hote hain, upar se anaesthesia ki special training\n✅ Operation se pehle woh aapki jaanch karke aapke liye anaesthesia ka plan banate hain\n✅ Poore operation ke dauraan woh aapke saath rehkar dil aur saans par lagaataar nazar rakhte hain\n✅ Operation ke baad dard kam rakhne ka plan bhi woh banate hain\nKoi bhi sawaal ho, apne doctor se poochhiye.\n\nDarr nahi, taiyaari!\nFollow @surgerysathi for more OT Kisse\n\n⚠️ AI character. This video is only for general information. Ask your own doctor about your treatment.\n\n#SurgerySaathi #OTKisse #SurgeryTips #HealthHindi #Shorts",
+  "tags": ["surgeon aur anaesthesia doctor", "anaesthesia doctor kya karte hain", "anesthesiologist kaun hota hai", "anaesthesia doctor ka kaam", "surgeon vs anesthesiologist", "anesthesiologist role hindi", "operation mein kaun kaun doctor", "behoshi ka doctor", "anaesthesia hindi", "operation ka darr", "OT kisse", "doctor cartoon", "surgerysaathi", "health hindi", "patient education", "shorts"]
+ }
+}

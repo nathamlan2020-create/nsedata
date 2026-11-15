@@ -22,3 +22,4 @@
 2026-11-12 | 21 | Anaesthesia doctor operation ke beech chale jaate hain? | ep21_saathrehte + ep21_saathrehte_bn
 2026-11-13 | 22 | Sugar zyada ho toh operation ruk sakta hai? | ep22_sugar + ep22_sugar_bn
 2026-11-14 | 23 | BP high ho toh operation ruk sakta hai? | ep23_bp + ep23_bp_bn
+2026-11-15 | 24 | Surgeon aur anaesthesia doctor mein fark | ep24_fark + ep24_fark_bn
