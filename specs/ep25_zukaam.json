@@ -1,0 +1,40 @@
+{
+ "slug": "ep25_zukaam",
+ "num": 25,
+ "layout": "ot",
+ "patient": "dadi",
+ "topic": "Khaansi-zukaam mein operation?",
+ "category": "pre",
+ "intro": ["KHAANSI-ZUKAAM", "MEIN OPERATION?", "Doctor ko pehle batana zaroori"],
+ "q_vo": [["डॉक्टर मैडम...", 0.22], ["मुझे खाँसी-ज़ुकाम है,", 0.06], ["ऑपरेशन होगा या नहीं?", 0.1]],
+ "a_vo": [["दादी, पहले हमें बताइए,", 0.06], ["फिर हम मिलकर", 0.06], ["सही फ़ैसला करेंगे!", 0.1]],
+ "f_vo": [
+  ["सच क्या है?", 0.3],
+  ["खाँसी, ज़ुकाम या बुखार हो,", 0.06],
+  ["तो पहले डॉक्टर को बताइए।", 0.2],
+  ["साँस का इन्फेक्शन,", 0.06],
+  ["एनेस्थीसिया में दिक्कत बढ़ा सकता है।", 0.2],
+  ["हल्के ज़ुकाम में,", 0.06],
+  ["हर बार ऑपरेशन नहीं रुकता।", 0.2],
+  ["ज़रूरत हो तो तारीख आगे,", 0.06],
+  ["आपकी सुरक्षा के लिए।", 0.1]
+ ],
+ "bullet_starts": [1, 3, 5, 7],
+ "switch_bullet": 2,
+ "q_bubble": ["Mujhe khaansi-zukaam", "hai, operation hoga", "ya nahi?"],
+ "a_bubble": ["Dadi, pehle humein", "bataiye, phir milkar", "sahi faisla karenge!"],
+ "bullets": ["Khaansi/bukhaar: pehle bataiye", "Saans infection: risk badhe", "Halka zukaam: har baar na ruke", "Date aage: aapki suraksha"],
+ "cap": {
+  "q": "Dadi: \"Doctor Madam, mujhe khaansi-zukaam hai, operation hoga ya nahi?\"",
+  "a": "Dr Saathi: \"Dadi, pehle humein bataiye, phir hum milkar sahi faisla karenge!\"",
+  "f": "Khaansi, zukaam ya bukhaar ho, toh pehle doctor ko bataiye. Saans ka infection anaesthesia mein dikkat badha sakta hai.",
+  "f2": "Halke zukaam mein har baar operation nahi rukta. Zaroorat ho toh taareekh aage, aapki suraksha ke liye."
+ },
+ "tiles": [],
+ "stage": {},
+ "youtube": {
+  "title": "Khaansi-zukaam mein operation ho sakta hai? 🤧 | Dr Saathi ke OT Kisse #25 #shorts",
+  "description": "Dadi ne poocha: \"Mujhe khaansi-zukaam hai, operation hoga ya nahi?\" 🤧\nDr Saathi ne kaha: Dadi, pehle humein bataiye, phir hum milkar sahi faisla karenge! 💚\n\nSach kya hai?\n✅ Operation se pehle khaansi, zukaam ya bukhaar ho toh pehle hi apne doctor ko bataiye\n✅ Saans ka infection anaesthesia ke dauraan dikkat ka risk badha sakta hai\n✅ Halke zukaam mein har baar operation nahi rukta, doctor jaanch karke faisla karte hain\n✅ Zaroorat ho toh operation ki taareekh aage ki jaati hai, sirf aapki suraksha ke liye\nKoi bhi sawaal ho, apne doctor se poochhiye.\n\nDarr nahi, taiyaari!\nFollow @surgerysathi for more OT Kisse\n\n⚠️ AI character. This video is only for general information. Ask your own doctor about your treatment.\n\n#SurgerySaathi #OTKisse #SurgeryTips #HealthHindi #Shorts",
+  "tags": ["khaansi zukaam mein operation", "cold mein operation ho sakta hai", "surgery with cold", "cough before surgery", "operation se pehle bukhaar", "anaesthesia aur zukaam", "operation postpone kyun", "cold before anesthesia", "operation ki taiyaari", "anaesthesia hindi", "operation ka darr", "OT kisse", "doctor cartoon", "surgerysaathi", "health hindi", "patient education", "shorts"]
+ }
+}

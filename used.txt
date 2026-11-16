@@ -23,3 +23,4 @@
 2026-11-13 | 22 | Sugar zyada ho toh operation ruk sakta hai? | ep22_sugar + ep22_sugar_bn
 2026-11-14 | 23 | BP high ho toh operation ruk sakta hai? | ep23_bp + ep23_bp_bn
 2026-11-15 | 24 | Surgeon aur anaesthesia doctor mein fark | ep24_fark + ep24_fark_bn
+2026-11-16 | 25 | Khaansi-zukaam mein operation? | ep25_zukaam + ep25_zukaam_bn
