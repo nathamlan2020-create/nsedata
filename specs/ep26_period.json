@@ -1,0 +1,133 @@
+{
+ "slug": "ep26_period",
+ "num": 26,
+ "layout": "ot",
+ "patient": "didi",
+ "topic": "Operation se pehle period ho toh?",
+ "category": "pre",
+ "intro": [
+  "PERIOD AA GAYE",
+  "TOH OPERATION?",
+  "Ghabraiye nahi, nurse ko bataiye"
+ ],
+ "q_vo": [
+  [
+   "डॉक्टर मैडम...",
+   0.22
+  ],
+  [
+   "मेरी बहन का ऑपरेशन है,",
+   0.06
+  ],
+  [
+   "पीरियड्स आ गए तो?",
+   0.1
+  ]
+ ],
+ "a_vo": [
+  [
+   "दीदी, घबराइए मत,",
+   0.06
+  ],
+  [
+   "आमतौर पर ऑपरेशन",
+   0.06
+  ],
+  [
+   "हो जाता है!",
+   0.1
+  ]
+ ],
+ "f_vo": [
+  [
+   "सच क्या है?",
+   0.3
+  ],
+  [
+   "पीरियड्स में आमतौर पर,",
+   0.06
+  ],
+  [
+   "ऑपरेशन नहीं रुकता।",
+   0.2
+  ],
+  [
+   "नर्स को बता दीजिए,",
+   0.06
+  ],
+  [
+   "वो पैड दे देंगी।",
+   0.2
+  ],
+  [
+   "टैम्पोन नहीं, पैड बेहतर,",
+   0.06
+  ],
+  [
+   "इन्फेक्शन से बचाव।",
+   0.2
+  ],
+  [
+   "ऑपरेशन की टेंशन से भी,",
+   0.06
+  ],
+  [
+   "पीरियड्स आ सकते हैं, घबराइए मत।",
+   0.1
+  ]
+ ],
+ "bullet_starts": [
+  1,
+  3,
+  5,
+  7
+ ],
+ "switch_bullet": 2,
+ "q_bubble": [
+  "Meri behen ka",
+  "operation hai, period",
+  "aa gaye toh?"
+ ],
+ "a_bubble": [
+  "Didi, ghabraiye mat,",
+  "aam taur par operation",
+  "ho jaata hai!"
+ ],
+ "bullets": [
+  "Period: aam taur par op nahi rukta",
+  "Nurse ko bataiye: pad milega",
+  "Tampon nahi, pad behtar",
+  "Tension se bhi period: normal"
+ ],
+ "cap": {
+  "q": "Didi: \"Doctor Madam, meri behen ka operation hai, periods aa gaye toh?\"",
+  "a": "Dr Saathi: \"Didi, ghabraiye mat, aam taur par operation ho jaata hai!\"",
+  "f": "Periods mein aam taur par operation nahi rukta. Nurse ko bata dijiye, woh pad de dengi.",
+  "f2": "Tampon nahi, pad behtar, infection se bachaav. Operation ki tension se bhi periods aa sakte hain, ghabraiye mat."
+ },
+ "tiles": [],
+ "stage": {},
+ "youtube": {
+  "title": "Operation ke din period aa gaye toh? 🌸 | Dr Saathi ke OT Kisse #26 #shorts",
+  "description": "Didi ne poocha: \"Meri behen ka operation hai, periods aa gaye toh?\" 🌸\nDr Saathi ne kaha: Didi, ghabraiye mat, aam taur par operation ho jaata hai! 💚\n\nSach kya hai?\n✅ Periods mein aam taur par operation nahi rukta\n✅ Hospital pahunchte hi nurse ko bata dijiye, woh pad aur madad dengi\n✅ Operation ke aas-paas tampon nahi, pad behtar hai, infection se bachaav ke liye\n✅ Operation ki tension se bhi kabhi-kabhi periods aa jaate hain, ghabraiye mat\nKoi bhi sawaal ho, apne doctor se poochhiye.\n\nDarr nahi, taiyaari!\nFollow @surgerysathi for more OT Kisse\n\n⚠️ AI character. This video is only for general information. Ask your own doctor about your treatment.\n\n#SurgerySaathi #OTKisse #SurgeryTips #HealthHindi #Shorts",
+  "tags": [
+   "period mein operation",
+   "periods aur surgery",
+   "operation ke din period",
+   "surgery during period",
+   "period before surgery",
+   "tampon before surgery",
+   "mahila operation tips",
+   "operation ki taiyaari",
+   "anaesthesia hindi",
+   "women health hindi",
+   "operation ka darr",
+   "OT kisse",
+   "doctor cartoon",
+   "surgerysaathi",
+   "health hindi",
+   "patient education",
+   "shorts"
+  ]
+ }
+}
