@@ -1,0 +1,45 @@
+{
+ "slug": "ep27_sardard",
+ "num": 27,
+ "layout": "ot",
+ "patient": "uncle",
+ "topic": "Spinal ke baad sar dard kyun?",
+ "category": "post",
+ "intro": ["SPINAL KE BAAD", "SAR DARD?", "Kyun hota hai, kya karein"],
+ "q_vo": [["डॉक्टर मैडम...", 0.22], ["स्पाइनल के बाद,", 0.06], ["सिर में दर्द क्यों?", 0.1]],
+ "a_vo": [["अंकल, घबराइए मत,", 0.06], ["यह कम होता है,", 0.06], ["और इलाज है!", 0.1]],
+ "f_vo": [
+  ["सच क्या है?", 0.3],
+  ["सौ में करीब एक या कम,", 0.06],
+  ["यह सिरदर्द होता है।", 0.2],
+  ["लेटने पर आराम मिलता है,", 0.06],
+  ["उठने पर बढ़ता है।", 0.2],
+  ["एक दिन से एक हफ्ते में,", 0.06],
+  ["आमतौर पर शुरू होता है।", 0.2],
+  ["पानी पीजिए, डॉक्टर को बताइए,", 0.06],
+  ["इसका इलाज मौजूद है।", 0.1]
+ ],
+ "bullet_starts": [1, 3, 5, 7],
+ "switch_bullet": 2,
+ "q_bubble": ["Spinal ke baad", "sir mein dard", "kyun?"],
+ "a_bubble": ["Uncle, ghabraiye mat,", "yeh kam hota hai,", "aur ilaaj hai!"],
+ "bullets": [
+  "Kam hota hai: 100 mein ~1 ya kam",
+  "Letne par aaraam, uthne par zyada",
+  "Shuru: 1 din se 1 hafte mein",
+  "Doctor ko bataiye: ilaaj hai"
+ ],
+ "cap": {
+  "q": "Uncle: \"Doctor Madam, spinal ke baad sir mein dard kyun?\"",
+  "a": "Dr Saathi: \"Uncle, ghabraiye mat, yeh kam hota hai, aur ilaaj hai!\"",
+  "f": "Sau mein kareeb ek ya kam ko yeh sirdard hota hai. Letne par aaraam milta hai, uthne par badhta hai.",
+  "f2": "Ek din se ek hafte mein aam taur par shuru hota hai. Paani peejiye, doctor ko bataiye, iska ilaaj maujood hai."
+ },
+ "tiles": [],
+ "stage": {},
+ "youtube": {
+  "title": "Spinal ke baad sar dard kyun hota hai? 🤕 | Dr Saathi ke OT Kisse #27 #shorts",
+  "description": "Uncle ne poocha: \"Spinal ke baad sir mein dard kyun?\" 🤕\nDr Saathi ne kaha: Uncle, ghabraiye mat, yeh kam hota hai, aur ilaaj hai! 💚\n\nSach kya hai?\n✅ Spinal ki sui ki jagah se thoda sa paani (fluid) rishne se yeh sirdard hota hai; 100 mein kareeb 1 ya usse kam logon ko\n✅ Letne par aaraam milta hai, baithne ya khade hone par badhta hai\n✅ Aam taur par 1 din se 1 hafte ke andar shuru hota hai\n✅ Paani peejiye, anaesthesia doctor ko bataiye; iska ilaaj maujood hai\nSirdard ke saath bahut neend, confusion ya ulti ho toh turant doctor ko dikhaiye. Koi bhi dawa apne doctor se poochh kar hi lijiye.\n\nDarr nahi, taiyaari!\nFollow @surgerysathi for more OT Kisse\n\n⚠️ AI character. This video is only for general information. Ask your own doctor about your treatment.\n\n#SurgerySaathi #OTKisse #SurgeryTips #HealthHindi #Shorts",
+  "tags": ["spinal ke baad sar dard", "spinal anaesthesia headache", "post spinal headache", "PDPH hindi", "spinal ke side effect", "operation ke baad sir dard", "spinal anaesthesia hindi", "headache after spinal", "anaesthesia hindi", "operation ka darr", "OT kisse", "doctor cartoon", "surgerysaathi", "health hindi", "patient education", "shorts"]
+ }
+}

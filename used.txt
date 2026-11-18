@@ -25,3 +25,4 @@
 2026-11-15 | 24 | Surgeon aur anaesthesia doctor mein fark | ep24_fark + ep24_fark_bn
 2026-11-16 | 25 | Khaansi-zukaam mein operation? | ep25_zukaam + ep25_zukaam_bn
 2026-11-17 | 26 | Operation se pehle period ho toh? | ep26_period + ep26_period_bn
+2026-11-18 | 27 | Spinal ke baad sar dard kyun? | ep27_sardard + ep27_sardard_bn
