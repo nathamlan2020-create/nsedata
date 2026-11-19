@@ -1,0 +1,45 @@
+{
+ "slug": "ep28_mahila",
+ "num": 28,
+ "layout": "ot",
+ "patient": "dadi",
+ "topic": "Mahila doctor se operation: koi fark?",
+ "category": "doctor",
+ "intro": ["LADY DOCTOR SE", "OPERATION?", "Koi fark padta hai kya?"],
+ "q_vo": [["डॉक्टर मैडम...", 0.22], ["लेडी डॉक्टर ऑपरेशन करेगी,", 0.06], ["ठीक रहेगा ना?", 0.1]],
+ "a_vo": [["दादी, बिल्कुल ठीक रहेगा!", 0.06], ["हुनर देखिए,", 0.06], ["औरत-मर्द नहीं।", 0.1]],
+ "f_vo": [
+  ["सच क्या है?", 0.3],
+  ["पढ़ाई, डिग्री और परीक्षा,", 0.06],
+  ["सबके लिए एक जैसी।", 0.2],
+  ["चौवन लाख मरीज़ों की रिसर्च में,", 0.06],
+  ["नतीजे कम नहीं, थोड़े बेहतर मिले।", 0.2],
+  ["असली फ़र्क अनुभव और टीम से,", 0.06],
+  ["औरत या मर्द होने से नहीं।", 0.2],
+  ["कोई सवाल हो तो,", 0.06],
+  ["डॉक्टर से खुलकर पूछिए।", 0.1]
+ ],
+ "bullet_starts": [1, 3, 5, 7],
+ "switch_bullet": 2,
+ "q_bubble": ["Lady doctor operation", "karegi, theek", "rahega na?"],
+ "a_bubble": ["Dadi, bilkul theek!", "Hunar dekhiye,", "aurat-mard nahi."],
+ "bullets": [
+  "Padhai aur exam: sabke liye same",
+  "54 lakh mareez: result kam nahi",
+  "Asli fark: anubhav aur team",
+  "Sawaal? Khul kar poochhiye"
+ ],
+ "cap": {
+  "q": "Dadi: \"Doctor Madam, lady doctor operation karegi, theek rahega na?\"",
+  "a": "Dr Saathi: \"Dadi, bilkul theek rahega! Hunar dekhiye, aurat-mard nahi.\"",
+  "f": "Padhai, degree aur exam sabke liye ek jaisi. 54 lakh mareezon ki research mein nateeje kam nahi, thode behtar mile.",
+  "f2": "Asli fark anubhav aur team se aata hai, aurat ya mard hone se nahi. Koi sawaal ho toh doctor se khul kar poochhiye."
+ },
+ "tiles": [],
+ "stage": {},
+ "youtube": {
+  "title": "Lady doctor se operation: koi fark padta hai? 🩺 | Dr Saathi ke OT Kisse #28 #shorts",
+  "description": "Dadi ne poocha: \"Lady doctor operation karegi, theek rahega na?\" 🩺\nDr Saathi ne kaha: Dadi, bilkul theek rahega! Hunar dekhiye, aurat-mard nahi. 💚\n\nSach kya hai?\n✅ Surgeon banne ki padhai, degree aur exam mahila aur purush dono ke liye ek jaise hote hain\n✅ 54 lakh se zyada mareezon ki research (15 studies) mein mahila surgeons ke mareezon ke nateeje kam nahi the, balki thode behtar mile\n✅ Asli fark anubhav, taiyaari aur poori OT team se aata hai, aurat ya mard hone se nahi\n✅ Koi bhi sawaal ya darr ho toh apne doctor se khul kar poochhiye\n\nDarr nahi, taiyaari!\nFollow @surgerysathi for more OT Kisse\n\n⚠️ AI character. This video is only for general information. Ask your own doctor about your treatment.\n\n#SurgerySaathi #OTKisse #SurgeryTips #HealthHindi #Shorts",
+  "tags": ["lady doctor operation", "female surgeon", "mahila doctor surgery", "lady surgeon safe", "female surgeon outcomes", "operation ka darr", "surgeon kaise chunein", "doctor myth hindi", "operation se pehle", "anaesthesia hindi", "OT kisse", "doctor cartoon", "surgerysaathi", "health hindi", "patient education", "shorts"]
+ }
+}

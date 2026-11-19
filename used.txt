@@ -26,3 +26,4 @@
 2026-11-16 | 25 | Khaansi-zukaam mein operation? | ep25_zukaam + ep25_zukaam_bn
 2026-11-17 | 26 | Operation se pehle period ho toh? | ep26_period + ep26_period_bn
 2026-11-18 | 27 | Spinal ke baad sar dard kyun? | ep27_sardard + ep27_sardard_bn
+2026-11-19 | 28 | Mahila doctor se operation: koi fark? | ep28_mahila + ep28_mahila_bn
