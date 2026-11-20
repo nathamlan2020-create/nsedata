@@ -1,0 +1,45 @@
+{
+ "slug": "ep29_pair",
+ "num": 29,
+ "layout": "ot",
+ "patient": "uncle",
+ "topic": "Spinal ke baad pair kab hilenge?",
+ "category": "intra",
+ "intro": ["SPINAL KE BAAD", "PAIR KAB?", "Pair kab hilenge, kya karein"],
+ "q_vo": [["डॉक्टर मैडम...", 0.22], ["स्पाइनल के बाद,", 0.06], ["पैर कब हिलेंगे?", 0.1]],
+ "a_vo": [["अंकल, घबराइए मत,", 0.06], ["कुछ घंटों में,", 0.06], ["पैर फिर हिलेंगे!", 0.1]],
+ "f_vo": [
+  ["सच क्या है?", 0.3],
+  ["पैर हिलने में,", 0.06],
+  ["आमतौर पर चार घंटे तक लगते हैं।", 0.2],
+  ["सुन्नपन धीरे-धीरे जाता है,", 0.06],
+  ["झनझनाहट होना आम है।", 0.2],
+  ["पहली बार उठते समय,", 0.06],
+  ["स्टाफ की मदद लीजिए।", 0.2],
+  ["एहसास न लौटे तो,", 0.06],
+  ["तुरंत टीम को बताइए।", 0.1]
+ ],
+ "bullet_starts": [1, 3, 5, 7],
+ "switch_bullet": 2,
+ "q_bubble": ["Spinal ke baad", "pair kab", "hilenge?"],
+ "a_bubble": ["Uncle, ghabraiye mat,", "kuch ghanton mein", "pair phir hilenge!"],
+ "bullets": [
+  "Pair hilenge: ~4 ghante tak",
+  "Jhanjhanahat aana normal hai",
+  "Pehli baar uthna: staff ke saath",
+  "Feeling na lauti? Turant bataiye"
+ ],
+ "cap": {
+  "q": "Uncle: \"Doctor Madam, spinal ke baad pair kab hilenge?\"",
+  "a": "Dr Saathi: \"Uncle, ghabraiye mat, kuch ghanton mein pair phir hilenge!\"",
+  "f": "Pair hilne mein aam taur par 4 ghante tak lagte hain. Sunnpan dheere-dheere jaata hai, jhanjhanahat hona aam hai.",
+  "f2": "Pehli baar uthte samay staff ki madad lijiye. Ehsaas na laute toh turant team ko bataiye."
+ },
+ "tiles": [],
+ "stage": {},
+ "youtube": {
+  "title": "Spinal ke baad pair kab hilenge? 🦵 | Dr Saathi ke OT Kisse #29 #shorts",
+  "description": "Uncle ne poocha: \"Spinal ke baad pair kab hilenge?\" 🦵\nDr Saathi ne kaha: Uncle, ghabraiye mat, kuch ghanton mein pair phir hilenge! 💚\n\nSach kya hai?\n✅ Spinal ke baad pairon mein harkat lautne mein aam taur par 4 ghante tak lagte hain, poori feeling lautne mein thoda zyada\n✅ Sunnpan dheere-dheere jaata hai, jhanjhanahat hona aam hai, aur ek taraf pehle theek ho sakti hai\n✅ Pehli baar bed se uthte samay chakkar ya ladkhadahat ho sakti hai, isliye staff ki madad lijiye\n✅ Feeling ya harkat umeed ke mutaabik na laute, ya sunnpan/kamzori badhe, toh turant team ko bataiye\n\nDarr nahi, taiyaari!\nFollow @surgerysathi for more OT Kisse\n\n⚠️ AI character. This video is only for general information. Ask your own doctor about your treatment.\n\n#SurgerySaathi #OTKisse #SurgeryTips #HealthHindi #Shorts",
+  "tags": ["spinal anaesthesia", "spinal ke baad pair", "spinal anesthesia legs", "pair sunn operation ke baad", "spinal kitni der", "spinal anaesthesia hindi", "operation ke baad", "anaesthesia hindi", "spinal injection", "operation ka darr", "OT kisse", "doctor cartoon", "surgerysaathi", "health hindi", "patient education", "shorts"]
+ }
+}
