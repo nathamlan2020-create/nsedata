@@ -1,0 +1,45 @@
+{
+ "slug": "ep30_yaadaasht",
+ "num": 30,
+ "layout": "ot",
+ "patient": "dadi",
+ "topic": "Anaesthesia se yaadaasht jaati hai kya?",
+ "category": "intra",
+ "intro": ["ANAESTHESIA SE", "YAADAASHT?", "Yaadaasht jaati hai? Sach suniye"],
+ "q_vo": [["डॉक्टर मैडम...", 0.22], ["एनेस्थीसिया से,", 0.06], ["याददाश्त चली जाती है क्या?", 0.1]],
+ "a_vo": [["दादी, चिंता मत कीजिए,", 0.06], ["ज़्यादातर लोगों की,", 0.06], ["याददाश्त ठीक रहती है!", 0.1]],
+ "f_vo": [
+  ["सच क्या है?", 0.3],
+  ["हल्की भूल या उलझन,", 0.06],
+  ["कुछ घंटों में ठीक होती है।", 0.2],
+  ["बुज़ुर्गों में कुछ दिन रह सकती है,", 0.06],
+  ["जो अक्सर ठीक हो जाती है।", 0.2],
+  ["चश्मा और हियरिंग एड,", 0.06],
+  ["साथ लेकर आइए।", 0.2],
+  ["चौबीस घंटे तक,", 0.06],
+  ["कोई बड़ा फैसला या साइन नहीं।", 0.1]
+ ],
+ "bullet_starts": [1, 3, 5, 7],
+ "switch_bullet": 2,
+ "q_bubble": ["Anaesthesia se", "yaadaasht chali", "jaati hai kya?"],
+ "a_bubble": ["Dadi, chinta mat kijiye,", "zyadatar logon ki", "yaadaasht theek rehti!"],
+ "bullets": [
+  "Halki bhool: kuch ghanton mein",
+  "Buzurg: kuch din, aksar theek",
+  "Chashma, hearing aid saath laayein",
+  "24 ghante: bada faisla/sign nahi"
+ ],
+ "cap": {
+  "q": "Dadi: \"Doctor Madam, anaesthesia se yaadaasht chali jaati hai kya?\"",
+  "a": "Dr Saathi: \"Dadi, chinta mat kijiye, zyadatar logon ki yaadaasht theek rehti hai!\"",
+  "f": "Halki bhool ya uljhan kuch ghanton mein theek hoti hai. Buzurgon mein kuch din reh sakti hai, aksar theek ho jaati hai.",
+  "f2": "Chashma aur hearing aid saath lekar aaiye. 24 ghante tak koi bada faisla ya sign nahi."
+ },
+ "tiles": [],
+ "stage": {},
+ "youtube": {
+  "title": "Anaesthesia se yaadaasht jaati hai kya? 🧠 | Dr Saathi ke OT Kisse #30 #shorts",
+  "description": "Dadi ne poocha: \"Anaesthesia se yaadaasht chali jaati hai kya?\" 🧠\nDr Saathi ne kaha: Dadi, chinta mat kijiye, zyadatar logon ki yaadaasht theek rehti hai! 💚\n\nSach kya hai?\n✅ Anaesthesia ke baad halki bhool ya uljhan aam taur par kuch minton ya ghanton mein theek ho jaati hai\n✅ Buzurgon mein kabhi kuch din uljhan reh sakti hai, jo aksar dheere-dheere theek ho jaati hai — pehle se bhoolne ki pareshani ho toh doctor ko zaroor bataiye\n✅ Chashma, hearing aid (aur extra battery) saath laaiye, ghar wale paas rahein aur din-tareekh yaad dilaayein\n✅ Anaesthesia ke baad 24 ghante tak koi bada faisla ya kaagaz par sign mat kijiye\n\nDarr nahi, taiyaari!\nFollow @surgerysathi for more OT Kisse\n\n⚠️ AI character. This video is only for general information. Ask your own doctor about your treatment.\n\n#SurgerySaathi #OTKisse #SurgeryTips #HealthHindi #Shorts",
+  "tags": ["anaesthesia memory loss", "anaesthesia se yaadaasht", "anesthesia side effects hindi", "operation ke baad bhoolna", "delirium after surgery", "buzurg operation", "anaesthesia hindi", "behoshi ki dawa asar", "general anaesthesia", "operation ka darr", "OT kisse", "doctor cartoon", "surgerysaathi", "health hindi", "patient education", "shorts"]
+ }
+}
