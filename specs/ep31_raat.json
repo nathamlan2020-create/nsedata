@@ -1,0 +1,45 @@
+{
+ "slug": "ep31_raat",
+ "num": 31,
+ "layout": "ot",
+ "patient": "uncle",
+ "topic": "Raat ko operation zyada risky?",
+ "category": "time",
+ "intro": ["RAAT KO", "OPERATION?", "Zyada risky hai? Sach suniye"],
+ "q_vo": [["डॉक्टर मैडम...", 0.22], ["रात को ऑपरेशन,", 0.06], ["ज़्यादा रिस्की होता है क्या?", 0.1]],
+ "a_vo": [["अंकल, रात का ऑपरेशन,", 0.06], ["ज़रूरत पर होता है,", 0.06], ["टीम पूरी तैयार रहती है!", 0.1]],
+ "f_vo": [
+  ["सच क्या है?", 0.3],
+  ["रात को आम तौर पर,", 0.06],
+  ["इमरजेंसी ऑपरेशन होते हैं।", 0.2],
+  ["इमरजेंसी में देरी,", 0.06],
+  ["ख़ुद नुकसान कर सकती है।", 0.2],
+  ["प्लान्ड ऑपरेशन,", 0.06],
+  ["आम तौर पर दिन में होते हैं।", 0.2],
+  ["इमरजेंसी के लिए,", 0.06],
+  ["टीम चौबीस घंटे तैयार।", 0.1]
+ ],
+ "bullet_starts": [1, 3, 5, 7],
+ "switch_bullet": 2,
+ "q_bubble": ["Raat ko operation", "zyada risky hota", "hai kya?"],
+ "a_bubble": ["Uncle, raat ka operation", "zaroorat par hota hai,", "team poori taiyaar!"],
+ "bullets": [
+  "Raat ko aksar emergency operation",
+  "Emergency mein deri bhi nuksaan",
+  "Planned operation: aam taur din",
+  "Emergency team: 24 ghante taiyaar"
+ ],
+ "cap": {
+  "q": "Uncle: \"Doctor Madam, raat ko operation zyada risky hota hai kya?\"",
+  "a": "Dr Saathi: \"Uncle, raat ka operation zaroorat par hota hai, team poori taiyaar rehti hai!\"",
+  "f": "Raat ko aam taur par emergency operation hote hain. Emergency mein deri khud nuksaan kar sakti hai.",
+  "f2": "Planned operation aam taur par din mein hote hain. Emergency ke liye team 24 ghante taiyaar."
+ },
+ "tiles": [],
+ "stage": {},
+ "youtube": {
+  "title": "Raat ko operation zyada risky hai? 🌙 | Dr Saathi ke OT Kisse #31 #shorts",
+  "description": "Uncle ne poocha: \"Raat ko operation zyada risky hota hai kya?\" 🌙\nDr Saathi ne kaha: Uncle, raat ka operation zaroorat par hota hai, team poori taiyaar rehti hai! 💚\n\nSach kya hai?\n✅ Raat ko aam taur par emergency operation hote hain — jo subah tak rukna theek nahi\n✅ Emergency mein zaroorat se zyada deri khud nuksaan kar sakti hai\n✅ Planned (pehle se tay) operation aam taur par din mein rakhe jaate hain\n✅ Emergency ke liye OT team 24 ghante taiyaar rehti hai — koi sawaal ho toh doctor se poochhiye\n\nDarr nahi, taiyaari!\nFollow @surgerysathi for more OT Kisse\n\n⚠️ AI character. This video is only for general information. Ask your own doctor about your treatment.\n\n#SurgerySaathi #OTKisse #SurgeryTips #HealthHindi #Shorts",
+  "tags": ["raat ko operation", "night surgery risk", "emergency operation hindi", "raat mein operation safe", "operation ka samay", "emergency surgery", "anaesthesia hindi", "operation ka darr", "surgery hindi", "OT kisse", "doctor cartoon", "surgerysaathi", "health hindi", "patient education", "shorts"]
+ }
+}

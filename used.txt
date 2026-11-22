@@ -29,3 +29,4 @@
 2026-11-19 | 28 | Mahila doctor se operation: koi fark? | ep28_mahila + ep28_mahila_bn
 2026-11-20 | 29 | Spinal ke baad pair kab hilenge? | ep29_pair + ep29_pair_bn
 2026-11-21 | 30 | Anaesthesia se yaadaasht jaati hai kya? | ep30_yaadaasht + ep30_yaadaasht_bn
+2026-11-22 | 31 | Raat ko operation zyada risky? | ep31_raat + ep31_raat_bn
