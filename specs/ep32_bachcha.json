@@ -1,0 +1,45 @@
+{
+ "slug": "ep32_bachcha",
+ "num": 32,
+ "layout": "ot",
+ "patient": "didi",
+ "topic": "Bachche ke operation se pehle kya karein",
+ "category": "patient",
+ "intro": ["BACHCHE KA", "OPERATION?", "Pehle kya karein? Sach suniye"],
+ "q_vo": [["डॉक्टर मैडम...", 0.22], ["मेरे बच्चे का ऑपरेशन है,", 0.06], ["पहले क्या करूँ?", 0.1]],
+ "a_vo": [["दीदी, घबराइए मत,", 0.06], ["थोड़ी तैयारी,", 0.06], ["बच्चा आराम से रहेगा!", 0.1]],
+ "f_vo": [
+  ["सच क्या है?", 0.3],
+  ["बच्चे को सच बताइए,", 0.06],
+  ["आसान शब्दों में।", 0.2],
+  ["पसंदीदा खिलौना,", 0.06],
+  ["साथ ले आइए।", 0.2],
+  ["खाने पीने की टाइमिंग,", 0.06],
+  ["डॉक्टर की बताई मानिए।", 0.2],
+  ["आप शांत रहेंगी,", 0.06],
+  ["तो बच्चा भी शांत।", 0.1]
+ ],
+ "bullet_starts": [1, 3, 5, 7],
+ "switch_bullet": 2,
+ "q_bubble": ["Mere bachche ka", "operation hai, pehle", "kya karoon?"],
+ "a_bubble": ["Didi, ghabraiye mat,", "thodi taiyaari,", "bachcha aaraam se!"],
+ "bullets": [
+  "Bachche ko sach, aasaan shabd",
+  "Pasandida khilona saath laayein",
+  "Khaana-peena: doctor ki timing",
+  "Aap shaant, toh bachcha shaant"
+ ],
+ "cap": {
+  "q": "Didi: \"Doctor Madam, mere bachche ka operation hai, pehle kya karoon?\"",
+  "a": "Dr Saathi: \"Didi, ghabraiye mat, thodi taiyaari, bachcha aaraam se rahega!\"",
+  "f": "Bachche ko sach bataiye, aasaan shabdon mein. Pasandida khilona saath le aaiye.",
+  "f2": "Khaane-peene ki timing doctor ki batayi maaniye. Aap shaant rahengi, toh bachcha bhi shaant."
+ },
+ "tiles": [],
+ "stage": {},
+ "youtube": {
+  "title": "Bachche ke operation se pehle kya karein? 🧸 | Dr Saathi ke OT Kisse #32 #shorts",
+  "description": "Didi ne poocha: \"Mere bachche ka operation hai, pehle kya karoon?\" 🧸\nDr Saathi ne kaha: Didi, ghabraiye mat, thodi taiyaari se bachcha aaraam se rahega! 💚\n\nSach kya hai?\n✅ Bachche ko sach bataiye — aasaan, shaant shabdon mein, ki operation hona hai\n✅ Uska pasandida khilona ya chaadar saath le aaiye\n✅ Khaane-peene ki timing wahi rakhiye jo doctor/hospital ne batayi hai\n✅ Aap shaant rahengi toh bachcha bhi shaant rahega — koi sawaal ho toh doctor se poochhiye\n\nDarr nahi, taiyaari!\nFollow @surgerysathi for more OT Kisse\n\n⚠️ AI character. This video is only for general information. Ask your own doctor about your treatment.\n\n#SurgerySaathi #OTKisse #SurgeryTips #HealthHindi #Shorts",
+  "tags": ["bachche ka operation", "child surgery preparation", "bachche ko operation ke liye taiyaar", "child anaesthesia hindi", "bachcha operation darr", "pediatric surgery hindi", "operation se pehle kya karein", "anaesthesia hindi", "parents tips surgery", "surgery hindi", "OT kisse", "doctor cartoon", "surgerysaathi", "health hindi", "patient education", "shorts"]
+ }
+}
