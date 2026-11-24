@@ -1,0 +1,45 @@
+{
+ "slug": "ep33_bhookh",
+ "num": 33,
+ "layout": "ot",
+ "patient": "dadi",
+ "topic": "Bachche ko khaali pet kitni der? (doctor ki timing)",
+ "category": "patient",
+ "intro": ["BACHCHA BHOOKHA", "KITNI DER?", "Operation se pehle sach suniye"],
+ "q_vo": [["डॉक्टर मैडम...", 0.22], ["पोते का ऑपरेशन है,", 0.06], ["कितनी देर भूखा रखूँ?", 0.1]],
+ "a_vo": [["दादी, ज़्यादा भूखा,", 0.06], ["रखना ज़रूरी नहीं,", 0.06], ["टाइमिंग मानिए!", 0.1]],
+ "f_vo": [
+  ["सच क्या है?", 0.3],
+  ["लंबी भूख प्यास,", 0.06],
+  ["बच्चे को परेशान करती है।", 0.2],
+  ["साफ़ पानी अक्सर,", 0.06],
+  ["एक घंटे पहले तक।", 0.2],
+  ["माँ का दूध,", 0.06],
+  ["तीन घंटे पहले तक।", 0.2],
+  ["खाने का टाइम,", 0.06],
+  ["डॉक्टर बताएँगे, वही मानिए।", 0.1]
+ ],
+ "bullet_starts": [1, 3, 5, 7],
+ "switch_bullet": 2,
+ "q_bubble": ["Pote ka operation", "hai, kitni der", "bhookha rakhoon?"],
+ "a_bubble": ["Dadi, zyada bhookha", "rakhna zaroori nahi,", "timing maaniye!"],
+ "bullets": [
+  "Lambi bhookh: bachcha pareshaan",
+  "Saaf paani: aksar 1 ghanta pehle",
+  "Maa ka doodh: 3 ghante pehle",
+  "Khaana: doctor ki batayi timing"
+ ],
+ "cap": {
+  "q": "Dadi: \"Doctor Madam, pote ka operation hai, kitni der bhookha rakhoon?\"",
+  "a": "Dr Saathi: \"Dadi, zyada bhookha rakhna zaroori nahi, timing maaniye!\"",
+  "f": "Lambi bhookh-pyaas bachche ko pareshaan karti hai. Saaf paani aksar ek ghante pehle tak.",
+  "f2": "Maa ka doodh teen ghante pehle tak. Khaane ka time doctor batayenge, wahi maaniye."
+ },
+ "tiles": [],
+ "stage": {},
+ "youtube": {
+  "title": "Bachche ko operation se pehle kitni der bhookha? 🍼 | Dr Saathi ke OT Kisse #33 #shorts",
+  "description": "Dadi ne poocha: \"Pote ka operation hai, kitni der bhookha rakhoon?\" 🍼\nDr Saathi ne kaha: Dadi, zyada der bhookha rakhna zaroori nahi — doctor ki timing maaniye! 💚\n\nSach kya hai?\n✅ Zaroorat se lambi bhookh-pyaas bachche ko pareshaan karti hai — usse fayda nahi\n✅ Saaf paani (clear fluids) aksar operation se 1 ghanta pehle tak diya ja sakta hai — doctor ki ijaazat se\n✅ Maa ka doodh aksar 3 ghante pehle tak\n✅ Khaana aur doosra doodh kab band karna hai, doctor/hospital batayenge — wahi maaniye, aur kuch kha liya ho toh doctor ko zaroor bataiye\n\nDarr nahi, taiyaari!\nFollow @surgerysathi for more OT Kisse\n\n⚠️ AI character. This video is only for general information. Ask your own doctor about your treatment.\n\n#SurgerySaathi #OTKisse #SurgeryTips #HealthHindi #Shorts",
+  "tags": ["bachche ko khaali pet", "child fasting before surgery", "operation se pehle kitni der bhookha", "bachche ka operation", "fasting before anaesthesia children", "clear fluids before surgery", "maa ka doodh operation se pehle", "child anaesthesia hindi", "pediatric surgery hindi", "anaesthesia hindi", "surgery hindi", "OT kisse", "doctor cartoon", "surgerysaathi", "health hindi", "patient education", "shorts"]
+ }
+}
