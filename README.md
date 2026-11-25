@@ -20,6 +20,7 @@ Each zip holds plain CSVs with columns `date,open,high,low,close,volume`. Unzip 
 - `intraday/hourly/`: 60-min and 30-min bars for Nifty, Bank Nifty and the Nifty 50 stocks (60-min from Nov 2023, 30-min last 60 days).
 - `intraday/5min/`: 5-minute bars, last 60 days.
 - `intraday/1min/YYYY/MM/`: 1-minute bars and chart image for each trading day.
+- `intraday/xauusd_1min/xauusd_1min_histdata_2018-2026_ist.csv.gz`: spot gold (XAU/USD) 1-minute OHLC from HistData.com, 2 Jan 2018 to 14 Nov 2026 (~3.1 million candles). Times converted from HistData's fixed EST (UTC-5, no DST) to IST (+10:30). Columns `date,open,high,low,close`; no volume. Mar-Jul 2023 has ~30% fewer candles (missing minutes in the source). Built with `scripts/build_xauusd_histdata.py`.
 
 ## Other folders
 
