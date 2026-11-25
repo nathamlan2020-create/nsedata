@@ -1,0 +1,45 @@
+{
+ "slug": "ep34_mausam",
+ "num": 34,
+ "layout": "ot",
+ "patient": "uncle",
+ "topic": "Garmi/barsaat mein operation nahi karwana chahiye?",
+ "category": "time",
+ "intro": ["GARMI-BARSAAT", "MEIN OPERATION?", "Mausam ka sach suniye"],
+ "q_vo": [["डॉक्टर मैडम...", 0.22], ["गर्मी बरसात में,", 0.06], ["ऑपरेशन नहीं करवाना चाहिए?", 0.1]],
+ "a_vo": [["अंकल,", 0.1], ["मौसम नहीं,", 0.06], ["तैयारी देखिए!", 0.1]],
+ "f_vo": [
+  ["सच क्या है?", 0.3],
+  ["मौसम से ज़्यादा, सफ़ाई ज़रूरी।", 0.2],
+  ["गर्मी में इन्फेक्शन का फ़र्क,", 0.06],
+  ["बहुत थोड़ा होता है।", 0.2],
+  ["ऑपरेशन से पहले,", 0.06],
+  ["साबुन से नहाइए।", 0.2],
+  ["घाव साफ़ और सूखा रखिए।", 0.2],
+  ["लाली, पस या बुखार हो,", 0.06],
+  ["तुरंत डॉक्टर को दिखाइए।", 0.1]
+ ],
+ "bullet_starts": [1, 2, 4, 6],
+ "switch_bullet": 2,
+ "q_bubble": ["Garmi-barsaat mein", "operation nahi", "karwana chahiye?"],
+ "a_bubble": ["Uncle, mausam nahi,", "taiyaari dekhiye!"],
+ "bullets": [
+  "Mausam se zyada: safai zaroori",
+  "Garmi mein farak: bahut thoda",
+  "Pehle sabun se nahaaiye",
+  "Ghaav saaf-sookha, laali: doctor!"
+ ],
+ "cap": {
+  "q": "Uncle: \"Doctor Madam, garmi-barsaat mein operation nahi karwana chahiye?\"",
+  "a": "Dr Saathi: \"Uncle, mausam nahi, taiyaari dekhiye!\"",
+  "f": "Mausam se zyada safai zaroori. Garmi mein infection ka farak bahut thoda hota hai.",
+  "f2": "Operation se pehle sabun se nahaiye. Ghaav saaf-sookha rakhiye; laali, pus ya bukhaar ho toh turant doctor ko dikhaiye."
+ },
+ "tiles": [],
+ "stage": {},
+ "youtube": {
+  "title": "Garmi-barsaat mein operation nahi karwana chahiye? ☀️ | Dr Saathi ke OT Kisse #34 #shorts",
+  "description": "Uncle ne poocha: \"Garmi-barsaat mein operation nahi karwana chahiye?\" ☀️🌧️\nDr Saathi ne kaha: Uncle, mausam nahi — taiyaari dekhiye! 💚\n\nSach kya hai?\n✅ Mausam se zyada zaroori hai saaf-safai — operation kab karna hai, apne doctor ke saath tay kariye\n✅ Research mein garmi ke mahino mein infection ka farak bahut thoda paaya gaya hai\n✅ Operation se ek din pehle ya usi din sabun se nahaiye\n✅ Ghaav ko saaf aur sookha rakhiye — laali, sujan, pus ya bukhaar ho toh turant doctor ko dikhaiye\n\nDarr nahi, taiyaari!\nFollow @surgerysathi for more OT Kisse\n\n⚠️ AI character. This video is only for general information. Ask your own doctor about your treatment.\n\n#SurgerySaathi #OTKisse #SurgeryTips #HealthHindi #Shorts",
+  "tags": ["garmi mein operation", "barsaat mein operation", "monsoon surgery myth", "summer surgery infection", "operation kis mausam mein", "surgical site infection hindi", "ghaav ki dekhbhal", "wound care after surgery", "operation se pehle nahana", "surgery myths hindi", "anaesthesia hindi", "surgery hindi", "OT kisse", "doctor cartoon", "surgerysaathi", "health hindi", "patient education", "shorts"]
+ }
+}

@@ -32,3 +32,4 @@
 2026-11-22 | 31 | Raat ko operation zyada risky? | ep31_raat + ep31_raat_bn
 2026-11-23 | 32 | Bachche ke operation se pehle kya karein | ep32_bachcha + ep32_bachcha_bn
 2026-11-24 | 33 | Bachche ko khaali pet kitni der? (doctor ki timing) | ep33_bhookh + ep33_bhookh_bn
+2026-11-25 | 34 | Garmi/barsaat mein operation nahi karwana chahiye? | ep34_mausam + ep34_mausam_bn
