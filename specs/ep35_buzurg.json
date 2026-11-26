@@ -1,0 +1,45 @@
+{
+ "slug": "ep35_buzurg",
+ "num": 35,
+ "layout": "ot",
+ "patient": "dadi",
+ "topic": "Buzurg aur anaesthesia: kya dhyan rakhein",
+ "category": "patient",
+ "intro": ["IS UMAR MEIN", "ANAESTHESIA?", "Buzurgon ke liye taiyaari"],
+ "q_vo": [["डॉक्टर मैडम...", 0.22], ["इस उम्र में,", 0.06], ["बेहोशी ठीक रहेगी?", 0.1]],
+ "a_vo": [["दादी,", 0.1], ["उम्र से मत डरिए,", 0.06], ["तैयारी कीजिए!", 0.1]],
+ "f_vo": [
+  ["सच क्या है?", 0.3],
+  ["अपनी सारी दवाइयाँ,", 0.06],
+  ["डॉक्टर को दिखाइए।", 0.2],
+  ["चश्मा और सुनने की मशीन,", 0.06],
+  ["साथ लेकर आइए।", 0.2],
+  ["घर वाले पास रहें,", 0.06],
+  ["दिन-तारीख़ याद दिलाएँ।", 0.2],
+  ["कुछ दिन उलझन हो सकती है,", 0.06],
+  ["ज़्यादातर ठीक हो जाती है।", 0.1]
+ ],
+ "bullet_starts": [1, 3, 5, 7],
+ "switch_bullet": 2,
+ "q_bubble": ["Is umar mein", "behoshi theek", "rahegi?"],
+ "a_bubble": ["Dadi, umar se", "mat dariye,", "taiyaari kijiye!"],
+ "bullets": [
+  "Saari dawaiyan doctor ko dikhaiye",
+  "Chashma, hearing aid saath laaiye",
+  "Ghar wale paas, din-taareekh yaad",
+  "Thodi ulajhan: aksar theek hoti"
+ ],
+ "cap": {
+  "q": "Dadi: \"Doctor Madam, is umar mein behoshi theek rahegi?\"",
+  "a": "Dr Saathi: \"Dadi, umar se mat dariye, taiyaari kijiye!\"",
+  "f": "Apni saari dawaiyan doctor ko dikhaiye. Chashma aur sunne ki machine saath lekar aaiye.",
+  "f2": "Ghar wale paas rahein, din-taareekh yaad dilaayein. Kuch din ulajhan ho sakti hai, zyaadatar theek ho jaati hai."
+ },
+ "tiles": [],
+ "stage": {},
+ "youtube": {
+  "title": "Is umar mein anaesthesia safe? 👵 | Dr Saathi ke OT Kisse #35 #shorts",
+  "description": "Dadi ne poocha: \"Is umar mein behoshi theek rahegi?\" 👵\nDr Saathi ne kaha: Dadi, umar se mat dariye — taiyaari kijiye! 💚\n\nSach kya hai?\n✅ Apni saari dawaiyan hospital lekar aaiye aur doctor ko dikhaiye — koi dawa khud band mat kijiye, doctor se poochhiye\n✅ Chashma aur hearing aid (sunne ki machine) saath laaiye\n✅ Ghar wale paas rahein, pyaar se baat karein aur din-taareekh yaad dilaayein\n✅ Operation ke baad kuch din ulajhan (confusion) ho sakti hai — zyaadatar log theek ho jaate hain; kuch ajeeb lage toh doctor ko batayiye\n\nDarr nahi, taiyaari!\nFollow @surgerysathi for more OT Kisse\n\n⚠️ AI character. This video is only for general information. Ask your own doctor about your treatment.\n\n#SurgerySaathi #OTKisse #SurgeryTips #HealthHindi #Shorts",
+  "tags": ["buzurg aur anaesthesia", "elderly anaesthesia", "budhape mein operation", "old age surgery safe", "operation ke baad confusion", "postoperative delirium hindi", "dadi ka operation", "anaesthesia for older people", "operation ki taiyaari", "surgery myths hindi", "anaesthesia hindi", "surgery hindi", "OT kisse", "doctor cartoon", "surgerysaathi", "health hindi", "patient education", "shorts"]
+ }
+}
