@@ -34,3 +34,4 @@
 2026-11-24 | 33 | Bachche ko khaali pet kitni der? (doctor ki timing) | ep33_bhookh + ep33_bhookh_bn
 2026-11-25 | 34 | Garmi/barsaat mein operation nahi karwana chahiye? | ep34_mausam + ep34_mausam_bn
 2026-11-26 | 35 | Buzurg aur anaesthesia: kya dhyan rakhein | ep35_buzurg + ep35_buzurg_bn
+2026-11-27 | 36 | Mota hone par anaesthesia safe? | ep36_wazan + ep36_wazan_bn

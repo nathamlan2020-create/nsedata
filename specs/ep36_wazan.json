@@ -1,0 +1,45 @@
+{
+ "slug": "ep36_wazan",
+ "num": 36,
+ "layout": "ot",
+ "patient": "uncle",
+ "topic": "Mota hone par anaesthesia safe?",
+ "category": "patient",
+ "intro": ["WAZAN ZYADA?", "ANAESTHESIA?", "Wazan aur behoshi ka sach"],
+ "q_vo": [["डॉक्टर मैडम...", 0.22], ["मेरा वज़न ज़्यादा है,", 0.06], ["बेहोशी सेफ़ है?", 0.1]],
+ "a_vo": [["अंकल,", 0.1], ["वज़न से ऑपरेशन नहीं रुकता,", 0.06], ["बस तैयारी चाहिए!", 0.1]],
+ "f_vo": [
+  ["सच क्या है?", 0.3],
+  ["आजकल का एनेस्थीसिया,", 0.06],
+  ["बहुत सेफ़ है।", 0.2],
+  ["नींद में साँस रुकती हो,", 0.06],
+  ["तो डॉक्टर को बताइए।", 0.2],
+  ["ऑपरेशन से पहले,", 0.06],
+  ["जितना हो सके चलिए-फिरिए।", 0.2],
+  ["ऑपरेशन के बाद,", 0.06],
+  ["जल्दी उठकर चलिए।", 0.1]
+ ],
+ "bullet_starts": [1, 3, 5, 7],
+ "switch_bullet": 2,
+ "q_bubble": ["Mera wazan zyada", "hai, behoshi", "safe hai?"],
+ "a_bubble": ["Uncle, wazan se", "operation nahi rukta,", "bas taiyaari!"],
+ "bullets": [
+  "Aaj ka anaesthesia bahut safe",
+  "Neend mein saans ruke? Bataiye",
+  "Pehle se chaliye-phiriye",
+  "Operation ke baad jaldi chaliye"
+ ],
+ "cap": {
+  "q": "Uncle: \"Doctor Madam, mera wazan zyada hai, behoshi safe hai?\"",
+  "a": "Dr Saathi: \"Uncle, wazan se operation nahi rukta, bas taiyaari chahiye!\"",
+  "f": "Aajkal ka anaesthesia bahut safe hai. Neend mein saans rukti ho, toh doctor ko bataiye.",
+  "f2": "Operation se pehle jitna ho sake chaliye-phiriye. Operation ke baad jaldi uthkar chaliye."
+ },
+ "tiles": [],
+ "stage": {},
+ "youtube": {
+  "title": "Wazan zyada hai toh anaesthesia safe? ⚖️ | Dr Saathi ke OT Kisse #36 #shorts",
+  "description": "Uncle ne poocha: \"Mera wazan zyada hai, behoshi safe hai?\" ⚖️\nDr Saathi ne kaha: Uncle, wazan se operation nahi rukta — bas taiyaari chahiye! 💚\n\nSach kya hai?\n✅ Aajkal ka anaesthesia bahut safe hai — zyada wazan wale log bhi aksar wahi operation karwa sakte hain\n✅ Neend mein saans rukti ho ya bahut kharraate aate hon, toh doctor ko bataiye; saans ki machine (CPAP) use karte hain toh saath laaiye\n✅ Operation se pehle jitna ho sake chaliye-phiriye aur santulit khaana khaiye — chhote badlaav bhi recovery behtar karte hain\n✅ Operation ke baad jaldi uthkar chaliye — isse khoon ke thakke (clot) ka khatra kam hota hai\nWazan ki koi dawa ya injection le rahe hain toh doctor ko zaroor bataiye — khud band mat kijiye, doctor se poochhiye\n\nDarr nahi, taiyaari!\nFollow @surgerysathi for more OT Kisse\n\n⚠️ AI character. This video is only for general information. Ask your own doctor about your treatment.\n\n#SurgerySaathi #OTKisse #SurgeryTips #HealthHindi #Shorts",
+  "tags": ["mota hone par anaesthesia", "wazan zyada operation", "obesity anaesthesia", "obesity surgery risk", "sleep apnoea operation", "kharraate aur anaesthesia", "operation ki taiyaari", "operation ke baad chalna", "anaesthesia safe hai", "surgery myths hindi", "anaesthesia hindi", "surgery hindi", "OT kisse", "doctor cartoon", "surgerysaathi", "health hindi", "patient education", "shorts"]
+ }
+}
