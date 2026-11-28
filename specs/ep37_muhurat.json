@@ -1,0 +1,45 @@
+{
+ "slug": "ep37_muhurat",
+ "num": 37,
+ "layout": "ot",
+ "patient": "dadi",
+ "topic": "Shubh muhurat dekh kar operation?",
+ "category": "time",
+ "intro": ["SHUBH MUHURAT", "PE OPERATION?", "Sahi waqt ka sach suniye"],
+ "q_vo": [["डॉक्टर मैडम...", 0.22], ["शुभ मुहूर्त देखकर,", 0.06], ["ऑपरेशन करवाएँ?", 0.1]],
+ "a_vo": [["दादी,", 0.1], ["सबसे शुभ मुहूर्त,", 0.06], ["जब डॉक्टर कहें!", 0.1]],
+ "f_vo": [
+  ["सच क्या है?", 0.3],
+  ["इमरजेंसी ऑपरेशन में,", 0.06],
+  ["देर मत कीजिए।", 0.2],
+  ["अपेंडिक्स जैसी बीमारी,", 0.06],
+  ["देर से बिगड़ सकती है।", 0.2],
+  ["प्लान्ड ऑपरेशन की तारीख़,", 0.06],
+  ["डॉक्टर के साथ तय कीजिए।", 0.2],
+  ["तारीख़ बदलनी हो,", 0.06],
+  ["तो पहले डॉक्टर से पूछिए।", 0.1]
+ ],
+ "bullet_starts": [1, 3, 5, 7],
+ "switch_bullet": 2,
+ "q_bubble": ["Shubh muhurat dekh", "kar operation", "karwayein?"],
+ "a_bubble": ["Dadi, sabse shubh", "muhurat: jab", "doctor kahein!"],
+ "bullets": [
+  "Emergency mein der mat kijiye",
+  "Appendix: der se bigad sakta",
+  "Taareekh doctor ke saath tay",
+  "Date badalni? Doctor se poochhiye"
+ ],
+ "cap": {
+  "q": "Dadi: \"Doctor Madam, shubh muhurat dekh kar operation karwayein?\"",
+  "a": "Dr Saathi: \"Dadi, sabse shubh muhurat — jab doctor kahein!\"",
+  "f": "Emergency operation mein der mat kijiye. Appendix jaisi bimari der se bigad sakti hai.",
+  "f2": "Planned operation ki taareekh doctor ke saath tay kijiye. Taareekh badalni ho, toh pehle doctor se poochhiye."
+ },
+ "tiles": [],
+ "stage": {},
+ "youtube": {
+  "title": "Shubh muhurat dekh kar operation karwayein? 🗓️ | Dr Saathi ke OT Kisse #37 #shorts",
+  "description": "Dadi ne poocha: \"Shubh muhurat dekh kar operation karwayein?\" 🗓️\nDr Saathi ne kaha: Dadi, sabse shubh muhurat — jab doctor kahein! 💚\n\nSach kya hai?\n✅ Emergency operation mein der mat kijiye — muhurat ka intezaar nahi\n✅ Appendix jaisi bimari mein der se haalat bigad sakti hai (appendix phat sakta hai)\n✅ Planned operation ki taareekh apne doctor ke saath milkar tay kijiye\n✅ Taareekh badalni ho toh pehle doctor se poochhiye — kuch bimariyon (jaise cancer) mein lambi der nuksaan kar sakti hai\nTez pet dard, bukhaar ya ulti ho toh turant doctor ko dikhaiye\n\nDarr nahi, taiyaari!\nFollow @surgerysathi for more OT Kisse\n\n⚠️ AI character. This video is only for general information. Ask your own doctor about your treatment.\n\n#SurgerySaathi #OTKisse #SurgeryTips #HealthHindi #Shorts",
+  "tags": ["shubh muhurat operation", "muhurat dekh kar surgery", "operation ki date", "operation kab karwayein", "surgery delay risk", "emergency operation", "appendix operation jaldi", "operation ki taareekh", "surgery timing myth", "surgery myths hindi", "anaesthesia hindi", "surgery hindi", "OT kisse", "doctor cartoon", "surgerysaathi", "health hindi", "patient education", "shorts"]
+ }
+}
